@@ -11,7 +11,6 @@ body {
   background-color: #1F1B24;
   padding: 20px 10px;
 }
-
 .header a {
   float: left;
   color: black;
@@ -21,23 +20,39 @@ body {
   font-size: 18px; 
   line-height: 25px;
   border-radius: 4px;
+  font-family: 'Work Sans', sans-serif;
+  
 }
-
 .header a.logo {
   font-size: 25px;
   font-weight: bold;
   color: white;
 }
-
+#logo-1{
+  background-color: blue;
+  animation: logo1 2s 1;
+  position: relative;
+}
+#logo-2{
+  background-color: red;
+  animation: logo2 2s 1;
+  position: relative;
+}
 .header a:hover {
   background-color: dodgerblue;
   color: black;
 }
-
 .header-right {
   float: right;
 }
-
+@keyframes logo1{
+  from {top: -100px;}
+  to {top: 0px;}
+}
+@keyframes logo2{
+  from {top: 100px;}
+  to {top: 0px;}
+}
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
@@ -53,8 +68,8 @@ body {
 .grid-container{
     display: grid;
     justify-content:center;
-    grid-template-columns: repeat(4, 250px);
-    grid-auto-rows: 250px;
+    grid-template-columns: repeat(6, 115px);
+    grid-auto-rows: 115px;
     background-color: #1d1d1d;
     padding: 20px;
     margin: 10px;
@@ -80,6 +95,8 @@ body {
 .tile-1 {
     grid-area: 1 / 1 / span 2 / span 2;
     background-color: lightcyan;
+    background: repeating-linear-gradient( 
+      45deg,#606dbc,#606dbc 10px,#465298 10px,#465298 20px);
 
   }
 .tile-2 {
@@ -95,10 +112,18 @@ body {
     background-color: lightsteelblue;
   }
 .tile-5 {
-    grid-area: 5 / 1 / span 1 / span 2;
+    grid-area: 1 / 5 / span 1 / span 2;
     background-color: lightgoldenrodyellow;
   }
 .tile-6 {
-    grid-area: 5 / 3 / span 1 / span 2;
+    grid-area: 2 / 5 / span 1 / span 2;
+    background-color: lightsalmon;
+  }
+.tile-7 {
+    grid-area: 3 / 5 / span 1 / span 2;
+    background-color: lightgoldenrodyellow;
+  }
+.tile-8 {
+    grid-area: 4 / 5 / span 1 / span 2;
     background-color: lightsalmon;
   }
