@@ -90,22 +90,20 @@ body
   border-radius: 16px;
   gap: 48px;
   overflow: visible;
-  width: fit-content;
+  width: 974px;
+  height: 650px;
   position: relative;
+  
     
 }
-/* grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end | itemname;
-.grid-item {
-    /* position: relative; 
-    /* border-radius: 10px; 
-	/* margin: -2.5em 0 0 -2.5em; 
-} */
+/* grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end | itemname;*/
 
 .grid-item 
 {
   position: relative;
-  margin: 5%;
+  margin: 5% 5% 5% 5%;
   border-radius: 10px;
+  justify-self: start;
   text-align: center;
   opacity: 0.8;
   overflow: visible;
@@ -168,69 +166,35 @@ body
   }
   .grid-container
   {
-    width: 90%;
+    width: 840px;
+    height: 600px;
+    gap: 30px;
   } 
-  .tile-5 
+  .grid-item 
   {
-    grid-area: 1 / 5 / span 1 / span 1;
-    min-width: 125px;
+    margin-right: 0%;
+    margin-left: 0%;
+    min-width: 220px;
   }
-  .tile-6
-  {
-    grid-area: 2 / 5 / span 1 / span 1;
-    min-width: 125px;
-  }
-  .tile-7 
-  {
-    grid-area: 3 / 5 / span 1 / span 1;
-    min-width: 125px;
-  }
-  .tile-8 
-  {
-    grid-area: 4 / 5 / span 1 / span 1;
-    min-width: 125px;
-  }
+ 
 }
-@media screen and (max-width: 910px) 
+
+@media screen and (max-width: 840px) 
 {
   body 
   {
-    background-color: green;
+    background-color: darkcyan;
   }
   .grid-container
   {
-    grid-template-columns: repeat(4, 115px);
-    widows: 600px;
+    width: 520px;
+    height: 785px;
+    gap: 10px;
   } 
-}
-    
-@media screen and (max-width: 767px) 
-{
-  /* start of medium tablet styles */
-  body 
+  .grid-item 
   {
-    background-color: orange;
-  }
-  .grid-container
-  {
-    grid-template-columns: repeat(4, 115px);
-    widows: 550px;
-  } 
-  .tile-1 
-  {
-    grid-area: 1 / 1 / span 2 / span 2;
-  }
-  .tile-2 
-  {
-    grid-area: 1 / 3 / span 2 / span 2;
-  }
-  .tile-3 
-  {
-    grid-area: 3 / 1 / span 2 / span 2;
-  }
-  .tile-4 
-  {
-    grid-area: 3 / 3 / span 2 / span 2;
+    margin-right: 2%;
+    margin-left: 2%;
   }
   .tile-5 
   {
@@ -248,21 +212,5 @@ body
   {
     grid-area: 6 / 3 / span 1 / span 2;
   }
-}
-@media only screen and (max-width: 675px) 
-{
-  /* start of phone styles */
-  body 
-  {
-    background-color: lightblue;
-  }
-}
-    
-@media screen and (max-width: 479px) 
-{
-  /* start of phone styles */
-  body 
-  {
-    background-color: red;
-  }
+  
 }
