@@ -16,28 +16,25 @@ body
 .header a 
 {
   float: left;
-  color: black;
-  text-align: center;
   padding: 12px;
-  text-decoration: none; 
-  font-size: 18px; 
   line-height: 25px;
-  border-radius: 4px;
   font-family: 'Audiowide', cursive;
+ 
 }
 .header a.logo 
 {
   font-size: 25px;
   font-weight: bold;
   color: white;
+  text-decoration: none; 
 }
-#logo-1
+.header a.logo .logo-1
 {
   background-color: blue;
   animation: logo1 2s 1;
   position: relative;
 }
-#logo-2
+.header a.logo .logo-2
 {
   background-color: red;
   animation: logo2 2s 1;
@@ -51,6 +48,7 @@ body
 .header-right 
 {
   float: right;
+  margin-top: 10px
 }
 @keyframes logo1
 {
@@ -85,6 +83,7 @@ body
   grid-auto-rows: 116px; 
   /* background-color: #1d1d1d; */
   background-color: #606dbc;
+  background-color: #c6cdf8;
   padding: 20px;
   margin:0 auto; 
   border-radius: 16px;
@@ -96,8 +95,6 @@ body
   
     
 }
-/* grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end | itemname;*/
-
 .grid-item 
 {
   position: relative;
@@ -113,7 +110,6 @@ body
 {
   opacity: 1;
 }
-
 .tile-1 
 {
   grid-area: 1 / 1 / span 2 / span 2;
@@ -212,5 +208,81 @@ body
   {
     grid-area: 6 / 3 / span 1 / span 2;
   }
-  
 }
+
+
+
+.body-light-mode {
+  background-color: rgb(227, 234, 255);
+  color: black;
+}
+
+.mode-container
+{
+    margin: auto;
+    position: relative;
+    background-color: rgb(87, 89, 99);
+    box-shadow: 0 0 0 2px lightgrey;
+    border-radius: 99999px;
+    height: 30px;
+    width: 62px;
+    z-index: 0;
+}
+.mode-selector{
+    background-color: white;
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 62px;
+    height: 30px;
+    border-radius: 99999px;
+    z-index: 3;
+}
+.moon {
+    position: absolute;
+    opacity: 1;
+    top: -2px;
+    left: 30px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 0 0 rgb(227, 218, 94);
+    z-index: 2;
+    transform: scale(1);
+    transition: transform 1s ease-out;
+}
+.sun-points {
+    opacity: 1;
+    position: absolute;
+    top: 7px;
+    left: 9px;
+    width: 16px;
+    height: 16px;
+    box-shadow: 0 0 0 2px rgb(230, 230, 14);
+    z-index: 2;
+    transform: scale(0.5);
+    transition: transform 1s ease-out;
+  }
+  .sun-points:before,
+  .sun-points:after {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    content: "";
+    height: 16px;
+    width: 16px;
+    background: rgb(230, 230, 14);
+    z-index: 2;
+  }
+  .sun-points:before {
+    transform: rotate(30deg);
+    box-shadow: 0 0 0 2px rgb(230, 230, 14);
+  }
+  .sun-points:after {
+    box-shadow: 0 0 0 4px rgb(230, 230, 14);
+    background: rgb(222, 173, 15);
+    outline: rgb(230, 230, 14) solid 2px;
+    transform: rotate(60deg);
+    border-radius: 50%;
+  }

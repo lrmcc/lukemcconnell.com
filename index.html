@@ -11,18 +11,22 @@
 </head>
 <body>
     <header>
-        <div class="header">
+        <div class="header" id="header">
             <a href="#default" class="logo">
-            <span id="logo-1">LUKE</span>
-            <span id="logo-2">MCCONNELL</span>
+            <span class="logo-1">LUKE</span>
+            <span class="logo-2">MCCONNELL</span>
             </a>
             <div class="header-right">
-                <button type="button">Dark Theme Active</button>
+                <div class="mode-container">
+                    <div class="sun-points" id="sun"></div>    
+                    <div class="moon" id="moon"></div>
+                    <div class="mode-selector" onclick="modeSelect()"></div>
+                </div>
             </div>
         </div>
     </header>
     
-    <div class="grid-container">
+    <div class="grid-container" id="grid-container">
         <div class="grid-item tile-1">Projects</div>
         <div class="grid-item tile-2">Web Dev</div>
         <div class="grid-item tile-3">Programming</div>
