@@ -3,64 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/main.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Luke McConnnell</title>
 </head>
 <body>
     <header>
         <div class="header" id="header">
             <a href="#default" id="logo" class="logo">
-                <span id="logo-first-name" class="logo-1">LUKE</span>
-                <span id="logo-last-name" class="logo-2">MCCONNELL</span>
+                <span id="logo-first-name" class="logo-1">Luke</span>
+                <span id="logo-last-name" class="logo-2">McConnell</span>
             </a>
-            <div id="mode-select" class="mode-container">
-                <div class="sun-points" id="sun"></div>    
-                <div class="moon" id="moon"></div>
-                <div class="mode-selector" onclick="modeSelect()"></div>
+            <div id="mode-select" class="mode-select">
+                <div id="mode-container" class="mode-container">
+                    <div class="sun-points" id="sun"></div>    
+                    <div class="moon" id="moon"></div>
+                    <div class="mode-selector" onclick="modeSelect()"></div>
+                </div>
             </div>
         </div>
     </header>
    <br>
     <div class="grid-container" id="grid-container">
-        <div class="grid-item main-item tile-1">
-            <div class="tile-name">PROJECTS</div>
-            <img src="images/canvas.png"  alt="Project Canvas" id="projects-img" class= "grid-img" width="176" height="232">
-        </div>
-        <div class="grid-item main-item tile-2">
-            <div class="tile-name">WEB DEV</div>
-            <img src="images/search.png" alt="Web search" id="web-dev-img" class= "grid-img" width="239" height="197">
-        </div>
-        <div class="grid-item main-item tile-3">
-            <div class="tile-name">PROGRAMMING</div>
-            <img src="images/program.png" alt="Programming terminal" id="programming-img" class= "grid-img" width="221" height="201">
-        </div>
-        <div class="grid-item main-item tile-4">
-            <div class="tile-name">MEDIA</div>
-            <img src="images/tv.png" alt="tv" id="media-img" class= "grid-img" width="212" height="197">
-        </div>
-        <div class="grid-item side-item tile-5">
-            <div class="tile-name">ABOUT</div>
-            <img src="images/about.png" alt="Information dialog" id="about-img" class= "grid-img" width="53" height="56">
-        </div>
-        <div class="grid-item side-item tile-6">
-            <div class="tile-name">VISION</div>
-            <img src="images/vision.png" alt="telescope" id="vision-img" class= "grid-img" width="50" height="60">
-        </div>
-        <div class="grid-item side-item tile-7">
-            <div class="tile-name">RESOURCES</div>
-            <img src="images/resources.png" alt="book" id="resources-img" class= "grid-img" width="78" height="58">
-        </div>
-        <div class="grid-item side-item tile-8">
-            <div class="tile-name">INSPIRATION</div>
-            <img src="images/ideaX.png" alt="lightbulb" id="inspiration-img" class= "grid-img" width="56" height="56" >
-        </div>
+        <a href="pages/projects.html" class="grid-link tile-1">
+            <div class="grid-item main-item">
+                <img src="images/projectz.png" alt="project icon">
+                <div class="main-section-name projects-name">PROJECTS</div>
+            </div> 
+        </a>
+        <a href="pages/dev.html" class="grid-link tile-2">
+             <div class="grid-item main-item">
+                 <img src="images/web dev.png" alt="browser icon">
+                <div class="main-section-name dev-name">DEVELOPMENT</div>
+            </div>
+        </a>
+        <a href="pages/media.html" class="grid-link tile-3">
+             <div class="grid-item main-item">
+                 <img src="images/media.png" alt="media icon">
+                <div class="main-section-name media-name">MEDIA</div>
+            </div>
+        </a>
+        <a href="pages/about.html" class="grid-link tile-4">
+             <div class="grid-item side-item">
+                <img src="images/about.png" alt="project icon">  
+                <div class="side-section-name about-name">ABOUT</div>
+            </div> 
+        </a>
+        <a href="pages/future.html" class="grid-link tile-5">
+             <div class="grid-item side-item">
+                <img src="images/sources.png" alt="project icon">  
+                <div class="side-section-name sources-name">SOURCES</div>
+            </div>
+        </a>
+        <a href="pages/generic.html" class="grid-link tile-6">
+            <div class="grid-item side-item">
+                <img src="images/interests.png" alt="project icon">  
+                <div class="side-section-name interests-name">INTERESTS</div>
+            </div> 
+        </a>
     </div>
 
     <footer id="footer">
-        <div id="footer-info">Copyright &copy; 2021 Luke McConnell <span style="font-size:x-large;">&#9993;</span> lukermcconnell@gmail.com</div> 	
+        <div id="footer-info">Copyright &copy; 2021 Luke McConnell</div> 	
     </footer>
 
 
