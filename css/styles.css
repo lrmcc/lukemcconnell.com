@@ -5,7 +5,8 @@ body
   font-family: Arial, Helvetica, sans-serif;
   background-color: #434242;
   margin: 0 auto;
-  overflow: auto; 
+  overflow-y: scroll;
+  overflow-x: hidden;
   color: white;
 }
 
@@ -47,10 +48,11 @@ body
 }
 .mode-select
 {
-  position: absolute;
+  /* position: absolute;
   top:5px;
-  right: 100px;
+  right: 100px; */
 } 
+
 .body-light-mode {
   background-color:#e3e3e3;
   color: black;
@@ -64,6 +66,8 @@ body
     border-radius: 99999px;
     height: 30px;
     width: 62px;
+    left:18px;
+    bottom: 4px;
     z-index: 0;
 }
 .mode-selector{
@@ -76,6 +80,46 @@ body
     height: 30px;
     border-radius: 99999px;
     z-index: 3;
+}
+
+.dropdown-menu {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-menu .dropdown-icon {
+  font-size: 30px;  
+  border: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: min-content;
+  border-radius: 5px;
+  left:5px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown-menu:hover .dropdown-content {
+  display: block;
 }
 
 .grid-container
@@ -208,6 +252,27 @@ body
 .tile-6 
 {
   grid-area: 3 / 10 / 4 / 11;
+}
+.page-title
+{
+  grid-area: 1 / 1 / 2 / 4;
+}
+.page-image
+{
+  grid-area: 1 / 6 / 3 / 12;
+  border-radius: 2%;
+}
+.page-content-1
+{
+  grid-area: 3 / 1 / 4 / 12;
+}
+.page-content-2
+{
+  grid-area: 5 / 1 / 6 / 12;
+}
+.page-content-3
+{
+  grid-area: 7 / 1 / 12 / 12;
 }
 @media screen and (max-width:1150px) {
   body 
