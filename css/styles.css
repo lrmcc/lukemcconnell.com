@@ -266,24 +266,9 @@ body
 {
   font-size: 20px; 
   text-align: left;
-}
-.page-content:hover
-{
   background-color: #5e5e5e;
   border-radius: 8px;
   border: 4px solid #5e5e5e;
-}
-.page-content-project
-{
-  font-size: 20px; 
-  text-align: left;
-  background-color: #5e5e5e;
-  border-radius: 8px;
-  border: 4px solid #5e5e5e;
-}
-.project-links:hover
-{
-  border: none;
 }
 .page-link{
   color: inherit; 
@@ -299,9 +284,20 @@ body
 {
   grid-area: 3 / 7 / 4 / 12;
 }
+.page-content-1-side
+{
+  grid-area: 3 / 6 / 4 / 12;
+}
+.page-content-1-media{
+  grid-area: 3 / 8 / 4 / 12;
+}
 .page-image-top-right
 {
   grid-area: 3 / 8 / 4 / 12;
+  border-radius: 2%;
+}
+.page-image-top-media{
+  grid-area: 3 / 1 / 4 / 8;
   border-radius: 2%;
 }
 .page-image-top-left
