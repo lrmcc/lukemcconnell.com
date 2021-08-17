@@ -15,7 +15,7 @@
     <header>
         <div class="header" id="header">
             <div class="dropdown-menu">
-                <button class="dropdown-icon">&#8801;</button>
+                <button class="dropdown-icon" id="dropdown-icon">&#8801;</button>
                 <div class="dropdown-content">
                     <a href="../index.html">Home</a>
                     <a href="projects.html">Projects</a>
@@ -24,30 +24,31 @@
                     <a href="about.html">About</a>
 					<a href="resources.html">Resources</a>
                     <a href="interests.html">Interests</a>
+                    <a href="contact.html">Contact</a>
                     <hr>
-                    <div id="mode-select" class="mode-select">
+                    <div id="mode-select" class="mode-select" title="Light/Dark Mode">
                         <div id="mode-container" class="mode-container">
                             <div class="sun-points" id="sun"></div>
                             <div class="moon" id="moon"></div>
-                            <div class="mode-selector" onclick="modeSelect()"></div>
+                            <div class="mode-selector mode-toggle"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="header-space"></div>
             <a href="../index.html" id="logo" class="logo">
-                <span id="logo-first-name">Luke</span>
-                <span id="logo-last-name">McConnell</span>
+                <span id="logo-first-name" class="logo-1">Luke</span>
+                <span id="logo-last-name" class="logo-2">McConnell</span>
             </a>
         </div>
     </header>
     <br>
 
     <div class="grid-container" id="grid-container">
-        <h1 class="page-title">Media</h1>
+        <h1 class="page-title" id="page-title">Media</h1>
         <img src="../images/tomoe.jpg" class="page-image-top-media" alt="camera" style="width: 600px;"/>
         <!-- Photo by piyush dubey  https://unsplash.com/photos/svu5bdsfsUk -->
-        <div class="page-content page-content-1-media">
+        <div class="page-content page-content-media-1">
             I am a hobbyist photographer, videographer and digital animator. 
             This area of the site is an opportunity for me to display some of my creative side.
             The still images were shot with my Nikon D5600. 
@@ -64,9 +65,9 @@
         
     </div>
     </div>
-    <footer id="footer">
-		<div id="footer-info">Copyright &copy; 2021 Luke McConnell</div>
-	</footer>
+    <footer class="footer">
+        <div class="footer-info">Copyright &copy; 2021 Luke McConnell</div>
+    </footer>
 
 
 </body>

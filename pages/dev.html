@@ -15,56 +15,125 @@
     <header>
         <div class="header" id="header">
             <div class="dropdown-menu">
-                <button class="dropdown-icon">&#8801;</button>
+                <button class="dropdown-icon" id="dropdown-icon">&#8801;</button>
                 <div class="dropdown-content">
                     <a href="../index.html">Home</a>
                     <a href="projects.html">Projects</a>
                     <a href="media.html">Media</a>
                     <hr>
                     <a href="about.html">About</a>
-					<a href="resources.html">Resources</a>
+                    <a href="resources.html">Resources</a>
                     <a href="interests.html">Interests</a>
+                    <a href="contact.html">Contact</a>
                     <hr>
-                    <div id="mode-select" class="mode-select">
+                    <div id="mode-select" class="mode-select" title="Light/Dark Mode">
                         <div id="mode-container" class="mode-container">
                             <div class="sun-points" id="sun"></div>
                             <div class="moon" id="moon"></div>
-                            <div class="mode-selector" onclick="modeSelect()"></div>
+                            <div class="mode-selector mode-toggle"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="header-space"></div>
             <a href="../index.html" id="logo" class="logo">
-                <span id="logo-first-name">Luke</span>
-                <span id="logo-last-name">McConnell</span>
+                <span id="logo-first-name" class="logo-1">Luke</span>
+                <span id="logo-last-name" class="logo-2">McConnell</span>
             </a>
         </div>
     </header>
     <br>
 
     <div class="grid-container" id="grid-container">
-        <h1 class="page-title">Dev</h1>
-        <img src="../images/dev-image.jpg" class="page-image-top-left" alt="computer" style="width: 420px;"/>
+        <h1 class="page-title" id="page-title">Dev</h1>
+        <img src="../images/dev-image.jpg" class="page-image-top-left" alt="computer" style="width: 420px;" />
         <!-- Photo by AltumCode https://unsplash.com/photos/oZ61KFUQsus -->
-        <div class="page-content page-content-1-main">
-            This page contains selected web and software development work. Each is provided with a description and use case analysis.
+
+        <div class="page-content page-content-main">
+            The following describes development work I've worked on in the past, am currently working on, or plan to work on.
+            <hr>
+            <ul>
+                <li><a href="#Personal" class="page-link">Personal</a></li>
+                <br>
+                <li><a href="#Professional" class="page-link">Professional</a></li>
+                <br>
+                <li><a href="#Open_Source" class="page-link">Freelance & Open Source</a></li>
+            </ul>
         </div>
 
-        <div class="page-content page-content-2">
-            
+        <div class="page-content page-content-dev-1">
+            <h2 id="Personal">Personal</h2>
+            <p>
+                The software development ventures I have taken on for personal use have varied in scope from a simple 
+                bash script to control keyboard LEDs, to a python program that sifted through financial data that outputted
+                custom D3 visualizations. I also made a scrolling video game with the Javascript library Phaser, 
+                where I used some custom sprite sheets to create a hostile environment to overcome.
+                I have stored some of this on my Github, but others I have intentionally kept in offline repositories.
+                Since Github is a way to view and measure an individuals skills, I plan to contribute more as time goes on.
+                To show some of what I've made for strictly web, I will be embedding some code pens into this site. 
+                This is just the beginning!
+            </p>
         </div>
 
-        <div class="page-content page-content-3">
-           
+        <div class="page-content page-content-dev-2">
+            <h2 id="Professional">Professional</h2>
+            <p>
+                Since I began working as a Software Developer, I have completed a number of assignments in a variety of languages.
+                <hr>
+                I designed and built a software installation script in Powershell for my first asignment,. 
+                The script is launched by double-clicking on an icon within the installation CD.
+                It began by disabling a number of running Microsoft services and detaching multiple databases from MSSQL Server.
+                Then it copied files over from the CD into specific directories on the computer. 
+                Lastly, the script restarted the computer, reattched the databases and enabled the services.
+                <hr>
+                Next I contributed to a ASP.NET Razor Pages web site. 
+                I created stories and pushed code to an Azure DevOps repository. 
+                On this project I used C#, HTML, CSS, Javascript, and Regex.
+                My contributions added additional front-end and back-end functionalities. 
+                <hr>
+                Recently, I studied, designed, and delivered an enterprise-level software design proposal. 
+                The project has since transitioned into development which is ongoing. 
+                I feel like it is an especially valuable experience to work as a developer on a large software project I helped to design. 
+                The product is an instantiable containerized software. 
+                Each instance is able to accept unique data streams from a source via TCP/IP connection 
+                The data streams are then parsed into messages and then published to a message broker (like ActiveMQ).
+                An instance is also able to recieve messages as a subscriber, reconstruct the messages to a data stream 
+                and send the stream to a recipient system via TCP/IP.
+                The intent is to allow for a third-party to create subscribers to recieve standardized messages intended for a variety of recipients. 
+                A goal of the enterprise serice is to remain tecnology stack independent. 
+                One part of this is to use an API wrapper for the message broker that allows for using one standard 
+                for a number of messaging services. There is essentially two main development efforts. 
+                The first portion of development will focus on creating the message passing infrastructure 
+                to accept and send data streams, create messages, and interact with the message broker.
+                The second effort is to work with each recipient system's unique message formats 
+                to accurately parse data streams into messages and back, while maintaining data integrity.
+            </p>
         </div>
-        
+
+        <div class="page-content page-content-dev-3">
+            <h2 id="Open_Source">Freelance & Open Source</h2>
+            <p>
+                While I haven't contributed to any Open Source projects yet, I have created this area of the site 
+                to hold my accountable and follow through with my desire to do so. I have researched and connected with
+                the code base of a block-chain technology I plan to work with. I will update the site when I have 
+                contributed something noteworthy. 
+                I can see working with the one project I have in mind, but beyond that will likely focus on paid work.
+                <hr>
+                I haven't begun taking on freelance work. I plan to do this once I have a larger online presence.
+                This will probably be one of the last areas of the site to be updated based on my priorities. 
+                However, my ambition for freelance work makes this an inevitability in my mind. 
+                I'll report back when progress has been made. Hopefully, this will span into its own section of the site.
+            </p>
+        </div>
+
+
     </div>
     </div>
-    <footer id="footer">
-		<div id="footer-info">Copyright &copy; 2021 Luke McConnell</div>
-	</footer>
+    <footer class="footer">
+        <div class="footer-info">Copyright &copy; 2021 Luke McConnell</div>
+    </footer>
 
 
 </body>
+
 </html>

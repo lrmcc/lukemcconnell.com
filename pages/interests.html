@@ -15,7 +15,7 @@
     <header>
         <div class="header" id="header">
             <div class="dropdown-menu">
-                <button class="dropdown-icon">&#8801;</button>
+                <button class="dropdown-icon" id="dropdown-icon">&#8801;</button>
                 <div class="dropdown-content">
                     <a href="../index.html">Home</a>
                     <a href="projects.html">Projects</a>
@@ -24,31 +24,32 @@
                     <hr>
                     <a href="about.html">About</a>
 					<a href="resources.html">Resources</a>
+                    <a href="contact.html">Contact</a>
                     <hr>
-                    <div id="mode-select" class="mode-select">
+                    <div id="mode-select" class="mode-select" title="Light/Dark Mode">
                         <div id="mode-container" class="mode-container">
                             <div class="sun-points" id="sun"></div>
                             <div class="moon" id="moon"></div>
-                            <div class="mode-selector" onclick="modeSelect()"></div>
+                            <div class="mode-selector mode-toggle"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="header-space"></div>
             <a href="../index.html" id="logo" class="logo">
-                <span id="logo-first-name">Luke</span>
-                <span id="logo-last-name">McConnell</span>
+                <span id="logo-first-name" class="logo-1">Luke</span>
+                <span id="logo-last-name" class="logo-2">McConnell</span>
             </a>
         </div>
     </header>
     <br>
 
     <div class="grid-container" id="grid-container">
-        <h1 class="page-title">Interests</h1>
+        <h1 class="page-title" id="page-title">Interests</h1>
         <img src="../images/interests-image.jpg" class="page-image-top-left" alt="beach" style="width: 420px;"/>
         <!-- Photo by Ralph (Ravi) Kayden https://unsplash.com/photos/NNik2I50ng4 -->
   
-        <div class="page-content page-content-1-side">
+        <div class="page-content page-content-side">
             Below is an unordered listing of my interests, the depths to which I've pursued them, 
             and explanations with links to what I view are reliable sources.
         </div>
@@ -63,9 +64,9 @@
         
     </div>
     </div>
-    <footer id="footer">
-		<div id="footer-info">Copyright &copy; 2021 Luke McConnell</div>
-	</footer>
+    <footer class="footer">
+        <div class="footer-info">Copyright &copy; 2021 Luke McConnell</div>
+    </footer>
 
 
 </body>
