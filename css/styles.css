@@ -372,6 +372,9 @@ body.dark-theme div.moon {
 {
   grid-area: 7 / 1 / 8 / 12;
 }
+.page-content-interests-1{
+  grid-area: 5 / 1 / 6 / 12;
+}
 .page-image-top-right
 {
   grid-area: 3 / 8 / 4 / 12;
