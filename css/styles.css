@@ -402,22 +402,34 @@ body.dark-theme div.moon {
   width: 100%;
 }
 .gallery-img1{
-  grid-area: 5 / 1 / 7 / 4;
+  grid-area: 5 / 5 / 6 / 12;
 }
 .gallery-img2{
-  grid-area: 5 / 5 / 7 / 12;
+  grid-area: 7 / 1 / 8 / 7;
 }
 .gallery-img3{
-  grid-area: 7 / 1 / 9 / 7;
+  grid-area: 9 / 5 / 10 / 12;
 }
 .gallery-img4{
-  grid-area: 7 / 8 / 9 / 12;
+  grid-area: 11 / 1 / 12 / 7;
 }
 .gallery-img5{
-  grid-area: 9 / 1 / 12 / 6;
+  grid-area: 13 / 5 / 14 / 12;
 }
 .gallery-img6{
-  grid-area: 9 / 7 / 12 / 12;
+  grid-area: 15 / 1 / 16 / 7;
+}
+.gallery-img7{
+  grid-area: 17 / 5 / 18 / 12;
+}
+.gallery-img8{
+  grid-area: 19 / 1 / 20 / 7;
+}
+.gallery-img9{
+  grid-area: 21 / 5 / 22 / 12;
+}
+.gallery-img10{
+  grid-area: 23 / 1 / 24 / 7;
 }
 @media screen and (max-width:1150px) {
   body 
