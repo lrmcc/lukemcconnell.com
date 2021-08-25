@@ -328,52 +328,25 @@ body.dark-theme div.moon {
 {
   grid-area: 9 / 1 / 12 / 12;
 }
-.page-content-project-1
+.page-content-1
 {
   grid-area: 5 / 1 / 6 / 12;
 }
-.page-content-project-2
+.page-content-2
 {
   grid-area: 7 / 1 / 8 / 12;
 }
-.page-content-project-3
+.page-content-3
 {
   grid-area: 9 / 1 / 10 / 12;
 }
-.page-content-project-4
+.page-content-4
 {
   grid-area: 11 / 1 / 12 / 12;
 }
-.page-content-project-5
+.page-content-5
 {
   grid-area: 13 / 1 / 14 / 12;
-}
-.page-content-dev-1
-{
-  grid-area: 5 / 1 / 6 / 12;
-}
-.page-content-dev-2
-{
-  grid-area: 7 / 1 / 8 / 12;
-}
-.page-content-dev-3
-{
-  grid-area: 9 / 1 / 10 / 12;
-}
-.page-content-dev-4
-{
-  grid-area: 11 / 1 / 12 / 12;
-}
-.page-content-resources-1
-{
-  grid-area: 5 / 1 / 6 / 12;
-}
-.page-content-resources-2
-{
-  grid-area: 7 / 1 / 8 / 12;
-}
-.page-content-interests-1{
-  grid-area: 5 / 1 / 6 / 12;
 }
 .page-image-top-right
 {
@@ -394,9 +367,6 @@ body.dark-theme div.moon {
   grid-area: 5 / 1 / 7 / 5;
   border-radius: 2%;
 }
-
-
-
 .gallery-image{
   border-radius: 8px;
   width: 100%;
