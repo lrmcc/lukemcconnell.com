@@ -87,7 +87,7 @@ body
 .dropdown-menu .dropdown-icon {
   font-size: 50px;  
   border: none;
-  color: var(dropdown-menu-icon);
+  color: var(--dropdown-menu-icon);
   background-color: inherit;
   font-family: inherit;
 }
@@ -563,33 +563,3 @@ body.dark-theme div.moon {
     float: none;
   }
 }
-
-/* .grid-container
-{
-  position: relative;
-  display: grid;
-  margin:auto;
-  grid-template-columns: repeat(12, 90px);
-  grid-auto-rows: min-content;  
-  align-items: center;
-  justify-items:center; 
-  width: 100%;
-  height: fit-content;
-  left: 15%;
-  gap: 20px 0px;
-}
-.grid-link{
-  text-decoration: inherit;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-}
-.grid-item 
-{
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  min-width: 100px;
-  border-radius: 10px;
-  position: relative;
-} */
