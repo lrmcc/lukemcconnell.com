@@ -488,10 +488,10 @@ body.dark-theme div.moon {
 }
 
 @media screen and (max-width:1164px) {
-  body 
+  /* body 
   {
     background-color: pink;
-  }
+  } */
   .grid-container{
     grid-template-columns: repeat(12, 80px);
     margin-left: none;
@@ -514,10 +514,10 @@ body.dark-theme div.moon {
 @media screen and (max-width: 900px) 
 {
   /* start of large tablet styles */
-  body 
+  /* body 
   {
     background-color: yellow;
-  }
+  } */
   .grid-container{
     grid-template-columns: repeat(12, 65px);
   }
@@ -530,10 +530,10 @@ body.dark-theme div.moon {
 
 @media screen and (max-width: 840px) 
 {
-  body 
+  /* body 
   {
     background-color: rgb(9, 84, 84);
-  }
+  } */
   .grid-container{
     grid-template-columns: repeat(12, 60px);
     left: 3%;
