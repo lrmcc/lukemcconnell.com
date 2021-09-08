@@ -477,15 +477,21 @@ body.dark-theme div.moon {
     background-color: pink;
   }
   .grid-container{
-    grid-template-columns: repeat(12, 76px);
+    grid-template-columns: repeat(12, 80px);
     margin-left: none;
     margin-right: none;
-    left: 10%;
+    left: 8%;
   }
   grid-item {
     height: 80%;
     width: 80%;
     min-width: 70px;
+  }
+}
+@media screen and (max-width:1032px) {
+  .grid-container{
+    grid-template-columns: repeat(12, 72px);
+    left: 7%;
   }
 }
 
@@ -497,11 +503,11 @@ body.dark-theme div.moon {
     background-color: yellow;
   }
   .grid-container{
-    grid-template-columns: repeat(12, 80px);
+    grid-template-columns: repeat(12, 65px);
   }
   .grid-item {
-    width: 80%;
-    min-width: 70px;
+    width: 60%;
+    min-width: 50px;
   }
  
 }
@@ -512,16 +518,36 @@ body.dark-theme div.moon {
   {
     background-color: rgb(9, 84, 84);
   }
-  .grid-container
+  .grid-container{
+    grid-template-columns: repeat(12, 60px);
+    left: 3%;
+  }
+  .grid-item {
+    width: 80%;
+    min-width: 80px;
+  }
+  .tile-1 
   {
-    width: 520px;
-    height: 785px;
-    gap: 10px;
-  } 
-  .grid-item 
+    grid-area: 1 / 1 / 2 / 12;
+  }
+  .tile-2 {
+    grid-area: 3 / 1 / 4 / 12;
+  }
+  .tile-3 
   {
-    margin-right: 2%;
-    margin-left: 2%;
+    grid-area: 5 / 1 / 6 / 12;
+  }
+  .tile-4 
+  {
+    grid-area: 7 / 1 / 8 / 12; 
+  }
+  .tile-5 
+  {
+    grid-area: 9 / 1 / 10 / 12;
+  }
+  .tile-6 
+  {
+    grid-area: 11 / 1 / 12 / 12;
   }
 }
 @media screen and (max-width: 500px) 
@@ -537,3 +563,33 @@ body.dark-theme div.moon {
     float: none;
   }
 }
+
+/* .grid-container
+{
+  position: relative;
+  display: grid;
+  margin:auto;
+  grid-template-columns: repeat(12, 90px);
+  grid-auto-rows: min-content;  
+  align-items: center;
+  justify-items:center; 
+  width: 100%;
+  height: fit-content;
+  left: 15%;
+  gap: 20px 0px;
+}
+.grid-link{
+  text-decoration: inherit;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+.grid-item 
+{
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  min-width: 100px;
+  border-radius: 10px;
+  position: relative;
+} */
