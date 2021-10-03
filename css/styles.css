@@ -161,7 +161,7 @@ body
 
 .main-section-name{
   color: white;
-  background-color: var(--light-theme-main);
+  background-color: none;
   border-radius: 6px;
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
@@ -169,7 +169,7 @@ body
 }
 .side-section-name{
   color: white;
-  background-color: var(--light-theme-main);
+  background-color: none;
   border-radius: 6px;
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
@@ -200,7 +200,7 @@ body
   left: 20px;
 }
 .resources-name{
-  left: 5px;
+  left: 2px;
 }
 .interests-name{
   left: 10px;
@@ -211,13 +211,6 @@ body
   font-size: 20px;
   text-align: center;
   width: 100%;
-}
-.side-item:hover > div.resources-name{
-  top: 60px;
-  left: -6px;
-  font-size: 20px;
-  text-align: center;
-  width: 120%;
 }
 
 .tile-1 
@@ -491,6 +484,7 @@ body.dark-theme div.moon {
   body 
   {
     width: auto;
+    background-color: red;
   } 
   .grid-container{
     grid-template-columns: repeat(12, 80px);
@@ -503,11 +497,49 @@ body.dark-theme div.moon {
     width: 80%;
     min-width: 70px;
   }
+  .projects-name{
+    left: 96px;
+  }
+  .dev-name{
+    left: 40px;
+  }
+  .media-name{
+    left: 30px;
+  }
+  .main-item:hover > div.projects-name{
+    left: 40px;
+  }
+  .main-item:hover > div.media-name{
+    left: 10px;
+  }
+  .about-name{
+    left: 4px;
+  }
+  .resources-name{
+    left: -12px;
+  }
+  .interests-name{
+    left: -6px;
+  }
+  .side-item:hover > div.resources-name{
+    left: -20px;
+  }
+  .side-item:hover > div.interests-name{
+    left: -10px;
+  }
 }
-@media screen and (max-width:1032px) {
+@media screen and (max-width: 1032px) {
+  body 
+  {
+    width: auto;
+    background-color: pink;
+  } 
   .grid-container{
     grid-template-columns: repeat(12, 72px);
     left: 7%;
+  }
+  .main-item:hover > div.media-name{
+    left: 20px;
   }
 }
 
@@ -517,6 +549,7 @@ body.dark-theme div.moon {
   body 
   {
     width: auto;
+    background-color: green;
   } 
   .grid-container{
     grid-template-columns: repeat(12, 65px);
@@ -525,7 +558,9 @@ body.dark-theme div.moon {
     width: 60%;
     min-width: 50px;
   }
- 
+  .main-item:hover > div.media-name{
+    left: 40px;
+  }
 }
 
 @media screen and (max-width: 840px) 
@@ -533,6 +568,7 @@ body.dark-theme div.moon {
    body 
   {
     width: auto;
+    background-color: pink;
   } 
   .grid-container{
     grid-template-columns: repeat(12, 60px);
@@ -565,9 +601,45 @@ body.dark-theme div.moon {
   {
     grid-area: 11 / 1 / 12 / 12;
   }
+  .projects-name{
+    left: 240px;
+  }
+  .dev-name{
+    left: 181px;
+  }
+  .media-name{
+    left: 164px;
+  }
+  .main-item:hover > div.projects-name{
+    top: 64px;
+    left: 3px;
+  }
+  .main-item:hover > div.media-name{
+    left: -20px;
+  }
+  .about-name{
+    left: 234px;
+  }
+  .resources-name{
+    left: 214px;
+  }
+  .interests-name{
+    left: 220px;
+  }
+  .side-item:hover > div.resources-name{
+    left: 0px;
+  }
+  .side-item:hover > div.interests-name{
+    left: 0px;
+  }
 }
 @media screen and (max-width: 500px) 
 {
+  body 
+  {
+    width: auto;
+    background-color: green;
+  } 
   .header a 
   {
     float: none;
