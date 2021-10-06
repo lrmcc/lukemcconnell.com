@@ -196,13 +196,17 @@ body
   text-align: center;
   width: 100%;
 }
+.main-item:hover > div.media-name{
+  top: 66px;
+  left: -20px;
+}
 .about-name{
   left: 20px;
 }
 .resources-name{
   left: 2px;
 }
-.interests-name{
+.contact-name{
   left: 10px;
 }
 .side-item:hover > div.side-section-name{
@@ -518,13 +522,13 @@ body.dark-theme div.moon {
   .resources-name{
     left: -12px;
   }
-  .interests-name{
+  .contact-name{
     left: -6px;
   }
   .side-item:hover > div.resources-name{
     left: -20px;
   }
-  .side-item:hover > div.interests-name{
+  .side-item:hover > div.contact-name{
     left: -10px;
   }
 }
@@ -623,13 +627,13 @@ body.dark-theme div.moon {
   .resources-name{
     left: 214px;
   }
-  .interests-name{
+  .contact-name{
     left: 220px;
   }
   .side-item:hover > div.resources-name{
     left: 0px;
   }
-  .side-item:hover > div.interests-name{
+  .side-item:hover > div.contact-name{
     left: 0px;
   }
 }
@@ -638,7 +642,7 @@ body.dark-theme div.moon {
   body 
   {
     width: auto;
-    background-color: green;
+    background-color: blueviolet;
   } 
   .header a 
   {
