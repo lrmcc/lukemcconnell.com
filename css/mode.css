@@ -1,0 +1,120 @@
+@import url(styles.css);
+
+.mode-container
+{
+    position: relative;
+    background-color: var(--dark-theme-main);
+    box-shadow: 0 0 0 2px lightgrey;
+    border-radius: 99999px;
+    height: 30px;
+    width: 62px;
+    left:18px;
+    bottom: 4px;
+    z-index: 0;
+}
+.mode-selector{
+    background-color: white;
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 62px;
+    height: 30px;
+    border-radius: 99999px;
+    z-index: 3;
+}
+.moon {
+    position: absolute;
+    opacity: 1;
+    top: -2px;
+    left: 26px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 0 0 rgba(220, 220, 219, 0.969);
+    z-index: 2;
+    transform: scale(0.5);
+    transition: transform 1s ease-out;
+}
+
+.sun-points {
+    opacity: 1;
+    position: absolute;
+    top: 7px;
+    left: 9px;
+    width: 16px;
+    height: 16px;
+    box-shadow: 0 0 0 2px rgb(230, 230, 230);
+    z-index: 2;
+    transform: scale(1);
+    transition: transform 1s ease-out;
+  }
+  .sun-points:before,
+  .sun-points:after {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    content: "";
+    height: 16px;
+    width: 16px;
+    background: rgb(230, 230, 230);
+    z-index: 2;
+  }
+  .sun-points:before {
+    transform: rotate(30deg);
+    box-shadow: 0 0 0 2px rgb(230, 230, 230);
+  }
+  .sun-points:after {
+
+    box-shadow: 0 0 0 4px rgb(230, 230, 230);
+    background: rgb(200, 200, 200);
+    outline: rgb(230, 230, 230) solid 2px;
+    transform: rotate(60deg);
+    border-radius: 50%;
+  }
+
+body.dark-theme {
+  color: var(--dark-theme-text);
+  background-color: var(--dark-theme-main);
+}
+body.dark-theme .main-section-name{
+  background-color: var(--dark-theme-main);
+}
+body.dark-theme .side-section-name{
+  background-color: var(--dark-theme-main);
+}
+body.dark-theme a {
+  color: var(--dark-theme-text);
+}
+body.dark-theme .dropdown-content {
+  background-color: var(--dark-theme-main);
+}
+body.dark-theme .dropdown-content a:hover {
+  background-color: rgb(147, 147, 147);
+}
+body.dark-theme button.dropdown-icon{
+  color: var(--dark-theme-text);
+}
+body.dark-theme div.footer-info {
+  color: var(--dark-theme-text);
+}
+body.dark-theme a.logo {
+  color: var(--dark-theme-text);
+} 
+body.dark-theme .page-title {
+  color: var(--dark-theme-text);
+} 
+body.dark-theme .page-content {
+  color: var(--dark-theme-text);
+  border: 5px solid var(--dark-theme-text-bg);
+  background-color: var(--dark-theme-text-bg);
+} 
+body.dark-theme .page-link:hover {
+  color: rgb(247, 121, 184);
+}
+body.dark-theme div.sun-points {
+  transform: scale(0.45);
+}
+body.dark-theme div.moon {
+  transform: scale(1.05);
+}

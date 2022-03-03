@@ -1,20 +1,16 @@
-const modeBtn = document.querySelector(".mode-toggle");
+// Create a condition that targets viewports at least 768px wide
+const mediaQuery = window.matchMedia('(min-width: 768px)')
 
-// Get current "theme" from local storage, if equals "dark"
-// add to classList and therefore toggle CSS
-const currentTheme = localStorage.getItem("theme");
-if (currentTheme == "dark") {
-  document.body.classList.add("dark-theme");
+function handleTabletChange(e) {
+  // Check if the media query is true
+  if (e.matches) {
+    // Then log the following message to the console
+    console.log('Media Query Matched!')
+  }
 }
 
-modeBtn.addEventListener("click", function () {
-    // Toggle mode upon click
-    document.body.classList.toggle("dark-theme");
-    
-    // If dark-theme toggled set local storage "theme" to dark 
-    let theme = "light";
-    if (document.body.classList.contains("dark-theme")) {
-      theme = "dark";
-    }
-    localStorage.setItem("theme", theme);
-  });
+// Register event listener
+mediaQuery.addListener(handleTabletChange)
+
+// Initial check
+handleTabletChange(mediaQuery)
