@@ -1,15 +1,49 @@
 @import url(styles.css);
 
-.gallery-image{
-    border-radius: 8px;
-    width: 100%;
-    -webkit-box-shadow: -4px 4px 1px 0px rgba(7,61,61,0.6), -8px 8px 2px 0px rgba(8,80,80,0.5), -12px 12px 4px 0px rgba(10,90,90,0.4); 
-    box-shadow: -4px 4px 1px 0px rgba(7,61,61,0.6), -8px 8px 2px 0px rgba(8,80,80,0.5), -12px 12px 4px 0px rgba(10,90,90,0.4);
-  }
-  .img{
+
+.img{
     border-radius: 5px;
-  }
-  .resizable-img{
-    max-width: 100%; 
-    height: auto;
-  }
+}
+.resizable-img{
+  max-width: 100%; 
+  height: auto;
+}
+.gallery-image{
+  border-radius: 8px;
+  width: 100%;
+  -webkit-box-shadow: -4px 4px 1px 0px rgba(7,61,61,0.6), -8px 8px 2px 0px rgba(8,80,80,0.5), -12px 12px 4px 0px rgba(10,90,90,0.4); 
+  box-shadow: -4px 4px 1px 0px rgba(7,61,61,0.6), -8px 8px 2px 0px rgba(8,80,80,0.5), -12px 12px 4px 0px rgba(10,90,90,0.4);
+}
+.gallery-img1 {
+  grid-area: 5 / 1 / 6 / 7;
+}
+.gallery-img2 {
+  grid-area: 7 / 5 / 8 / 12;
+}
+.gallery-img3 {
+  grid-area: 9 / 1 / 10 / 7;
+}
+.gallery-img4 {
+  grid-area: 11 / 5 / 12 / 12;
+}
+.gallery-img5 {
+  grid-area: 13 / 1 / 14 / 7;
+}
+.gallery-img6 {
+  grid-area: 15 / 5 / 16 / 12;
+}
+.gallery-img7 {
+  grid-area: 17 / 1 / 18 / 7;
+}
+.gallery-img8 {
+  grid-area: 19 / 5 / 20 / 12;
+}
+.gallery-img9 {
+  grid-area: 21 / 1 / 22 / 7;
+}
+.gallery-img10 {
+  grid-area: 23 / 5 / 24 / 12;
+}
+.gallery-img11 {
+  grid-area: 25 / 1 / 26 / 7;
+}

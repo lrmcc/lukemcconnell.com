@@ -2,42 +2,76 @@
 
 .grid {
     position: absolute;
+    width: 100%;
 }
 .grid-container {
   position: relative;
   display: grid;
-  margin:auto;
   grid-template-columns: repeat(12, 90px);
   grid-auto-rows: min-content;  
   align-items: center;
+  text-align: center;
   justify-items:center; 
-  width: 100%;
   height: fit-content;
   left: 15%;
   gap: 20px 20px;
 }
-.grid-link {
+.grid-container a{
   text-decoration: inherit;
-  text-align: center;
   height: 100%;
   width: 100%;
 }
 .grid-item {
-  text-align: center;
   height: 100%;
   width: 100%;
   min-width: 100px;
   border-radius: 10px;
   position: relative;
 }
-.site-row-1 {
-  grid-area: 1 / 1 / 2 / 12;
+
+.grid-right {
+  grid-column: 7 / 11;
+  border-radius: 2%;
 }
-.site-row-2 {
-  grid-area: 2 / 1 / 3 / 12;
+.grid-left {
+  grid-column: 2 / 6;
+  border-radius: 2%;
 }
-.site-row-3 {
-  grid-area: 3 / 1 / 4 / 12;
+.row-content {
+  grid-column: 2 / 11;
+}
+.row-1 {
+  grid-row: 1 / 2;
+}
+.row-2 {
+  grid-row: 2 / 3;
+}
+.row-3 {
+  grid-row: 3 / 4;
+}
+.row-4 {
+  grid-row: 4 / 5;
+}
+.row-5 {
+  grid-row: 4 / 5;
+}
+.row-6 {
+  grid-row: 4 / 5;
+}
+.row-7 {
+  grid-row: 4 / 5;
+}
+.row-8 {
+  grid-row: 4 / 5;
+}
+.col-1{
+  grid-column: 1 / 2;
+}
+.col-2{
+  grid-area: 2 / 3;
+}
+.col-3{
+  grid-area: 3 / 4;
 }
 .tile-1 {
   grid-area: 4 / 1 / 5 / 4;
@@ -56,58 +90,4 @@
 }
 .tile-6 {
   grid-area: 5 / 10 / 6 / 11;
-}
-.page-content-1 {
-  grid-area: 4 / 2 / 5 / 11;
-}
-.page-content-2 {
-  grid-area: 6 / 2 / 7 / 11;
-}
-.page-content-3 {
-  grid-area: 8 / 2 / 9 / 11;
-}
-.page-content-4 {
-  grid-area: 10 / 2 / 11 / 11;
-}
-.page-content-5 {
-  grid-area: 12 / 2 / 13 / 11;
-}
-.page-content-6 {
-  grid-area: 14 / 2 / 15 / 11;
-}
-.page-content-7 {
-  grid-area: 16 / 2 / 17 / 11;
-}
-.gallery-img1 {
-  grid-area: 5 / 1 / 6 / 7;
-}
-.gallery-img2 {
-  grid-area: 7 / 5 / 8 / 12;
-}
-.gallery-img3 {
-  grid-area: 9 / 1 / 10 / 7;
-}
-.gallery-img4 {
-  grid-area: 11 / 5 / 12 / 12;
-}
-.gallery-img5 {
-  grid-area: 13 / 1 / 14 / 7;
-}
-.gallery-img6 {
-  grid-area: 15 / 5 / 16 / 12;
-}
-.gallery-img7 {
-  grid-area: 17 / 1 / 18 / 7;
-}
-.gallery-img8 {
-  grid-area: 19 / 5 / 20 / 12;
-}
-.gallery-img9 {
-  grid-area: 21 / 1 / 22 / 7;
-}
-.gallery-img10 {
-  grid-area: 23 / 5 / 24 / 12;
-}
-.gallery-img11 {
-  grid-area: 25 / 1 / 26 / 7;
 }
