@@ -20,28 +20,6 @@
   font-size: 0px;
   position: absolute;
 }
-.side-section-name{
-  color: var(--light-theme-text-alt);
-  background-color: none;
-  border-radius: 6px;
-  font-family: 'Cabin', sans-serif;
-  font-size: 0px;
-  top: 70px;
-  text-align: center;
-  position: absolute;
-}
-.projects-name{
-  top: 80px;
-  left: 110px;
-}
-.dev-name{
-  top: 160px;
-  left: 56px;
-}
-.media-name{
-  top: 60px;
-  left: 34px;
-}
 .main-item:hover > div.main-section-name{
   top: 30%;
   left: initial;
@@ -56,14 +34,15 @@
   top: 66px;
   left: -20px;
 }
-.about-name{
-  left: 20px;
-}
-.resources-name{
-  right: 0px;
-}
-.contact-name{
-  left: 10px;
+.side-section-name{
+  color: var(--light-theme-text-alt);
+  background-color: none;
+  border-radius: 6px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 0px;
+  top: 70px;
+  text-align: center;
+  position: absolute;
 }
 .side-item:hover > div.side-section-name{
   top: 60px;
