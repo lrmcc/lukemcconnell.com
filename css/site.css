@@ -1,22 +1,75 @@
 @import url(styles.css);
 
 .site{
-  padding-top: 100px;
+  padding-top: 5px;
 }
 .site-title
 {
-  position: relative;
   text-align: left;
-  display: inline-block;
+  font-size: 60px;
   left: 5%;
-  width:100%;
+  color: var(--light-theme-text-alt);
 }
-.no-select {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+.page-title {
+  font-size: 2.4em;
+  color: var(--light-theme-text-alt);
+  font-family: var(--site-font);
+  text-align: left;
+}
+.page-info{
+  position: sticky;
+  top: 40px; 
+  display: block;
+}
+.page-about-info {
+  max-height: fit-content;
+  grid-column: 6/9;
+  border-radius: 5px;
+}
+.page-link {
+  color: inherit;
+}
+.page-link:hover {
+  color: rgb(179, 10, 95);
+}
+.page-header-link {
+  display: block;
+}
+.page-line {
+  border: 1px solid var(--light-theme-text-alt);
+  border-radius: 2px;
+}
+.page-header-line {
+  margin: 10px 10px 0px 10px;
+  color: inherit;
+  border: 1px solid var(--light-theme-text-alt);
+  border-radius: 2px;
+}
+.page-icon {
+  margin: auto;
+  border-radius: 2%;
+}
+.page-banner {
+  color: var(--light-theme-text-alt);
+  background-color: rgb(179, 242, 181);
+  border: 2px inset rgb(152, 249, 155);
+  border-radius: 5px 5px 5px 5px;
+}
+.page-card {
+  width: 100%;
+  margin: 10px;
+  color: var(--light-theme-text-alt);
+  font-size: 20px; 
+  justify-self: start;
+  text-align: left;
+  border: 5px solid var(--light-theme-text-bg);
+  border-radius: 10px 12px 5px 5px;
+  background-color: var(--light-theme-text-bg); 
+  -webkit-box-shadow: -4px 4px 1px 0px rgba(7,61,61,0.6), -8px 8px 2px 0px rgba(8,80,80,0.5), -12px 12px 4px 0px rgba(10,90,90,0.4); 
+  box-shadow: -4px 4px 1px 0px rgba(7,61,61,0.6), -8px 8px 2px 0px rgba(8,80,80,0.5), -12px 12px 4px 0px rgba(10,90,90,0.4);
+}
+.page-contact{
+  justify-self: center;
+  align-self: center;
+  max-width: fit-content;
 }

@@ -1,15 +1,23 @@
 @import url(styles.css);
 
-.gallery-image{
-    border-radius: 8px;
-    width: 100%;
-    -webkit-box-shadow: -4px 4px 1px 0px rgba(7,61,61,0.6), -8px 8px 2px 0px rgba(8,80,80,0.5), -12px 12px 4px 0px rgba(10,90,90,0.4); 
-    box-shadow: -4px 4px 1px 0px rgba(7,61,61,0.6), -8px 8px 2px 0px rgba(8,80,80,0.5), -12px 12px 4px 0px rgba(10,90,90,0.4);
-  }
-  .img{
-    border-radius: 5px;
-  }
-  .resizable-img{
-    max-width: 100%; 
-    height: auto;
-  }
+.gallery{
+  grid-row: 2/12;
+}
+.gallery img{
+  width: 28rem;
+  border-radius: 8px;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 10px;
+  -webkit-box-shadow: -4px 4px 1px 0px rgba(7,61,61,0.6), -8px 8px 2px 0px rgba(8,80,80,0.5), -12px 12px 4px 0px rgba(10,90,90,0.4); 
+  box-shadow: -4px 4px 1px 0px rgba(7,61,61,0.6), -8px 8px 2px 0px rgba(8,80,80,0.5), -12px 12px 4px 0px rgba(10,90,90,0.4);
+}
+.img img{
+  border-radius: 5px;
+  width: 100%;
+}
+.iframe-about{
+  height: 38rem;
+  width: 100%;
+  justify-self: end;
+}

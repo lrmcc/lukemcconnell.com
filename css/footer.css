@@ -1,14 +1,9 @@
 @import url(styles.css);
 
 .footer {
-    position: fixed;
-    width: 100%;
-    height: 40px;
-    color: rgb(70, 70, 70);
-    bottom: 0;
-  }
-  .footer-info{
-    position: fixed;
-    right: 5px;
-    bottom: 0;
-  }
+  color: #4fa0a07b;
+  position: fixed;
+  opacity: .5;
+  right: 5px;
+  bottom: 0;
+}
