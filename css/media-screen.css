@@ -8,7 +8,7 @@
     background-color: red;
   } 
   .grid-container{
-    grid-template-columns: repeat(12, 80px);
+    grid-template-columns: repeat(12, 1fr);
     margin-left: none;
     margin-right: none;
     left: 8%;
@@ -65,7 +65,7 @@
     background-color: pink;
   } 
   .grid-container{
-    grid-template-columns: repeat(12, 72px);
+    grid-template-columns: repeat(12, 1fr);
     left: 7%;
   }
   .main-item:hover > div.media-name{
@@ -91,7 +91,7 @@
     background-color: green;
   } 
   .grid-container{
-    grid-template-columns: repeat(12, 65px);
+    grid-template-columns: repeat(6, 1fr);
   }
   .grid-item {
     width: 60%;
@@ -120,7 +120,7 @@
     background-color: pink;
   } 
   .grid-container{
-    grid-template-columns: repeat(12, 60px);
+    grid-template-columns: repeat(6, 1fr);
     left: 3%;
   }
   .grid-item {
