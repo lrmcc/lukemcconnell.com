@@ -5,14 +5,14 @@
   color: var(--light-theme-text-alt);
   background-color: inherit;
   font-size: 36px;
-  font-family: 'Cabin', sans-serif;
+  font-family: var(--site-font);
   font-weight: bold;
-  text-shadow: -1px 1px 1px rgba(255,255,255,0.9), -3px 3px 2px rgba(242,242,242,0.8);
   display: inline;
 }
 .header a 
 {
   color: var(--light-theme-text-alt);
+  font-family: var(--site-font);
   text-decoration: none;
 }
 .header a.logo 
@@ -30,7 +30,8 @@
   font-size: 26px;
   text-align: center;
   background-color: var(--light-theme-main);
+  opacity: 1;
 }
 .header-menu a{
-  padding: 8px;
+  padding: 1.6em;
 }

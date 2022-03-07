@@ -17,6 +17,8 @@
   --light-theme-text-bg: #f2f2f2;
   --light-theme-text-alt: rgb(17, 41, 50);
   --header: rgb(45, 195, 195);
+  --text-shadow: -1px 1px 1px rgba(255,255,255,0.9), -3px 3px 2px rgba(242,242,242,0.8);
+  --site-font: 'Cabin', sans-serif;
 }
 
 html::-webkit-scrollbar {

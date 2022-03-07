@@ -5,66 +5,71 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/main.js" defer></script>
+	<script src="../js/main.js" defer></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
 	<title>Projects - Luke McConnnell</title>
 </head>
 
 <body>
 	<header>
-		<div class="header" id="header">
-			<div class="dropdown-menu">
-				<button class="dropdown-icon">&#8801;</button>
-				<div class="dropdown-content">
-					<a href="../index.html">Home</a>
-					<a href="dev.html">Dev</a>
-					<a href="media.html">Media</a>
-					<hr>
-					<a href="about.html">About</a>
-					<a href="resources.html">Resources</a>
-					<a href="contact.html">Contact</a>
-					<hr>
-					<div id="mode-select" class="mode-select" title="Light/Dark Mode">
-						<div id="mode-container" class="mode-container">
-							<div class="sun-points" id="sun"></div>
-							<div class="moon" id="moon"></div>
-							<div class="mode-selector mode-toggle"></div>
+			<div class="header" id="header">
+				<div class="dropdown-menu">
+					<button class="dropdown-icon">&#8801;</button>
+					<div class="dropdown-content">
+						<a href="../index.html">Home</a>
+						<a href="dev.html">Dev</a>
+						<a href="media.html">Media</a>
+						<hr>
+						<a href="about.html">About</a>
+						<a href="resources.html">Resources</a>
+						<a href="contact.html">Contact</a>
+						<hr>
+						<div id="mode-select" class="mode-select" title="Light/Dark Mode">
+							<div id="mode-container" class="mode-container">
+								<div class="sun-points" id="sun"></div>
+								<div class="moon" id="moon"></div>
+								<div class="mode-selector mode-toggle"></div>
+							</div>
 						</div>
 					</div>
 				</div>
+				<a href="../index.html" class="logo">Luke McConnell</a>
+				<div class="header-menu">
+					<a href="../index.html">Home</a>
+					<a href="projects.html">Projects</a>
+					<a href="dev.html">Dev</a>
+					<a href="media.html">Media</a>
+					<a href="about.html">About</a>
+					<a href="resources.html">Resources</a>
+					<a href="contact.html">Contact</a>
+					<hr class="page-header-line">
+				</div>
 			</div>
-			<a href="../index.html" class="logo">Luke McConnell</a>	
-			<div class="header-menu">
-				<a href="../index.html">Home</a>
-				<a href="projects.html">Projects</a>
-				<a href="dev.html">Dev</a>
-				<a href="media.html">Media</a>
-				<a href="about.html">About</a>
-				<a href="resources.html">Resources</a>
-				<a href="contact.html">Contact</a>
-			</div>
-		</div>
-	</header>
-	
-	<br>
+		</header>
+		<br>
+		
+	<div class="container">
 
-	<div class="grid-container">
-
-		<div class="grid-item row-1">
+		<div class="item-row-top"></div>
+		<div class="item-col-left"></div>
+		<div class="item-table-left">
 			<div class="page-info">
-				<a class="page-title">/Projects</a>
+				<div><a class="page-title">/Projects</a></div>
+				<ul>
+					<li><a href="#Design_for_Defense" class="page-link  ">Design for Defense</a></li>
+					<li><a href="#Senior_Design" class="page-link ">Design Capstone</a></li>
+					<li><a href="#Bebop" class="page-link ">Drone Path Planner</a></li>
+					<li><a href="#PickUp" class="page-link ">Mobile App</a></li>
+					<li><a href="#Personal_Website" class="page-link ">Personal Website</a></li>
+				</ul>
 			</div>
-			<hr class="page-info-line">
-			<a href="#Design_for_Defense" class="page-link">Design for Defense</a>
-			<a href="#Senior_Design" class="page-link">Senior Design Capstone</a>
-			<a href="#Bebop" class="page-link">Drone Path Planner</a>
-			<a href="#PickUp" class="page-link">Mobile App</a>
-			<a href="#Personal_Website" class="page-link">Personal Website</a>
 		</div>
+		<div class="item-col-right"></div>
+		<div class="item-table-right"></div>
 
-		<div class="page-card row-content row-2">
+		<div class="page-card row-content row-2" >
 			<h2 id="Design_for_Defense">
 				<a href="https://www.colorado.edu/ideaforge/H4D" target="_blank" class="page-link">Design for
 					Defense</a> -
@@ -72,7 +77,6 @@
 					(NGA)</a>
 			</h2>
 			<p>
-
 				This five-person interdisciplinary team endeavor derived from a problem posed to us by the NGA in an
 				entrepreneurial setting.
 				The ultimate goal was to produce dual-purpose (military and private-sector) entity use-cases.
@@ -120,7 +124,6 @@
 					class="page-link">U.S. Army Research Office (ARO)</a>
 			</h2>
 			<p>
-
 				In place of the traditional Computer Science Capstone project, I applied for CU Boulder's Capstone
 				Exchange program.
 				I wanted to work on an interdisciplinary team in the Mechanical Engineering Capstone, called Senior
@@ -162,7 +165,6 @@
 				the project is also on the University of Colorado Boulder website found <a
 					href="https://www.colorado.edu/mechanical/team-16-autonomous-devicesystem-ground-based-warfighter-protection-supply-andor-evacuation"
 					target="_blank" class="page-link">here</a> .
-
 			</p>
 			<div>
 				<figure>
@@ -216,7 +218,6 @@
 
 		<div class="page-card row-content row-5" id="PickUp">
 			<h2>PickUp/Pindown App</h2>
-
 			This project began as a six-person team in the Spring of 2019 in Software Development Methods and Tools
 			class.
 			The team designed and implemented a working Android app prototype named PickUp.
@@ -239,11 +240,10 @@
 				class="page-link"> New Venture Challenge</a>.
 			It has since dissolved. Below is some images from PickUp that were remade into wireframes for Pindown.
 			<figure>
-				<img src="../images/pindown.png" class="img resizable-img" alt="pindown">
+				<img src="../images/pindown.png" class="img" alt="pindown">
 				<figcaption>Wireframe Sequence</figcaption>
 			</figure>
 		</div>
-
 
 		<div class="page-card row-content row-6" id="Personal_Website">
 			<h2>Personal Website</h2>
@@ -261,10 +261,10 @@
 	</div>
 
 	<br><br>
+
 	<footer class="footer">
 		<div>Copyright &copy; 2021 Luke McConnell</div>
 	</footer>
 
 </body>
-
 </html>
