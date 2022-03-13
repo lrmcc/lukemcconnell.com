@@ -4,7 +4,7 @@
 @media screen and (max-width:1164px) {
   body 
   {
-    width: auto;
+    
     background-color: red;
   } 
   .grid-container{
@@ -61,7 +61,7 @@
 @media screen and (max-width: 1032px) {
   body 
   {
-    width: auto;
+    
     background-color: pink;
   } 
   .grid-container{
@@ -87,7 +87,7 @@
   /* start of large tablet styles */
   body 
   {
-    width: auto;
+    
     background-color: green;
   } 
   .grid-container{
@@ -116,7 +116,7 @@
 {
    body 
   {
-    width: auto;
+   
     background-color: pink;
   } 
   .grid-container{
@@ -196,7 +196,7 @@
 {
   body 
   {
-    width: auto;
+   
     background-color: blueviolet;
   } 
   .header a 

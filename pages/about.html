@@ -13,93 +13,96 @@
 </head>
 
 <body>
-    <header>
-        <div class="header" id="header">
-            <div class="dropdown-menu">
-                <button class="dropdown-icon">&#8801;</button>
-                <div class="dropdown-content">
+    <div class="container">
+		<header class="header" id="header">
+			<div class="item-header-banner row-1">Page updated: 3/13/2022</div>
+			<div class="item-header-menu row-2">
+                <div class="dropdown-menu">
+                    <button class="dropdown-icon">&#8801;</button>
+                    <div class="dropdown-content">
+                        <a href="../index.html">Home</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="dev.html">Dev</a>
+                        <a href="media.html">Media</a>
+                        <hr>
+                        <a href="resources.html">Resources</a>
+                        <a href="contact.html">Contact</a>
+                        <hr>
+                        <div id="mode-select" class="mode-select" title="Light/Dark Mode">
+                            <div id="mode-container" class="mode-container">
+                                <div class="sun-points" id="sun"></div>
+                                <div class="moon" id="moon"></div>
+                                <div class="mode-selector mode-toggle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="../index.html" class="logo">Luke McConnell</a>
+                <div class="header-menu">
                     <a href="../index.html">Home</a>
                     <a href="projects.html">Projects</a>
                     <a href="dev.html">Dev</a>
                     <a href="media.html">Media</a>
-                    <hr>
+                    <a href="about.html">About</a>
                     <a href="resources.html">Resources</a>
                     <a href="contact.html">Contact</a>
-                    <hr>
-                    <div id="mode-select" class="mode-select" title="Light/Dark Mode">
-                        <div id="mode-container" class="mode-container">
-                            <div class="sun-points" id="sun"></div>
-                            <div class="moon" id="moon"></div>
-                            <div class="mode-selector mode-toggle"></div>
-                        </div>
-                    </div>
+                    <hr class="page-header-line">
                 </div>
             </div>
-            <a href="../index.html" class="logo">Luke McConnell</a>	
-			<div class="header-menu">
-				<a href="../index.html">Home</a>
-				<a href="projects.html">Projects</a>
-				<a href="dev.html">Dev</a>
-				<a href="media.html">Media</a>
-				<a href="about.html">About</a>
-				<a href="resources.html">Resources</a>
-				<a href="contact.html">Contact</a>
-                <hr class="page-header-line">
-			</div>
-        </div>
-    </header>
-    <br>
+        </header>
 
-    <div class="container">
-
-		<div class="item-row-top"></div>
-		<div class="item-col-left"></div>
-        <div class="item-table-left">
+        <div class="item-col-left"></div>
+        
+        <div class="item-table-left row-3">
 			<div class="page-info">
-                <div><a class="page-title">/About</a></div>
+				<div><a class="page-title">/About</a></div>
             </div>
-		</div>
+        </div>
+
 		<div class="item-col-right"></div>
+
 		<div class="item-table-right"></div>
 
-        <div class="row-2 row-content img">
+		<div class="row-content img row-3">
             <div class="">
                 <img src="../images/luke.jpg" alt="Luke" />
             </div>
         </div>
 
-        <div class="page-card row-3 row-content">
-                Hi, I'm Luke McConnell.
-                I am a Software Engineer currently working as a Computer Scientist for the
-                <a href="https://afciviliancareers.com/" target="_blank" class="page-link">Air Force Civilian Service</a>.
-                I've held this position since graduating from the <a href="https://www.colorado.edu/cs/"
-                    class="page-link">University of Colorado Boulder</a> with a B.S. Computer Science in August of 2020.
-                <br><br>
-                I am proud to have served 6 years in the U.S. Navy as a
-                <a href="https://en.wikipedia.org/wiki/Machinist%27s_mate#Nuclear_mechanics" target="_blank"
-                    class="page-link">Nuclear Machinist's Mate</a>.
-                My academic and professional evolution from Nuclear Power Plant Operations to Computer Science has been
-                immensenly rewarding.
-                I enjoy leveraging my diverse skills to solve problems of all kinds. Below is my resume. Thanks for visiting
-                my site!
+        <div class="page-card row-4 row-content">
+            Hi, I'm Luke McConnell.
+            I am a Software Engineer currently working as a Computer Scientist for the
+            <a href="https://afciviliancareers.com/" target="_blank" class="page-link">Air Force Civilian Service</a>.
+            I've held this position since graduating from the <a href="https://www.colorado.edu/cs/"
+                class="page-link">University of Colorado Boulder</a> with a B.S. Computer Science in August of 2020.
+            <br><br>
+            I am proud to have served 6 years in the U.S. Navy as a
+            <a href="https://en.wikipedia.org/wiki/Machinist%27s_mate#Nuclear_mechanics" target="_blank"
+                class="page-link">Nuclear Machinist's Mate</a>.
+            My academic and professional evolution from Nuclear Power Plant Operations to Computer Science has been
+            immensenly rewarding.
+            I enjoy leveraging my diverse skills to solve problems of all kinds. Below is my resume. Thanks for visiting
+            my site!
         </div>
 
-        <div class="row-4 row-content img">
+        <div class="row-content img row-5 ">
             <div class="">
                 <img src="../images/ship.jpg" alt="ship" />
             </div>
         </div>
 
-        <div class="row-5 row-content img iframe-about">
-            <iframe src="../assets/Resume.pdf#toolbar=0&scrollbars=0&statusbar=0&navpanes=0" class="iframe-about no-select" ></iframe>
+        <div class="row-content img iframe-about row-6">
+            <iframe src="../assets/Resume.pdf#toolbar=0&scrollbars=0&statusbar=0&navpanes=0"
+                class="iframe-about no-select"></iframe>
         </div>
+        
+        <footer class="footer row-7">
+			<div>Copyright &copy; 2021 Luke McConnell</div>
+		</footer>
     </div>
 
-    <br><br>
     
-    <footer class="footer">
-        <div class="footer-info">Copyright &copy; 2021 Luke McConnell</div>
-    </footer>
 
 </body>
+
 </html>
