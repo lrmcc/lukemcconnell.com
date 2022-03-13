@@ -2,12 +2,14 @@
 
 .header 
 {
+  top: 0;
   color: var(--light-theme-text-alt);
   background-color: inherit;
   font-size: 36px;
   font-family: var(--site-font);
   font-weight: bold;
   display: inline;
+  z-index: 2;
 }
 .header a 
 {
@@ -22,12 +24,9 @@
   display: none;
 }
 .header-menu{
-  position: fixed;
   display: block;
-  width: 100%;
   margin: 0;
-  z-index: 2;
-  font-size: 26px;
+  font-size: 1.2rem;
   text-align: center;
   background-color: var(--light-theme-main);
   opacity: 1;
