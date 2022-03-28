@@ -1,59 +1,133 @@
 @import url(styles.css);
 
-.main-item:hover 
+.home{
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+.home-welcome
 {
-  transform: scale(1.03);
-  text-shadow: -1px 1px 1px rgba(255,255,255,0.9), -2px 2px 2px rgba(242,242,242,0.8);
-  filter: blur(0px);
-}
-.side-item:hover
-{
-  transform: scale(1.1);
-  filter: blur(0px);
-  text-shadow: -1px 1px 1px rgba(255,255,255,0.9), -3px 3px 2px rgba(242,242,242,0.8);
-}
-.main-section-name{
-  color: var(--light-theme-text-alt);
-  background-color: none;
-  border-radius: 6px;
+  text-align: left;
+  font-size: 3.0rem;
+  grid-column: 3 / span 8;
   font-family: 'Cabin', sans-serif;
-  font-size: 0px;
-  position: absolute;
+  color: #f2f2f2;
+  margin: 60px 0px 14px 0px;
+  display: inline;
 }
-.main-item:hover > div.main-section-name{
-  top: 30%;
-  left: initial;
-  font-size: 42px;
-  text-align: center;
-  width: 100%;  
-}
-.main-item:hover > img{
-  opacity: 0.3;
-}
-.main-item:hover > div.media-name{
-  top: 66px;
-  left: -20px;
-}
-.side-section-name{
+
+.home-icon-img{
+  grid-column: 8 / span 2;
   color: var(--light-theme-text-alt);
-  background-color: none;
-  border-radius: 6px;
-  font-family: 'Cabin', sans-serif;
-  font-size: 0px;
-  top: 70px;
-  text-align: center;
+  justify-self: center;
+  align-self: start;
+}
+
+.home-item div.item-name {
+  visibility: hidden;
+}
+.home-item:hover div.item-name {
+  visibility: visible;
+  opacity: 1;
+}
+.home-item img.home-img {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.home-item:hover img.home-img{
+  opacity: 0.85;
+}
+
+.key-item {
+  transform: scale(0.95);
+}
+.key-item:hover {
+  transform: scale(1.0);
+  
+}
+
+.dev-item {
+  transform: translateY(22%);
+}
+.media-item {
+  transform: translateY(22%);
+}
+
+.main-item {
+  transform: scale(0.6);
+}
+.main-item:hover {
+  transform: scale(0.65);
+}
+
+.side-item {
+  transform: scale(0.6);
+}
+.side-item div{
+  font-size: 2.0rem;
+}
+.side-item:hover {
+  transform: scale(0.65);
+}
+
+.item-name {
   position: absolute;
-}
-.side-item:hover > div.side-section-name{
-  top: 60px;
-  left: initial;
-  font-size: 28px;
+  font-size: 2.2rem;
   text-align: center;
-  width: 100%;
+  color: #f2f2f2;;
+  font-family: 'Cabin', sans-serif;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
-.side-item:hover > .resources-name{
-  right: 20px;
+
+.key-name{
+  bottom: -10%;
+  left: 30%;
+  font-size: 1.5rem;
 }
-.side-item:hover > img{
-  opacity: 0.3;
+
+.main-name-1{
+  bottom: -40%;
+}
+.main-name-2{
+  bottom: -40%;
+  left: 30%
+}
+
+.side-name-1 {
+  left: -10%;
+  bottom: -45%;
+}
+.side-name-2 {
+  left: -40%;
+  bottom: -45%;
+}
+.side-name-3 {
+  left: -25%;
+  bottom: -45%;
+}
+
+.tile-1 {
+  grid-column: 4 / span 2;
+  grid-row: 4 / span 1;
+}
+.tile-2 {
+  grid-column: 6 / span 2;
+  align-self: end;
+}
+.tile-3 {
+  grid-column: 8 / span 2;
+  align-self: end;
+}
+.tile-4 {
+  grid-column: 4 / span 2;
+}
+.tile-5 {
+  grid-column: 6 / span 2;
+}
+.tile-6 {
+  grid-column: 8 / span 2;
 }
