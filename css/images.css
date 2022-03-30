@@ -1,6 +1,7 @@
 @import url(styles.css);
 
 .gallery{
+  margin-top: 5%;
   grid-row: 2/12;
 }
 .gallery img{
@@ -9,8 +10,10 @@
   align-self: center;
   justify-self: center;
   margin-bottom: 10px;
-  -webkit-box-shadow: -4px 4px 1px 0px rgba(7,61,61,0.6), -8px 8px 2px 0px rgba(8,80,80,0.5), -12px 12px 4px 0px rgba(10,90,90,0.4); 
-  box-shadow: -4px 4px 1px 0px rgba(7,61,61,0.6), -8px 8px 2px 0px rgba(8,80,80,0.5), -12px 12px 4px 0px rgba(10,90,90,0.4);
+}
+.gallery-gap{
+  grid-template-columns: 4 / span 6;
+  height: 100px;
 }
 .img img{
   border-radius: 5px;

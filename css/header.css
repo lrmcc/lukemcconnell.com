@@ -3,8 +3,6 @@
 .header 
 {
   top: 0;
-  color: var(--light-theme-text-alt);
-  background-color: inherit;
   font-size: 36px;
   font-family: var(--site-font);
   font-weight: bold;
@@ -13,7 +11,7 @@
 }
 .header a 
 {
-  color: var(--light-theme-text-alt);
+  color: var(--header-text);
   font-family: var(--site-font);
   text-decoration: none;
 }
@@ -28,7 +26,7 @@
   margin: 0;
   font-size: 1.2rem;
   text-align: center;
-  background-color: var(--light-theme-main);
+  background-color: var(--header);
   opacity: 1;
 }
 .header-menu a{

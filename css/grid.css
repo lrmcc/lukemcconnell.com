@@ -30,8 +30,8 @@
   background-color: #112932;
 }
 .item-header-menu {
-  grid-column: 2 / span 10;
-  background-color: green;
+  grid-column:  1 / span 12;
+  background-color: var(--header);
 }
 .item-line {
   grid-column: 1 / span 12;
@@ -114,6 +114,13 @@
 .row-13 {
   grid-row: 13 / span 1;
 }
+.row-14 {
+  grid-row: 14 / span 1;
+}
+.row-15 {
+  grid-row: 15 / span 1;
+}
+
 .col-1{
   grid-column: 1 / span 1;
 }

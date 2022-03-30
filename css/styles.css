@@ -10,14 +10,14 @@
 @import url(utils.css);
 
 :root {
-  --dark-theme-main: #5e5e5e;
-  --dark-theme-text: rgb(234, 234, 234);
-  --dark-theme-text-bg: rgb(114, 114, 114);
-  --light-theme-main: #008b8b;
-  --light-theme-text-bg: #f2f2f2;
-  --light-theme-text-alt: #112932;
-  --header: rgb(45, 195, 195);
-  --text-shadow: -1px 1px 1px rgba(255,255,255,0.9), -3px 3px 2px rgba(242,242,242,0.8);
+
+  --text:#31334a;
+  --background:#d0d0d0;
+  --card-text: #31334a;
+  --card-background: #a2a4b1;
+  --container-background: #c3c3c3;
+  --header: #31334a;
+  --header-text: #f2f2f2;
   --site-font: 'Cabin', sans-serif;
 
 }
@@ -50,5 +50,6 @@ body
   margin: 0;
   overflow-y: scroll;
   overflow-x: hidden;
-  background-color: var(--light-theme-main);
+  color: var(--text);
+  background-color: var(--background);
 }
