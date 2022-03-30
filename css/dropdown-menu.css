@@ -10,7 +10,7 @@
   font-size: 46px;  
   border: none;
   padding-top: 7px;
-  color: var(--light-theme-text-alt);
+  color: var(--header-text);
   background-color: inherit;
   font-family: inherit;
   display: none;

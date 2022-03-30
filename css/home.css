@@ -13,14 +13,13 @@
   font-size: 3.0rem;
   grid-column: 3 / span 8;
   font-family: 'Cabin', sans-serif;
-  color: #f2f2f2;
+  color: var(--text);
   margin: 60px 0px 14px 0px;
   display: inline;
 }
 
 .home-icon-img{
   grid-column: 8 / span 2;
-  color: var(--light-theme-text-alt);
   justify-self: center;
   align-self: start;
 }
@@ -76,7 +75,7 @@
   position: absolute;
   font-size: 2.2rem;
   text-align: center;
-  color: #f2f2f2;;
+  color: var(--text);
   font-family: 'Cabin', sans-serif;
   z-index: 1;
   opacity: 0;
