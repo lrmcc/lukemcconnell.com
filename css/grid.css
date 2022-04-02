@@ -130,3 +130,10 @@
 .col-3{
   grid-area: 3 / span 1;
 }
+
+.left{
+  grid-column: 4 / span 3;
+}
+.right{
+  grid-column: 7 / span 3;
+}

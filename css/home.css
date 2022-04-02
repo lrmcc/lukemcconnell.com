@@ -130,3 +130,7 @@
 .tile-6 {
   grid-column: 8 / span 2;
 }
+
+.about{
+  margin: auto;
+}
