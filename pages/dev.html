@@ -9,13 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+
     <title>Dev - Luke McConnnell</title>
 </head>
 
 <body>
     <div class="container">
         <header class="header" id="header">
-            <div class="item-header-banner row-1"></div>
+            <div class="item-header-banner row-1">Updated April 2, 2022</div>
             <div class="item-header-menu row-2">
                 <a href="../index.html" class="logo">Luke McConnell</a>
                 <div class="header-menu">
@@ -31,11 +32,11 @@
             </div>
         </header>
 
-		<div class="item-col-left"></div>
+        <div class="item-col-left"></div>
 
-		<div class="item-table-left row-3">
-			<div class="page-info">
-				<div><a class="page-title">/Dev</a></div>
+        <div class="item-table-left row-3">
+            <div class="page-info">
+                <div><a class="page-title">/Dev</a></div>
                 <ul>
                     <li><a href="#Personal" class="page-link">Personal</a></li>
                     <li><a href="#Professional" class="page-link">Professional</a></li>
@@ -45,69 +46,39 @@
             </div>
         </div>
 
-		<div class="item-col-right"></div>
+        <div class="item-col-right"></div>
 
-		<div class="item-table-right"></div>
+        <div class="item-table-right"></div>
 
-		<div class="page-card row-content row-3">
-            <h2 id="Personal">Personal</h2>
+        <div class="page-card row-content row-3">
+            <h2 id="Current">Current</h2>
+            <h4>Projects currently in development</h4>
             <p>
-                The software development ventures I have taken on for personal use have varied in scope.
-                I have enjoyed working on home projects from a simple LED controlling bash script,
-                to a python program that sifted through financial data to produce custom D3 visualizations.
-                I also made a scrolling video game with the Javascript library Phaser,
-                where I used some custom sprite sheets to created a hostile environment for the player to overcome.
-                I have stored some of this on my Github, but others I have intentionally kept in offline repositories.
-                Since Github is a way to view and measure an individuals skills, I plan to contribute more as time goes
-                on.
-                To show some of what I've made for strictly web, I will be embedding some code pens into this site.
-                This is just the beginning!
+                <ul>
+                    <li><a href="https://gitlab.com/lukermcconnell/shoot-messenger" class="page-link">Shoot Messenger</a></li>
+                    <li><a href="https://github.com/lrmcc/Space_Web_Game" class="page-link">Galactic Field Fighter</a></li>
+                </ul>
             </p>
         </div>
 
         <div class="page-card row-content row-4">
-            <h2 id="Professional">Professional</h2>
+            <h2 id="Future">Future</h2>
+            <h4>Projects slated for future in development</h4>
             <p>
-                Since I began working as a Software Developer, I have completed a number of assignments in a variety of
-                languages.
-                <br><br>
-                I designed and built a software installation script in Powershell for my first asignment.
-                The script functioned is launched by double-clicking on an icon within the installation CD.
-                It began by disabling a number of running Microsoft services and detaching multiple databases from MSSQL
-                Server.
-                Then it copied files over from the CD into specific directories on the computer.
-                Lastly, the script restarted the computer, reattched the databases and enabled the services.
-                <br><br>
-                Next I contributed to a ASP.NET Razor Pages web site.
-                I created stories and pushed code to an Azure DevOps repository.
-                On this project I used C#, HTML, CSS, Javascript, and Regex.
-                My contributions added additional front-end and back-end functionalities.
-                <br><br>
-                Recently, I studied, designed, and delivered an enterprise-level software design proposal.
-                The project has since transitioned into development which is ongoing.
-                I feel like it is an especially valuable experience to work as a developer on a large software project I
-                helped to design.
-                The product is an instantiable containerized software.
-                Each instance is able to accept unique data streams from a source via TCP/IP connection
-                The data streams are then parsed into messages and then published to a message broker (like ActiveMQ).
-                An instance is also able to recieve messages as a subscriber, reconstruct the messages to a data stream
-                and send the stream to a recipient system via TCP/IP.
-                The intent is to allow for a third-party to create subscribers to recieve standardized messages intended
-                for a variety of recipients.
-                A goal of the enterprise serice is to remain tecnology stack independent.
-                One part of this is to use an API wrapper for the message broker that allows for using one standard
-                for a number of messaging services. There is essentially two main development efforts.
-                The first portion of development will focus on creating the message passing infrastructure
-                to accept and send data streams, create messages, and interact with the message broker.
-                The second effort is to work with each recipient system's unique message formats
-                to accurately parse data streams into messages and back, while maintaining data integrity.
-            </p>
+                <p>
+                    <ul>
+                        <li><a href="https://github.com/lrmcc/Game_Stats_Backend" class="page-link">Game Stats Backend</a></li>
+                        <li><a href="https://github.com/lrmcc/Etrade_Client" class="page-link">Etrade Client</a></li>
+                    </ul>
+                </p>
         </div>
-        
-        <footer class="footer row-5">
+
+
+        <footer class="footer row-6">
             <div>Copyright &copy; 2021 Luke McConnell</div>
         </footer>
     </div>
 
 </body>
+
 </html>
