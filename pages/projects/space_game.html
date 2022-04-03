@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../css/projects/space-game.css">
+	<script src="../../js/projects/space_game.js" defer></script>
+    <title>Space Game - Luke McConnnell</title>
+</head>   
+
+<body onload="startBackgroundAnimation()">
+    <div class="game-container game-text">
+
+        <div class="game-menu">
+            <div class="game-title borderstyle">Galactic Star Field Fighter</div>
+        </div>
+        
+        <div class="game-instructions ">
+            Use the keyboard Arrows to move and spacebar to shoot
+            <br><br>
+            Press p to pause the game
+        </div>  
+
+        <div class="button-container">
+            <button type="button" class="start-button game-text" id="startButton" onClick="startGame()">Start</button>
+        </div>
+        
+        
+        <div class="game-hud">
+            <span class="borderstyle">Score: <span id="game-score-value">0</span></span>
+            <span class="borderstyle">Time: <span id="game-time-value">0</span></span>
+        </div>
+
+        <div class="graphics-container">
+            <div class="graphics" id="graphics"></div>
+        </div>
+
+        <div class="button-container">
+        <button type="button" class="quit-button game-text" onClick="quitGame()">Quit</button>
+        </div>
+        
+        
+    </div>
+</body>
