@@ -1,47 +1,54 @@
-@import url(styles.css);
-
 .page-title {
   font-size: 2.4em;
   color: var(--text);
   font-family: var(--site-font);
   text-align: left;
 }
-.page-info{
+
+.page-info {
   display: block;
 }
+
 .page-about-info {
   max-height: fit-content;
   grid-column: 6/9;
   border-radius: 5px;
 }
+
 .page-link {
   color: inherit;
 }
 .page-link:hover {
   color: rgb(179, 10, 95);
 }
+
 .page-header-link {
   display: block;
 }
+
 .page-line {
   border: 1px solid var(--light-theme-text-alt);
   border-radius: 2px;
 }
+
 .page-header-line {
   margin: 10px 10px 0px 10px;
   color: inherit;
   border: 1px solid var(--light-theme-text-alt);
 }
+
 .page-icon {
   margin: auto;
   border-radius: 2%;
 }
+
 .page-banner {
   color: var(--light-theme-text-alt);
   background-color: rgb(179, 242, 181);
   border: 2px inset rgb(152, 249, 155);
   border-radius: 5px 5px 5px 5px;
 }
+
 .page-card {
   width: 100%;
   margin: 12px;
@@ -53,7 +60,8 @@
   color: var(--card-text);
   background-color: var(--card-background); 
 }
-.page-contact{
+
+.page-contact {
   justify-self: center;
   align-self: center;
   max-width: fit-content;

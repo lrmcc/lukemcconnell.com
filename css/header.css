@@ -1,7 +1,4 @@
-@import url(styles.css);
-
-.header 
-{
+.header {
   top: 0;
   font-size: 36px;
   font-family: var(--site-font);
@@ -9,19 +6,18 @@
   display: inline;
   z-index: 2;
 }
-.header a 
-{
+.header a {
   color: var(--header-text);
   font-family: var(--site-font);
   text-decoration: none;
 }
-.header a.logo 
-{ 
+.header a.logo { 
   position: relative;
   left: 20px;
   display: none;
 }
-.header-menu{
+
+.header-menu {
   display: block;
   margin: 0;
   font-size: 1.2rem;
@@ -29,6 +25,6 @@
   background-color: var(--header);
   opacity: 1;
 }
-.header-menu a{
+.header-menu a {
   padding: 1.6em;
 }

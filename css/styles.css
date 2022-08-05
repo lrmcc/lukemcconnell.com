@@ -1,17 +1,12 @@
-@import url(collapsible.css);
-@import url(dropdown-menu.css);
-@import url(footer.css);
-@import url(grid.css);
 @import url(header.css);
+@import url(grid.css);
 @import url(images.css);
-@import url(media-screen.css);
-@import url(mode.css);
-@import url(home.css);
 @import url(site.css);
+@import url(home.css);
 @import url(utils.css);
+/* @import url(media-screen.css); */
 
 :root {
-
   --text:#31334a;
   --background:#d0d0d0;
   --card-text: #31334a;
@@ -20,7 +15,12 @@
   --header: #31334a;
   --header-text: #f2f2f2;
   --site-font: 'Cabin', sans-serif;
+}
 
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
 }
 
 html::-webkit-scrollbar {
@@ -39,18 +39,17 @@ html::-webkit-scrollbar-track:hover {
   background-color: #555;
 }
 
-* {box-sizing: border-box;}
-html{
-  margin-top:0;
-  padding-top:0;
-}
-
-body 
-{ 
+body { 
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
   overflow-y: scroll;
   overflow-x: hidden;
   color: var(--text);
   background-color: var(--background);
+}
+
+.footer {
+  grid-column: 11 / span 2;
+  grid-row: 8 / span 1;
+  color: var(--text);
+  opacity: .25;
 }
