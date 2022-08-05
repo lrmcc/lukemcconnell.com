@@ -4,7 +4,7 @@
 @import url(site.css);
 @import url(home.css);
 @import url(utils.css);
-/* @import url(media-screen.css); */
+@import url(home-media-queries.css);
 
 :root {
   --text:#31334a;
@@ -21,6 +21,16 @@
   margin:0;
   padding:0;
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+.content {
+  padding: 20px;
 }
 
 html::-webkit-scrollbar {
@@ -49,7 +59,11 @@ body {
 
 .footer {
   grid-column: 11 / span 2;
-  grid-row: 8 / span 1;
+  grid-row: 12 / span 1;
   color: var(--text);
   opacity: .25;
+  position: sticky;
+  justify-self:right;
+  align-self: end;
+  padding-top: 8rem;
 }

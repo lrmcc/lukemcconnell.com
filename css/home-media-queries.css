@@ -1,0 +1,321 @@
+@media screen and (min-width: 1100px) and (max-width: 4000px) {
+    .home-welcome {
+        font-size: 3.0rem;
+    }
+    .main-item {
+        transform: scale(0.6);
+    }
+    .main-item:hover {
+        transform: scale(0.65);
+    }
+
+   .side-item {
+        transform: scale(0.6);
+    }
+    .side-item:hover {
+        transform: scale(0.65);
+    }
+
+    .tile-1, .tile-4 {
+        grid-column: 4 / span 2;
+      }
+      .tile-2, .tile-5 {
+        grid-column: 6 / span 2;
+      }
+      .tile-3, .tile-6 {
+        grid-column: 8 / span 2;
+      }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1100px) {
+    .home-welcome {
+        font-size: 2.8rem;
+    }
+    .main-item {
+        transform: scale(0.6);
+    }
+    .main-item:hover {
+        transform: scale(0.65);
+    }
+
+   .side-item {
+        transform: scale(0.6);
+    }
+    .side-item:hover {
+        transform: scale(0.65);
+    }
+    .tile-1, .tile-4 {
+        grid-column: 3 / span 3;
+    }
+    .tile-2, .tile-5 {
+        grid-column: 6 / span 2;
+    }
+    .tile-3, .tile-6 {
+        grid-column: 8 / span 3;
+    }
+
+}
+
+@media screen and (min-width: 640px) and (max-width:850px) {
+    .home-welcome {
+        font-size: 2.5rem;
+    }
+
+    .tile-1, .tile-4 {
+        grid-column: 2 / span 4;
+    }
+    .tile-2, .tile-5 {
+        grid-column: 6 / span 2;
+    }
+    .tile-3, .tile-6 {
+        grid-column: 8 / span 4;
+    }
+
+    .main-item {
+        transform: scale(0.5);
+    }
+    .main-item:hover {
+        transform: scale(0.55);
+    }
+
+    .side-item {
+        transform: scale(0.5);
+    }
+    .side-item:hover {
+        transform: scale(0.55);
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width:640px) {
+    .home-container {
+        gap: 0px;
+        grid-template-rows: 80px 200px 200px 200px 120px;
+    }
+    .home-welcome {
+        font-size: 2.1rem;
+        margin: 20px 0px 0px 0px;
+    }
+
+    .home-item img.home-img {
+        transform: translateY(0%);
+    }
+
+    .tile-1, .tile-2, .tile-3 {
+        grid-column: 3 / span 8;
+    }
+    .tile-1 {
+        grid-row: 2 / span 1;
+    }
+    .tile-2 {
+        grid-row: 3 / span 1;
+    }
+    .tile-3 {
+        grid-row: 4 / span 1;
+    }
+    .tile-4, .tile-5, .tile-6 {
+        grid-row: 5 / span 1;
+    }
+    .tile-4 {
+        grid-column: 3 / span 3;
+    }
+    .tile-5 {
+        grid-column: 6 / span 2;
+    }
+    .tile-6 {
+        grid-column: 8 / span 3;
+    }
+
+    
+    
+}
+
+@media screen and (min-width: 450px) and (max-width:550px) {
+    .home-container {
+        gap: 0px;
+        grid-template-rows: 80px 180px 180px 180px 120px;
+    }
+    
+    .home-welcome {
+        font-size: 1.8rem;
+        margin: 20px 0px 0px 0px;
+    }
+
+    .home-item img.home-img {
+        transform: translateY(0%);
+    }
+
+    .tile-1, .tile-2, .tile-3 {
+        grid-column: 3 / span 8;
+    }
+    .tile-1 {
+        grid-row: 2 / span 1;
+    }
+    .tile-2 {
+        grid-row: 3 / span 1;
+    }
+    .tile-3 {
+        grid-row: 4 / span 1;
+    }
+    .tile-4, .tile-5, .tile-6 {
+        grid-row: 5 / span 1;
+    }
+    .tile-4 {
+        grid-column: 3 / span 3;
+    }
+    .tile-5 {
+        grid-column: 6 / span 2;
+    }
+    .tile-6 {
+        grid-column: 8 / span 3;
+    }   
+
+}
+
+@media screen and (min-width: 390px) and (max-width:450px) {
+    .home-container {
+        gap: 0px;
+        grid-template-rows: 80px 170px 170px 170px 120px;
+    }
+    .home-welcome {
+        font-size: 1.6rem;
+        margin: 20px 0px 0px 0px;
+    }
+
+    .home-item img.home-img {
+        transform: translateY(0%);
+    }
+
+    .tile-1, .tile-2, .tile-3 {
+        grid-column: 3 / span 8;
+    }
+    .tile-1 {
+        grid-row: 2 / span 1;
+    }
+    .tile-2 {
+        grid-row: 3 / span 1;
+    }
+    .tile-3 {
+        grid-row: 4 / span 1;
+    }
+    .tile-4, .tile-5, .tile-6 {
+        grid-row: 5 / span 1;
+    }
+    .tile-4 {
+        grid-column: 3 / span 3;
+    }
+    .tile-5 {
+        grid-column: 6 / span 2;
+    }
+    .tile-6 {
+        grid-column: 8 / span 3;
+    }
+
+}
+
+@media screen and (min-width: 290px) and (max-width:390px) {
+    .home-container {
+        gap: 0px;
+        grid-template-rows: 80px 160px 160px 160px 110px;
+    }
+    .home-welcome {
+        font-size: 1.2rem;
+        margin: 20px 0px 0px 0px;
+    }
+
+    .home-item img.home-img {
+        transform: translateY(0%);
+    }
+
+    .tile-1, .tile-2, .tile-3 {
+        grid-column: 3 / span 8;
+    }
+    .tile-1 {
+        grid-row: 2 / span 1;
+    }
+    .tile-2 {
+        grid-row: 3 / span 1;
+    }
+    .tile-3 {
+        grid-row: 4 / span 1;
+    }
+    .tile-4, .tile-5, .tile-6 {
+        grid-row: 5 / span 1;
+    }
+    .tile-4 {
+        grid-column: 3 / span 3;
+    }
+    .tile-5 {
+        grid-column: 6 / span 2;
+    }
+    .tile-6 {
+        grid-column: 8 / span 3;
+    }
+
+    .main-item {
+        transform: scale(0.5);
+    }
+    .main-item:hover {
+        transform: scale(0.55);
+    }
+
+    .side-item {
+        transform: scale(0.5);
+    }
+    .side-item:hover {
+        transform: scale(0.55);
+    }
+}
+
+@media screen and (min-width: 150px) and (max-width:290px) {
+    .home-container {
+        gap: 0px;
+        grid-template-rows: 60px 150px 150px 150px 100px;
+    }
+    .home-welcome {
+        font-size: 1.0rem;
+        margin: 20px 0px 0px 0px;
+    }
+
+    .home-item img.home-img {
+        transform: translateY(0%);
+    }
+
+    .tile-1, .tile-2, .tile-3 {
+        grid-column: 3 / span 8;
+    }
+    .tile-1 {
+        grid-row: 2 / span 1;
+    }
+    .tile-2 {
+        grid-row: 3 / span 1;
+    }
+    .tile-3 {
+        grid-row: 4 / span 1;
+    }
+    .tile-4, .tile-5, .tile-6 {
+        grid-row: 5 / span 1;
+    }
+    .tile-4 {
+        grid-column: 3 / span 3;
+    }
+    .tile-5 {
+        grid-column: 6 / span 2;
+    }
+    .tile-6 {
+        grid-column: 8 / span 3;
+    }
+
+    .main-item {
+        transform: scale(0.5);
+    }
+    .main-item:hover {
+        transform: scale(0.55);
+    }
+
+    .side-item {
+        transform: scale(0.5);
+    }
+    .side-item:hover {
+        transform: scale(0.55);
+    }
+}
