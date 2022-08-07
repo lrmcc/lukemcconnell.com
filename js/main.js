@@ -10,7 +10,7 @@ function handleTabletChange(e) {
 }
 
 // Register event listener
-mediaQuery.addListener(handleTabletChange)
+mediaQuery.addEventListener(handleTabletChange)
 
 // Initial check
 handleTabletChange(mediaQuery)
