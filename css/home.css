@@ -18,38 +18,35 @@
   font-size: 3.0rem;
   font-family: 'Cabin', sans-serif;
   color: var(--text);
-  margin: 60px 0px 14px 0px;
-}
-
-.home-item div.item-name {
-  visibility: hidden;
-}
-.home-item:hover div.item-name {
-  visibility: visible;
-  opacity: 1;
-}
-.home-item img.home-img {
-  opacity: 1;
-  transition: opacity 1s;
-  transform: translateY(22%);
-}
-.home-item:hover img.home-img {
-  opacity: 0.85;
+  margin: 60px 0px 40px 0px;
 }
 
 .main-item {
+  margin-top: 60px;
   transform: scale(0.6);
+  transition: transform 0.75s ease, opacity 1s ease;
 }
 .main-item:hover {
   transform: scale(0.65);
 }
 
 .side-item {
+  margin-top: 20px;
   transform: scale(0.6);
+  transition: transform 0.75s;
 }
 .side-item:hover {
   transform: scale(0.65);
 }
+
+.home-img {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.home-item:hover .home-img {
+  opacity: 0.85;
+}
+
 
 .item-name {
   position: absolute;
@@ -57,10 +54,12 @@
   text-align: center;
   color: var(--text);
   font-family: 'Cabin', sans-serif;
-  z-index: 1;
   opacity: 0;
   transition: opacity 0.5s;
-  bottom: -40%;
+}
+
+.home-item:hover .item-name {
+  opacity: 1;
 }
 
 .main-name-1 {
@@ -74,16 +73,13 @@
 }
 
 .side-name-1 {
-  left: -10%;
-  bottom: -60%;
+  right: -12%;
 }
 .side-name-2 {
-  left: -40%;
-  bottom: -60%;
+  left: -56%;
 }
 .side-name-3 {
-  left: -25%;
-  bottom: -60%;
+  left: -34%;
 }
 
 .tile-1, .tile-4 {
