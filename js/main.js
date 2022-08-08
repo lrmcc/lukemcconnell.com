@@ -6,6 +6,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     
     isMobile = true;
 
+    // For home page
     let itemNames = document.getElementsByClassName("item-name");
     for (let i = 0; i < itemNames.length; i++) {
         itemNames.item(i).style.setProperty('opacity', 'initial');
