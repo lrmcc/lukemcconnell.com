@@ -22,9 +22,23 @@
   margin: 0;
   font-size: 1.2rem;
   text-align: center;
-  background-color: var(--header);
   opacity: 1;
+  grid-column:  1 / span 12;
+  background-color: var(--header);
 }
 .header-menu a {
   padding: 1.6em;
+}
+
+.header-banner {
+  font-size: 1rem;
+  text-align: center;
+  color: whitesmoke;
+  background-color: #112932;
+}
+
+.header-line {
+  margin: 10px 10px 0px 10px;
+  color: inherit;
+  border: 1px solid var(--light-theme-text-alt);
 }

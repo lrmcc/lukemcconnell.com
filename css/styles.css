@@ -1,10 +1,11 @@
-@import url(header.css);
+@import url(card.css);
 @import url(grid.css);
+@import url(header.css);
+@import url(home.css);
+@import url(home-media-queries.css);
 @import url(images.css);
 @import url(site.css);
-@import url(home.css);
 @import url(utils.css);
-@import url(home-media-queries.css);
 
 :root {
   --text:#31334a;
@@ -66,4 +67,28 @@ body {
   justify-self:right;
   align-self: end;
   padding-top: 8rem;
+}
+
+.page-title {
+  font-size: 2.4em;
+  color: var(--text);
+  font-family: var(--site-font);
+  text-align: left;
+}
+
+.page-info {
+  display: block;
+}
+
+.link {
+  color: inherit;
+}
+.link:hover {
+  color: rgb(179, 10, 95);
+}
+
+.contact { /* Revisit how neccessary this is */
+  justify-self: center;
+  align-self: center;
+  max-width: fit-content;
 }

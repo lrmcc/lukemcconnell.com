@@ -1,0 +1,11 @@
+.card {
+    width: 100%;
+    margin: 12px;
+    padding: 12px;
+    font-size: 20px; 
+    justify-self: start;
+    text-align: left;
+    border-radius: 10px 12px 5px 5px;
+    color: var(--card-text);
+    background-color: var(--card-background); 
+  }
