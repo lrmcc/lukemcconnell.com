@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="../../css/styles.css">
 	<script src="../../js/main.js" defer></script>
+	<link rel="icon" href="../images/favicon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
@@ -16,228 +17,238 @@
 
 	<div class="container">
 		<header class="header" id="header">
-			<div class="item-header-banner row-1"></div>
-			<div class="item-header-menu row-2">
-				<a href="../../index.html" class="logo">Luke McConnell</a>
-				<div class="header-menu">
-					<a href="../../index.html">Home</a>
-					<a href="../projects.html">Projects</a>
-					<a href="../dev.html">Dev</a>
-					<a href="../media.html">Media</a>
-					<a href="../about.html">About</a>
-					<a href="../resources.html">Resources</a>
-					<a href="../contact.html">Contact</a>
-					<hr class="page-header-line">
-				</div>
+			<div class="header-banner"></div>
+			<div class="header-menu">
+				<a href="../../index.html">Home</a>
+				<a href="../projects.html">Projects</a>
+				<a href="../dev.html">Dev</a>
+				<a href="../media.html">Media</a>
+				<a href="../about.html">About</a>
+				<a href="../resources.html">Resources</a>
+				<a href="../contact.html">Contact</a>
+				<hr class="header-line">
 			</div>
 		</header>
 
-		<div class="item-col-left"></div>
-
-		<div class="item-table-left row-3">
+		<div class="table-left">
 			<div class="page-info">
 				<div><a class="page-title">/Projects /Academic</a></div>
 				<ul>
-					<li><a href="#Design_for_Defense" class="page-link  ">Design for Defense</a></li>
-					<li><a href="#Senior_Design" class="page-link ">Design Capstone</a></li>
-					<li><a href="#Bebop" class="page-link ">Drone Path Planner</a></li>
-					<li><a href="#PickUp" class="page-link ">Mobile App</a></li>
-					<li><a href="#Personal_Website" class="page-link ">Personal Website</a></li>
+					<li><a href="#Design_for_Defense" class="link  ">Design for Defense</a></li>
+					<li><a href="#Senior_Design" class="link ">Design Capstone</a></li>
+					<li><a href="#Bebop" class="link ">Drone Path Planner</a></li>
+					<li><a href="#PickUp" class="link ">Mobile App</a></li>
+					<li><a href="#Personal_Website" class="link ">Personal Website</a></li>
 				</ul>
 			</div>
 		</div>
 
-		<div class="item-col-right"></div>
-
-		<div class="item-table-right"></div>
-
-		<div class="page-card row-content row-3">
-			<h2 id="Design_for_Defense">
-				<a href="https://www.colorado.edu/ideaforge/H4D" target="_blank" class="page-link">Design for
-					Defense</a> -
-				<a href="https://www.nga.mil/" target="_blank" class="page-link">National Geospatial Intelligence Agency
-					(NGA)</a>
-			</h2>
-			<p>
-				This five-person interdisciplinary team endeavor derived from a problem posed to us by the NGA in an
-				entrepreneurial setting.
-				The ultimate goal was to produce dual-purpose (military and private-sector) entity use-cases.
-				In short, the NGA wanted us to develop a software solution to identify salient changes in mass
-				quantities of geoJSON data and transform it into actionable information.<br>
-				<br>
-				This data came from the European Space Agency's (ESA)
-				<a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-1" target="_blank"
-					class="page-link">Sentienel-1 mission</a>.
-				The mission is comprised of a constellation of two polar-orbiting C-band synthetic aperture radar (SAR)
-				satellites.
-				The data we were given was preprocessed by the NGA's internal change-detection algorithm.
-				What we recieved was a 700+ GB of geoJSON and KMZ files.<br>
-				<br>
-				We worked as a team to develop two code-backed approaches to handing the Sentienel-1 SAR data, namely
-				heatmapping and clustering.
-				However, based on the low resolution of Sentienel-1 data compared to emerging technologies, which offer
-				a magnitude increase in resolution,
-				it was a tough case to sell for private-sector use. <br>
-				<br>
-				Therefore, we gave the NGA our code and a thoughtful detailed write-up that explained the problem and
-				landscape as we came to know it.
-				This lead to our team to a major pivot to focus on wildfire mitigation.
-				We landed on this focus largely due to the fact that SAR data is unique in its ability acquire imagery
-				regardless of the weather.
-				In order to make a case for an entrepreneurial endeavor, we conducted interviews, market research, and
-				establied industry partners.
-				The video on this page stands as a testament to the deep dive we took into this realm.
-			</p>
-			<div>
-				<figure>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/ZEVGm29nJxM?controls=0"
-						frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-					<figcaption>Pitch Video</figcaption>
-				</figure>
+		<div class="card" id="first-card">
+			<div class="card-contents">
+				<div class="card-text">
+					<h2 id="Design_for_Defense">
+						<a href="https://www.colorado.edu/ideaforge/H4D" target="_blank" class="link">Design for
+							Defense</a> -
+						<a href="https://www.nga.mil/" target="_blank" class="link">National Geospatial Intelligence Agency
+							(NGA)</a>
+					</h2>
+					<p>
+						This five-person interdisciplinary team endeavor derived from a problem posed to us by the NGA in an
+						entrepreneurial setting.
+						The ultimate goal was to produce dual-purpose (military and private-sector) entity use-cases.
+						In short, the NGA wanted us to develop a software solution to identify salient changes in mass
+						quantities of geoJSON data and transform it into actionable information.<br>
+						<br>
+						This data came from the European Space Agency's (ESA)
+						<a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-1" target="_blank"
+							class="link">Sentienel-1 mission</a>.
+						The mission is comprised of a constellation of two polar-orbiting C-band synthetic aperture radar (SAR)
+						satellites.
+						The data we were given was preprocessed by the NGA's internal change-detection algorithm.
+						What we recieved was a 700+ GB of geoJSON and KMZ files.<br>
+						<br>
+						We worked as a team to develop two code-backed approaches to handing the Sentienel-1 SAR data, namely
+						heatmapping and clustering.
+						However, based on the low resolution of Sentienel-1 data compared to emerging technologies, which offer
+						a magnitude increase in resolution,
+						it was a tough case to sell for private-sector use. <br>
+						<br>
+						Therefore, we gave the NGA our code and a thoughtful detailed write-up that explained the problem and
+						landscape as we came to know it.
+						This lead to our team to a major pivot to focus on wildfire mitigation.
+						We landed on this focus largely due to the fact that SAR data is unique in its ability acquire imagery
+						regardless of the weather.
+						In order to make a case for an entrepreneurial endeavor, we conducted interviews, market research, and
+						establied industry partners.
+						The video on this page stands as a testament to the deep dive we took into this realm.
+					</p>
+					<div>
+						<figure>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/ZEVGm29nJxM?controls=0"
+								frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+							<figcaption>Pitch Video</figcaption>
+						</figure>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<div class="page-card row-content row-4">
-			<h2 id="Senior_Design">
-				<a href="https://www.colorado.edu/engineering/senior-design" target="_blank" class="page-link">Senior
-					Design Capstone</a> -
-				<a href="https://www.arl.army.mil/who-we-are/locations/army-research-office/" target="_blank"
-					class="page-link">U.S. Army Research Office (ARO)</a>
-			</h2>
-			<p>
-				In place of the traditional Computer Science Capstone project, I applied for CU Boulder's Capstone
-				Exchange program.
-				I wanted to work on an interdisciplinary team in the Mechanical Engineering Capstone, called Senior
-				Design.
-				After I was in the program, I then applied and was accepted for this specific project.<br>
-				<br>
-				The team was comprised of seven Mechanical Engineering students, and myself being the sole Computer
-				Science student.
-				We were given a prompt by the ARO titled "<i>Autonomous device/system for ground-based Warfighter
-					protection, supply, and/or evacuation</i>".
-				This amounted to a largely open-ended design and prototyping project.
-				We spent the entire Fall 2019 semester developing the scope, design, manufacturing, assembly, and test
-				plans for the project.
-				This included drawing up industry standard documents and presentations such as the Critical Design
-				Review.
-				The lionshare of the team's time during Spring 2020 semester was spent putting together and testing our
-				device.<br>
-				<br>
-				My role as the team Computer Scientist was broadly split in two.
-				Firstly, I was to research, pitch, make diagrams, and field questions during the iterative design
-				process
-				to aid in determining scope and feasibility.
-				Secondly I was to taking the lead with computer and electronics hardware installation, software
-				implementation, and testing.<br>
-				<br>
-				Part of this process included using Python's Computer Vision module OpenCV with a webcam attached to our
-				device.
-				This was to autonomously detect some visual target, find its location, and deploy defensive system in
-				response.
-				In order to accomplish this, we used a Raspberry Pi with Raspian (Debian-based operating system) as the
-				computer for the electronic components interface with.
-				The webcam was plugged into the Raspberry Pi's USB port, while the rest of the components were connected
-				via the general purpose input/output ports.
-				Below is a diagram I made of the electronics, a sample of what the computer vision code would "see", and
-				a couple images of the device.
-				The code for the final program can be found <a
-					href="https://github.com/lrmcc/ARO-Senior-Design/blob/master/SDET_FINAL.py" target="_blank"
-					class="page-link">here</a> and
-				the project is also on the University of Colorado Boulder website found <a
-					href="https://www.colorado.edu/mechanical/team-16-autonomous-devicesystem-ground-based-warfighter-protection-supply-andor-evacuation"
-					target="_blank" class="page-link">here</a> .
-			</p>
-			<div>
-				<figure>
-					<img src="../../images/elec_sys.png" width="560" height="315" alt="electrical" class="img">
-					<figcaption>Electronics System</figcaption>
-				</figure>
-				<figure>
-					<img src="../../images/cv.png" width="560" height="315" alt="cv" class="img">
-					<figcaption>Signal flowpath</figcaption>
-				</figure>
-			</div>
-			<div>
-				<figure>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/crDZYq-qjM8?controls=0"
-						frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-					<figcaption>The system in operation</figcaption>
-				</figure>
-				<figure>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/TbS_l0LK80Y?controls=0"
-						frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-					<figcaption>This is what the computer "sees"</figcaption>
-				</figure>
-
-			</div>
-		</div>
-
-		<div class="page-card row-content row-5" id="Bebop">
-			<h2>Bebop Parrot 2 Path Planner</h2>
-			<p>
-				This robotics project was a four-person team effort during the Fall 2019 semester.
-				We decided to write a color-coded path planner via blob detection for a quadcopter.
-				My contributions entailed installing and managing the ROS middleware on an Ubunutu Linux virtual machine
-				and aquiring the required Bebop packages.
-				I setup the initial quadcopter communications, which were basic controlling movement via bash commands.
-				I then wrote the same type of commands in Python and merged it with the groups blob-detection code.
-				We then worked as a group to bring together and test the color-detection and motor controlling. The code
-				can be found <a href="https://github.com/lrmcc/RoboticsFinal" target="_blank">here.</a>
-				The video below was part of our group's deliverable.
-			</p>
-			<div>
-				<figure>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/0KpePEbs3xg" frameborder="0"
-						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-					<figcaption>Task Progression Video</figcaption>
-				</figure>
+		<div class="card" id="second-card">
+			<div class="card-contents">
+				<div class="card-text">
+					<h2 id="Senior_Design">
+						<a href="https://www.colorado.edu/engineering/senior-design" target="_blank" class="link">Senior
+							Design Capstone</a> -
+						<a href="https://www.arl.army.mil/who-we-are/locations/army-research-office/" target="_blank"
+							class="link">U.S. Army Research Office (ARO)</a>
+					</h2>
+					<p>
+						In place of the traditional Computer Science Capstone project, I applied for CU Boulder's Capstone
+						Exchange program.
+						I wanted to work on an interdisciplinary team in the Mechanical Engineering Capstone, called Senior
+						Design.
+						After I was in the program, I then applied and was accepted for this specific project.<br>
+						<br>
+						The team was comprised of seven Mechanical Engineering students, and myself being the sole Computer
+						Science student.
+						We were given a prompt by the ARO titled "<i>Autonomous device/system for ground-based Warfighter
+							protection, supply, and/or evacuation</i>".
+						This amounted to a largely open-ended design and prototyping project.
+						We spent the entire Fall 2019 semester developing the scope, design, manufacturing, assembly, and test
+						plans for the project.
+						This included drawing up industry standard documents and presentations such as the Critical Design
+						Review.
+						The lionshare of the team's time during Spring 2020 semester was spent putting together and testing our
+						device.<br>
+						<br>
+						My role as the team Computer Scientist was broadly split in two.
+						Firstly, I was to research, pitch, make diagrams, and field questions during the iterative design
+						process
+						to aid in determining scope and feasibility.
+						Secondly I was to taking the lead with computer and electronics hardware installation, software
+						implementation, and testing.<br>
+						<br>
+						Part of this process included using Python's Computer Vision module OpenCV with a webcam attached to our
+						device.
+						This was to autonomously detect some visual target, find its location, and deploy defensive system in
+						response.
+						In order to accomplish this, we used a Raspberry Pi with Raspian (Debian-based operating system) as the
+						computer for the electronic components interface with.
+						The webcam was plugged into the Raspberry Pi's USB port, while the rest of the components were connected
+						via the general purpose input/output ports.
+						Below is a diagram I made of the electronics, a sample of what the computer vision code would "see", and
+						a couple images of the device.
+						The code for the final program can be found <a
+							href="https://github.com/lrmcc/ARO-Senior-Design/blob/master/SDET_FINAL.py" target="_blank"
+							class="link">here</a> and
+						the project is also on the University of Colorado Boulder website found <a
+							href="https://www.colorado.edu/mechanical/team-16-autonomous-devicesystem-ground-based-warfighter-protection-supply-andor-evacuation"
+							target="_blank" class="link">here</a> .
+					</p>
+					<div>
+						<figure>
+							<img src="../../images/elec_sys.png" width="560" height="315" alt="electrical" class="img">
+							<figcaption>Electronics System</figcaption>
+						</figure>
+						<figure>
+							<img src="../../images/cv.png" width="560" height="315" alt="cv" class="img">
+							<figcaption>Signal flowpath</figcaption>
+						</figure>
+					</div>
+					<div>
+						<figure>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/crDZYq-qjM8?controls=0"
+								frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+							<figcaption>The system in operation</figcaption>
+						</figure>
+						<figure>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/TbS_l0LK80Y?controls=0"
+								frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+							<figcaption>This is what the computer "sees"</figcaption>
+						</figure>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<div class="page-card row-content row-6" id="PickUp">
-			<h2>PickUp/Pindown App</h2>
-			This project began as a six-person team in the Spring of 2019 in Software Development Methods and Tools
-			class.
-			The team designed and implemented a working Android app prototype named PickUp.
-			The name is from the common term for an impromptu sports game, which was the types of events we were
-			targeting.
-			The app was created using Google's Flutter SDK with a Firebase database and Google Cloud Platform for user
-			authentication.
-			My chief contributions to the app protoype were establishing the authentication and
-			required API keys as well as connecting Firebase to the frontend. The team used weekly Scrum meetings and a
-			broader interative Agile methodology throughout the semester.
-			The team was successful in developing a protoype version
-			<a href="https://github.com/lrmcc/PickUpApp1.0/tree/master/lib/pages" target="_blank" class="page-link">
-				found here</a>
-			that allowed users to create an account, securely login, and post and remove events at predetermined
-			locations on a map.<br>
-			<br>
-			This project gave rise to efforts to rebrand and build a new start-up around map-based events app, called
-			Pindown.
-			This startup went on to grow and pitch at the 2020 <a href=" https://www.colorado.edu/nvc/" target="_blank"
-				class="page-link"> New Venture Challenge</a>.
-			It has since dissolved. Below is some images from PickUp that were remade into wireframes for Pindown.
-			<figure>
-				<img src="../../images/pindown.png" class="img" alt="wireframe sequence">
-			</figure>
+		<div class="card" id="third-card">
+			<div class="card-contents">
+				<div class="card-text">
+					<h2 id="Bebop">Bebop Parrot 2 Path Planner</h2>
+					<p>
+						This robotics project was a four-person team effort during the Fall 2019 semester.
+						We decided to write a color-coded path planner via blob detection for a quadcopter.
+						My contributions entailed installing and managing the ROS middleware on an Ubunutu Linux virtual machine
+						and aquiring the required Bebop packages.
+						I setup the initial quadcopter communications, which were basic controlling movement via bash commands.
+						I then wrote the same type of commands in Python and merged it with the groups blob-detection code.
+						We then worked as a group to bring together and test the color-detection and motor controlling. The code
+						can be found <a href="https://github.com/lrmcc/RoboticsFinal" target="_blank">here.</a>
+						The video below was part of our group's deliverable.
+					</p>
+					<div>
+						<figure>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/0KpePEbs3xg" frameborder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+							<figcaption>Task Progression Video</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<div class="page-card row-content row-7" id="Personal_Website">
-			<h2>Personal Website</h2>
-			<p><a href="https://www.lukemcconnell.net/" target="_blank" class="page-link">lukemcconnell.net</a>:
-				This static website is hosted via AWS S3 Bucket, Route 53, and Cloudfront.
-				The current version you are viewing has been made from scratch with no templating.
-				This is an exercise of my abilities to work independently to pursue modern techniques in web design.
-				I have used common resources from the internet like
-				<a href="https://www.w3schools.com/" target="_blank" class="page-link">w3schools</a>,
-				<a href="https://css-tricks.com/" target="_blank" class="page-link">css-tricks</a>, and
-				<a href="https://stackoverflow.com/" target="_blank" class="page-link">Stack Overflow</a> among others.
-				I plan to continue updating, expanding, and integrating my experiences into this site.
-			</p>
+		<div class="card" id="fourth-card">
+			<div class="card-contents">
+				<div class="card-text">
+					<h2 id="PickUp">PickUp/Pindown App</h2>
+					This project began as a six-person team in the Spring of 2019 in Software Development Methods and Tools
+					class.
+					The team designed and implemented a working Android app prototype named PickUp.
+					The name is from the common term for an impromptu sports game, which was the types of events we were
+					targeting.
+					The app was created using Google's Flutter SDK with a Firebase database and Google Cloud Platform for user
+					authentication.
+					My chief contributions to the app protoype were establishing the authentication and
+					required API keys as well as connecting Firebase to the frontend. The team used weekly Scrum meetings and a
+					broader interative Agile methodology throughout the semester.
+					The team was successful in developing a protoype version
+					<a href="https://github.com/lrmcc/PickUpApp1.0/tree/master/lib/pages" target="_blank" class="link">
+						found here</a>
+					that allowed users to create an account, securely login, and post and remove events at predetermined
+					locations on a map.<br>
+					<br>
+					This project gave rise to efforts to rebrand and build a new start-up around map-based events app, called
+					Pindown.
+					This startup went on to grow and pitch at the 2020 <a href=" https://www.colorado.edu/nvc/" target="_blank"
+						class="link"> New Venture Challenge</a>.
+					It has since dissolved. Below is some images from PickUp that were remade into wireframes for Pindown.
+					<figure>
+						<img src="../../images/pindown.png" class="img" alt="wireframe sequence">
+					</figure>
+				</div>
+			</div>
+		</div>
+
+		<div class="card" id="fifth-card">
+			<div class="card-contents">
+				<div class="card-text">
+					<h2 id="Personal_Website">Personal Website</h2>
+					<p><a href="https://www.lukemcconnell.net/" target="_blank" class="link">lukemcconnell.net</a>:
+						This static website is hosted via AWS S3 Bucket, Route 53, and Cloudfront.
+						The current version you are viewing has been made from scratch with no templating.
+						This is an exercise of my abilities to work independently to pursue modern techniques in web design.
+						I have used common resources from the internet like
+						<a href="https://www.w3schools.com/" target="_blank" class="link">w3schools</a>,
+						<a href="https://css-tricks.com/" target="_blank" class="link">css-tricks</a>, and
+						<a href="https://stackoverflow.com/" target="_blank" class="link">Stack Overflow</a> among others.
+						I plan to continue updating, expanding, and integrating my experiences into this site.
+					</p>
+				</div>
+			</div>
 		</div>
 
 		<footer class="footer">

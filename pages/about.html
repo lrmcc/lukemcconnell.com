@@ -18,68 +18,99 @@
     <div class="container">
 
 		<header class="header" id="header">
-			<div class="item-header-banner row-1"></div>
-			<div class="item-header-menu row-2">
-                <a href="../index.html" class="logo">Luke McConnell</a>
-                <div class="header-menu">
-                    <a href="../index.html">Home</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="dev.html">Dev</a>
-                    <a href="media.html">Media</a>
-                    <a href="about.html">About</a>
-                    <a href="resources.html">Resources</a>
-                    <a href="contact.html">Contact</a>
-                    <hr class="page-header-line">
-                </div>
+			<div class="header-banner"></div>
+			<div class="header-menu">
+                <a href="../index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="dev.html">Dev</a>
+                <a href="media.html">Media</a>
+                <a href="about.html">About</a>
+                <a href="resources.html">Resources</a>
+                <a href="contact.html">Contact</a>
+                <hr class="header-line">
             </div>
         </header>
-
-        <div class="item-col-left"></div>
         
-        <div class="item-table-left row-3">
+        <div class="table-left">
 			<div class="page-info">
 				<div><a class="page-title">/About</a></div>
             </div>
         </div>
 
-		<div class="item-col-right"></div>
+        <div class="card" id="first-card">
+            <div class="card-contents">
+                <div class="card-img">
+                    <img src="../images/luke.jpg" alt="Luke" /> 
+                </div>
+                <div class="card-w-img-text">
+                    Hi! I'm Luke McConnell.
+                    I am a Software Engineer living near Tokyo, Japan. 
+                    <br><br>
+                    I have recently begun my job search since relocating to Japan in July 2022.
+                    I will be honing my software skills and building out public <a href="https://github.com/lrmcc" target="_blank" class="link">projects</a> 
+                    while looking for the right position.
+                </div>
+            </div>
 
-		<div class="item-table-right"></div>
+        </div>
 
-        <div class="page-card img row-3 left">
-            <div class="">
-                <img src="../images/luke.jpg" alt="Luke" />
+        <div class="card" id="second-card">
+            <div class="card-contents">
+
+                <div class="card-img" id="usaf">
+                    <img src="../images/usaf-logo.png" alt="U.S. Air Force logo" />
+                </div>
+                <div class="card-w-img-text">
+                    I worked as a <a href="https://www.opm.gov/policy-data-oversight/classification-qualifications/general-schedule-qualification-standards/1500/computer-science-series-1550/" target="_blank" class="link">Computer Scientist</a> for the
+                    <a href="https://afciviliancareers.com/" target="_blank" class="link">Air Force Civilian Service</a> for 2 years. 
+                    <br><br>
+                    I served as a Software Engineer, CI/CD pipeline manager, and <a href="https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster" target="_blank" class="link">Scrum Master</a>, among other roles.
+                </div>
             </div>
         </div>
 
-        <div class="page-card row-3 right">
-            Hi! I'm Luke McConnell.<br><br>
-            I am a Software Engineer currently working as a Computer Scientist for the
-            <a href="https://afciviliancareers.com/" target="_blank" class="page-link">Air Force Civilian Service</a>.
-            <br><br>
-            I've held this position since graduating from the <a href="https://www.colorado.edu/cs/"
-                class="page-link">University of Colorado Boulder</a> with a B.S. Computer Science in August of 2020.
-        </div>
+        <div class="card" id="third-card">
+            <div class="card-contents">
 
-        <div class="page-card row-4 left">
-            I am proud to have served 6 years in the U.S. Navy as a
-            <a href="https://en.wikipedia.org/wiki/Machinist%27s_mate#Nuclear_mechanics" target="_blank"
-                class="page-link">Nuclear Machinist's Mate</a>.<br><br>
-            My academic and professional evolution from Nuclear Power Plant Operations to Computer Science has been
-            immensenly rewarding.<br><br>
-            I enjoy leveraging my diverse skills to solve problems of all kinds. Below is my resume. Thanks for visiting
-            my site!
-        </div>
+                <div class="card-img" id="ucb">
+                    <img src="../images/ucb.png" alt="University of Colorado logo" />
+                </div>
 
-        <div class="page-card img row-4 right">
-            <div class="">
-                <img src="../images/ship.jpg" alt="ship" />
+                <div class="card-w-img-text">
+                    I graduated from the <a href="https://www.colorado.edu/cs/" target="_blank" class="link">University of Colorado Boulder</a> 
+                    with a Bachelor of Science in Computer Science in August of 2020.
+                </div>
             </div>
         </div>
 
-        <div class="page-card row-content  row-6 img iframe-about">
-            <iframe src="../assets/Resume.pdf#toolbar=0&scrollbars=0&statusbar=0&navpanes=0"
-                class="iframe-about no-select"></iframe>
+        <div class="card" id="fourth-card">
+            <div class="card-contents">
+                <div class="card-img" id="usn">
+                    <img src="../images/usn.png" alt="navy logo"/>
+                </div>
+
+                <div class="card-w-img-text">
+                    I proudly served 6 years in the U.S. Navy as a
+                    <a href="https://en.wikipedia.org/wiki/Machinist%27s_mate#Nuclear_mechanics" target="_blank"
+                        class="link">Nuclear Machinist's Mate</a>.
+                    <br><br>
+                    My tranisition from Nuclear Power to Computer Science has been
+                    immensenly rewarding.
+                    <br><br>
+                    My resume is below. Thanks for visiting my site!
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card img iframe-about" id="fifth-card">
+            <div class="card-contents">
+                <div class="card-iframe" id="resume">
+                    <iframe src="../assets/Resume.pdf#toolbar=0&scrollbars=0&statusbar=0&navpanes=0"
+                    class="iframe-about no-select"></iframe>
+                </div>
+            </div>
+            
         </div>
         
         <footer class="footer">

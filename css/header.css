@@ -1,4 +1,5 @@
 .header {
+  position: sticky;
   top: 0;
   font-size: 36px;
   font-family: var(--site-font);
@@ -17,14 +18,30 @@
   display: none;
 }
 
+.header-banner {
+  font-size: 1rem;
+  text-align: center;
+  color: whitesmoke;
+  grid-row: 1 / span 1;
+  background-color: #112932;
+}
+
 .header-menu {
   display: block;
   margin: 0;
   font-size: 1.2rem;
   text-align: center;
-  background-color: var(--header);
   opacity: 1;
+  grid-column:  1 / span 12;
+  grid-row: 2 / span 1;
+  background-color: var(--header);
 }
 .header-menu a {
-  padding: 1.6em;
+  padding: 0 1.6em 0 1.6em;
+}
+
+.header-line {
+  margin: 10px 10px 0px 10px;
+  color: inherit;
+  border: 1px solid var(--light-theme-text-alt);
 }

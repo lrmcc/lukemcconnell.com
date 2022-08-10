@@ -1,18 +1,16 @@
 .gallery{
-  margin-top: 5%;
-  grid-row: 2/12;
+  grid-column: 3 / span 10;
+  grid-row: 3/13;
+  margin: 50px 20px 0px 0px;
 }
 .gallery img{
-  width: 28rem;
+  width: 34rem;
   border-radius: 8px;
   align-self: center;
   justify-self: center;
   margin-bottom: 10px;
 }
-.gallery-gap{
-  grid-template-columns: 4 / span 6;
-  height: 100px;
-}
+
 
 .img img{
   border-radius: 5px;
