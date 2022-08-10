@@ -1,4 +1,5 @@
 .gallery{
+  /* grid-row: 5 / span 1; */
   margin-top: 5%;
   grid-row: 2/12;
 }
@@ -11,6 +12,7 @@
 }
 .gallery-gap{
   grid-template-columns: 4 / span 6;
+  grid-row: 4 / span 1;
   height: 100px;
 }
 

@@ -2,10 +2,10 @@
 @import url(grid.css);
 @import url(header.css);
 @import url(home.css);
-@import url(home-media-queries.css);
 @import url(images.css);
-@import url(site.css);
 @import url(utils.css);
+@import url(home-media-queries.css);
+@import url(site-media-queries.css);
 
 :root {
   --text:#31334a;
@@ -70,7 +70,6 @@ body {
 }
 
 .page-title {
-  font-size: 2.4em;
   color: var(--text);
   font-family: var(--site-font);
   text-align: left;
@@ -78,6 +77,10 @@ body {
 
 .page-info {
   display: block;
+}
+
+.page-links {
+  list-style-type: none;
 }
 
 .link {

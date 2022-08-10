@@ -14,14 +14,12 @@
 .container header {
   grid-column: 1 / span 12;
   grid-row: 1 / 3;
-  /* position: sticky; */
-  /* top:0; */
 }
 
 .table-left{
   grid-column: 1 / span 2;
+  grid-row: 3 / span 1;
   margin: 60px auto;
-  /* position: sticky; */
 }
 
 .col-1 {
