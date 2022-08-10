@@ -5,7 +5,6 @@
     .table-left{
         grid-column: 1 / span 2;
     }
-
 }
 
 @media screen and (min-width: 865px) and (max-width: 1150px) {
@@ -237,9 +236,10 @@
 
     .card-img img{
         transform: scale(0.4);
+        margin-right: 20px;
     }
     #ucb{
-        margin-left: 20px;
+        margin-left: 0px;
     }
 }
 
@@ -257,8 +257,9 @@
 
     .card-img img{
         transform: scale(0.3);
+        margin-right: 20px;
     }
     #ucb{
-        margin-left: 20px;
+        margin-left: 0px;
     }
 }
