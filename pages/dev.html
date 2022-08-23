@@ -18,15 +18,13 @@
 
     <div class="container">
         <header class="header" id="header">
-            <div class="header-banner">Updated April 2, 2022</div>
+            <div class="header-banner">Updated August 22, 2022</div>
             <div class="header-menu">
                 <a href="../index.html">Home</a>
-                <a href="projects.html">Projects</a>
                 <a href="dev.html">Dev</a>
+                <a href="blog.html">Blog</a>
                 <a href="media.html">Media</a>
                 <a href="about.html">About</a>
-                <a href="resources.html">Resources</a>
-                <a href="contact.html">Contact</a>
                 <hr class="header-line">
             </div>
         </header>
@@ -35,36 +33,111 @@
             <div class="page-info">
                 <div><a class="page-title">/Dev</a></div>
                 <ul class="page-links">
-                    <li><a href="#Personal" class="link">Personal</a></li>
-                    <li><a href="#Professional" class="link">Professional</a></li>
-                    <li><a href="https://github.com/lrmcc" target="_blank" class="link">Github</a></li>
-                    <li><a href="https://gitlab.com/lukermcconnell" target="_blank" class="link">Gitlab</a></li>
+                    <li><a href="#Current" class="link">Current</a></li>
+                    <li><a href="#Future" class="link">Future</a></li>
+                    <li><a href="#Past" class="link">Past</a></li>
+                    <li><a href="#Web" class="link">Web</a></li>
+                    <li><a href="#Undergrad" class="link">Undergrad</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="card" id="first-card">
-            <div class="card-contents">
+            <div class="card-contents" id="Current">
                 <div class="card-text">
-                    <h2 id="Current">Current</h2>
+                    <h2 >Current</h2><hr class="card-line">
                     <br>
-                    <ul>
-                        <li><a href="https://gitlab.com/lukermcconnell/shoot-messenger" class="link">Shoot Messenger</a></li>
-                        <li><a href="https://github.com/lrmcc/Space_Web_Game" class="link">Galactic Field Fighter</a></li>
-                    </ul>
+                    <h4 id="Shoot_Messenger">
+						<a href="https://gitlab.com/lukermcconnell/shoot-messenger" target="_blank" class="link">
+						Shoot Messenger</a>
+					</h4>
+					<h5>Messaging application built in Java</h5>
+					<ul>
+						<li>Users can create or connect to server from any network connected computer with a modern OS.</li>
+						<li>Each server is unique with its own list of users, configured settings and chat history.</li>
+						<li>The state of each server maintained in flat files local to the server machine.</li>
+					</ul>
                 </div>
             </div>
         </div>
 
         <div class="card" id="second-card">
-            <div class="card-contents">
+            <div class="card-contents" id="Future">
                 <div class="card-text">
-                    <h2 id="Future">Future</h2>
+                    <h2>Future</h2><hr class="card-line">
                     <br>
+                    <h4 id="Game_Stats_Backend">
+						<a href="https://github.com/lrmcc/Game_Stats_Backend" target="_blank" class="link">
+                            Game Stats Backend</a>
+					</h4>
+                    <h5>Web application to process and serve high-score data</h5>
+                    <br>
+                    <h4 id="Etrade_Client">
+						<a href="https://github.com/lrmcc/Etrade_Client" target="_blank" class="link">
+                            Etrade Client</a>
+					</h4>
+                    <h5>Web application for viewing predictive models of stock market data</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="third-card">
+            <div class="card-contents" id="Past">
+                <div class="card-text">
+                    <h2>Past</h2><hr class="card-line">
+                    <br>
+                    <h4 id="Space_Game">
+						<a href="https://github.com/lrmcc/Space_Web_Game" target="_blank" class="link">
+							Galactic Field Fighter
+						</a>
+					</h4>
+					<h5>Space shooter game written in Javascript</h5>
+					<ul>
+						<li>Players navigate the stars to avoid destruction!</li>
+						<li>Enemy UFOs spawn randomly, how many can you defeat?</li>
+                        <li><a href="projects/space_game.html"  class="link">*** Play here ***</a></li>
+					</ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="fourth-card">
+			<div class="card-contents" id="Web">
+				<div class="card-text">
+                    <h2>Web</h2><hr class="card-line">
+                    <br>
+                    <h4 id="Personal_Website">
+						<a href="https://www.lukemcconnell.net/" target="_blank" class="link">
+							Personal Website
+						</a>
+					</h4>
+					<h5>Static website hosted on AWS S3 Bucket via Route 53, and Cloudfront.</h5>
+					<ul>
+						<li>Coded from scratch with no templating.</li>
+						<li>Independently pursuing techniques in web design.</li>
+                        <li><a href="https://github.com/lrmcc/lukemcconnell.net/issues" target="_blank" class="link">Issues added to backlog.</a></li>
+					</ul>
+                </div>
+			</div>
+		</div>
+
+        <div class="card" id="fifth-card">
+            <div class="card-contents" id="Undergrad">
+                <div class="card-text">
+                    <h2>Undergraduate</h2><hr class="card-line">
+                    <br>
+                    <h4>
+						<a href="projects/academic.html" target="_blank" class="link">
+							Collegiate Projects
+						</a>
+					</h4>
+					<h5>Detailed description of university coding endeavors.</h5>
                     <ul>
-                        <li><a href="https://github.com/lrmcc/Game_Stats_Backend" class="link">Game Stats Backend</a></li>
-                        <li><a href="https://github.com/lrmcc/Etrade_Client" class="link">Etrade Client</a></li>
-                    </ul>
+						<li>Sifted through repeat location SAR data for salient changes.</li>
+						<li>Controller of electical motors and actuators using computer vision.</li>
+                        <li>Drone path planner via live stream image processing using blob detection.</li>
+                        <li>Android app for event recording using Google Maps API.</li>
+					</ul>
                 </div>
             </div>
         </div>

@@ -5,14 +5,12 @@
   grid-auto-rows: min-content;
   gap: 10px;
 }
-
 .home {
   justify-content: space-evenly;
   justify-items: center;
   align-content: space-evenly;
   align-items: stretch;
 }
-
 .home-welcome {
   grid-column: 1 / span 12;
   font-size: 3.0rem;
@@ -20,25 +18,9 @@
   color: var(--text);
   margin: 60px 0px 40px 0px;
 }
-
-.main-item {
-  margin-top: 60px;
-  transform: scale(0.6);
-  transition: transform 0.75s ease, opacity 1s ease;
+.home-item {
+  align-self: auto;
 }
-.main-item:hover {
-  transform: scale(0.65);
-}
-
-.side-item {
-  margin-top: 20px;
-  transform: scale(0.6);
-  transition: transform 0.75s;
-}
-.side-item:hover {
-  transform: scale(0.65);
-}
-
 .home-img {
   opacity: 1;
   transition: opacity 1s;
@@ -46,8 +28,6 @@
 .home-item:hover .home-img {
   opacity: 0.85;
 }
-
-
 .item-name {
   position: absolute;
   font-size: 2.2rem;
@@ -57,40 +37,53 @@
   opacity: 0;
   transition: opacity 0.5s;
 }
-
 .home-item:hover .item-name {
   opacity: 1;
 }
-
-.main-name-1 {
-  left: 25%
+.main-item {
+  margin-top: 60px;
+  transform: scale(0.6);
+  transition: transform 0.75s ease, opacity 1s ease;
 }
-.main-name-2 {
+.main-item:hover {
+  transform: scale(0.65);
+}
+.side-item {
+  margin-top: 20px;
+  transform: scale(0.6);
+  transition: transform 0.75s;
+}
+.side-item:hover {
+  transform: scale(0.65);
+}
+
+#icon-1 {
+  grid-column: 4 / span 2;
+}
+#icon-2{
+  grid-column: 6 / span 2;
+}
+#icon-3 {
+  grid-column: 8 / span 2;
+}
+#icon-4 {
+  grid-column: 5 / span 2;
+}
+#icon-5 {
+  grid-column: 7 / span 2;
+}
+#icon-1 .item-name {
   left: 11%
 }
-.main-name-3 {
+#icon-2 .item-name {
+  left: 37%
+}
+#icon-3 .item-name {
   left: 30%
 }
-
-.side-name-1 {
+#icon-4 .item-name {
   right: -12%;
 }
-.side-name-2 {
-  left: -56%;
-}
-.side-name-3 {
+#icon-5 .item-name {
   left: -34%;
-}
-
-.tile-1, .tile-4 {
-  grid-column: 4 / span 2;
-  align-self: auto;
-}
-.tile-2, .tile-5 {
-  grid-column: 6 / span 2;
-  align-self: auto;
-}
-.tile-3, .tile-6 {
-  grid-column: 8 / span 2;
-  align-self: auto;
 }
