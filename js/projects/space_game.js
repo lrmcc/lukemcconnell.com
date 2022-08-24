@@ -1,86 +1,77 @@
-let keyPress = '';
-let gameInProgress = 0;
+const shipInitX = 200;
+const shipMinX = -160;
+const shipMaxX = 560;
+const shipInitY = 220;
+const shipMinY = -60;
+const shipMaxY = 270;
+const shipComponents = ['ship-nose', 'ship-body', 'ship-star', 'ship-circle', 'ship-chevron', 'ship-wing-left','ship-wing-right', 'ship-tail','ship-tail-fire','ship-tail-fire'];
+
+const ufoMinX = -180;
+const ufoMaxX = 530;
+const ufoComponents = ['ufo-glass', 'ufo-alien','ufo-alien-eye-left','ufo-alien-eye-right', 'ufo-alien-body','ufo-top','ufo-body-upper', 'ufo-body-lower','ufo-antenna-pole','ufo-antenna-base','ufo-antenna-bead'];
+
+const laserMinY = -100;
+const laserMaxY = 270;
+const numLasersCreate = 5;
+
+const numStarsCreate = 16;
+
+let gameInProgress = false;
 let time = 60;
 let score = 0;
-let transformRegex = /(-*[0-9]+)/g;
+let keyPress = '';
 
 let shipX = 200;
 let shipY = 220;
-let shipMinX = -160;
-let shipMaxX = 560;
-let shipMinY = -60;
-let shipMaxY = 270;
+let shipContainer;
+let shipTailFire;
 
-let numStarsCreate = 16;
-let numStarsActive = 0;
-let starYValue = [-100,50,200,350,500];
+let ufoX = -180;
+let ufoY = -60;
+let ufoDirection = 1;
+let ufoHit = false;
+let ufoContainer = "";
+let ufoCreated = false;
+let ufoExists = false;
+let ufoOpac;
+let ufoIntervalId;
 
-let numUFOsCreate = 0;
-let UFOX = -180;
-let UFOMinX = -180;
-let UFOMaxX = 530;
-let UFOY = -60;
-let UFODirection = 1;
+let numLasersActive = 0;
+let laserIsMoving = false;
 
-let UFOResetX = [-179, -38, 104, 246, 388, 529]
-let UFOElementID = '';
-let UFOHit = 0;
+let numStars = 0;
 
-let numberLasersCreate = 5;
-let laserX = 246;
-let laserY = 160;
-let laserMinY = -100;
-let laserMaxY = 270;
-let laserIDsActive = [];
-let laserIsMoving = 0;
-
-let shipComponentents = ['ship-nose', 'ship-body','ship-wing-left','ship-wing-right', 'ship-tail','ship-tail-fire','ship-tail-fire'];
-let UFOComponents = ['ufo-glass', 'ufo-alien','ufo-alien-eye-left','ufo-alien-eye-right', 'ufo-alien-body','ufo-top','ufo-body-upper', 'ufo-body-lower','ufo-antenna-pole','ufo-antenna-base','ufo-antenna-bead'];
-
-function startBackgroundAnimation() {
+/**
+ * Starts the background animation by adding stars.
+ */
+const startBackgroundAnimation = () => {
     for(let i = 0; i < numStarsCreate; i++){
         addStar(`star${i}`);
     }
 }
 
-function startGame(){
+/**
+ * Starts the game by initializing Ship, Lasers, Ufos, clearing the score and starting the timer. 
+ */
+const startGame = () => {
     if (!gameInProgress){
-        console.log("Starting game");
-        document.getElementById('startButton').style.zIndex = 0;
+        console.log("startGame()");
         score = 0;
         setScore();
-        setShipCSSRootVariables();
-        addShip();
-        for(let i = 0; i < numberLasersCreate; i++){
-            addLaser(`laser${i}`);
-        }
-        addUFO(1);
-        document.onkeydown = checkKey;
+        removeStartButton();
+        resetGraphics();
+        createShip();
+        createUfo();
         startTimer();
+        document.onkeydown = checkKey;
     }
-    gameInProgress = 1;
+    gameInProgress = true;
 }
 
-function quitGame(){
-    console.log("quitting game");
-    let graphicsContainer = document.querySelector('.graphics');
-    while (graphicsContainer.lastElementChild) {
-        graphicsContainer.removeChild(graphicsContainer.lastElementChild);
-    }
-    document.onkeydown = null;
-    numStarsActive = 0;
-    gameInProgress = 0;
-    startBackgroundAnimation();
-    time = 0;
-    document.getElementById('game-time-value').innerText = time;
-    document.getElementById('startButton').style.zIndex = 1;
-}
-
-function pauseGame(){
-
-}
-
-async function startTimer(){
+/**
+ * Starts timer.
+ */
+const startTimer = async () => {
     time = 60;
     let timeElement = document.getElementById('game-time-value');
     while (time > -1){
@@ -93,188 +84,316 @@ async function startTimer(){
     }
 }
 
-
-function addStar(starID){
-    appendChildToGraphics('star', '',starID, 'graphics');
+/**
+ * Adds star to graphics container.
+ * @param {*} starID 
+ */
+const addStar = (starID) => {
+    appendChildToParent(createElement('div', starID, ['star']), 'graphics');
     let star = document.getElementById(starID);
     let starTime = getStarTime();
     setStarStyles(star, starTime, getStarXValue());
     setTimeout(() => {resetStarStyles(star)}, Math.floor(starTime * 1000));
-    numStarsActive++;
+    numStars++;
 }
 
-function setStarStyles(star, starTime, starXValue){
+/**
+ * Sets star CSS values.
+ * @param {*} star 
+ * @param {*} starTime 
+ * @param {*} starXValue 
+ */
+const setStarStyles = (star, starTime, starXValue) => {
     star.style.setProperty('--star-time', starTime +'s');
     star.style.setProperty("--star-translateX", starXValue + "px");
 }
 
-function resetStarStyles(star){
+/**
+ * Resets star CSS values.
+ * @param {*} star 
+ */
+const resetStarStyles = (star) => {
     let starTime = getStarTime();
     setStarStyles(star, starTime, getStarXValue());
     setTimeout(() => {resetStarStyles(star)}, Math.floor(starTime * 1000));
 }
 
-let getStarTime = () => {return 10 * Math.random() + 3; }
-
-let getStarXValue = () => { return Math.random() * (880 - (-80)) + -80;}
-
-function addShip(){
-    console.log("Adding Ship");
-    appendChildToGraphics('', '', 'ship-container', 'graphics');
-    appendChildToGraphics('', '', 'ship-wrapper', 'ship-container');
-    appendChildToGraphics('', '', 'ship', 'ship-wrapper');
-    for(let i = 0; i < shipComponentents.length; i++){
-        appendChildToGraphics('', ' ship-component', shipComponentents[i], 'ship');
+/**
+ * Initializes Ship by appending elements to graphics container.
+ */
+const createShip = () => {
+    console.log("createShip()");
+    shipX = shipInitX;
+    shipY = shipInitY;
+    appendChildToParent(createElement('div', 'ship-container', []), 'graphics');
+    appendChildToParent(createElement('div', 'ship-wrapper', []), 'ship-container');
+    appendChildToParent(createElement('div', 'ship', []), 'ship-wrapper');
+    for(let i = 0; i < shipComponents.length; i++){
+        appendChildToParent(createElement('div', shipComponents[i], ['ship-component']), 'ship');
     }
+    shipContainer = document.getElementById('ship-container');
+    shipTailFire = document.getElementById('ship-tail-fire');
 }
 
-function shipMove(){
-    let shipContainer = document.getElementById('ship-container');
+/**
+ * Allows the ship to move.
+ */
+const shipMove = async () => {
+    shipTailFire.style.visibility = "visible";
     shipContainer.style.transform = `translate(${shipX}px, ${shipY}px)`;
-    console.log("shipContainer.style.transform: " + shipContainer.style.transform);
-    let shipTailFire = document.getElementById('ship-tail-fire');
-    shipFireOn(shipTailFire);
-    setTimeout(shipFireOff(shipTailFire), 100);
+    await sleep(100);
+    shipTailFire.style.visibility = "hidden";
 }
 
-let shipFireOn = (shipTailFire) => {shipTailFire.style.visibility = "visible";}
-
-let shipFireOff = (shipTailFire) => {shipTailFire.style.visibility = "hidden";}
-
-function addUFO(numUFOs){
-    for (let i = 0; i < numUFOs; i++){
-        appendChildToGraphics('ufo-container', '',`ufo-container${i}`, 'graphics');
-        appendChildToGraphics('ufo', '', `ufo${i}`, `ufo-container${i}`);
-        for(let j = 0; j < UFOComponents.length; j++){
-            appendChildToGraphics(UFOComponents[j], ' ufo-component', `${UFOComponents[j]}${i}`, `ufo${i}`);
+/**
+ * Create Ufo by add needed elements to graphics container.
+ */
+const createUfo = () => {
+    console.log("createUfo()");
+    if (!ufoCreated) {
+        ufoContainer = appendChildToParent(createElement('div', 'ufo-container', ['ufo-container']), 'graphics');
+        appendChildToParent(createElement('div', 'ufo', ['ufo']), 'ufo-container');
+        for(let j = 0; j < ufoComponents.length; j++) {
+            appendChildToParent(createElement('div', `${ufoComponents[j]}`, [ufoComponents[j], 'ufo-component']), 'ufo');
         }
-        UFOElementID = `ufo-container${i}`;
-        let UFOContainer = document.getElementById(UFOElementID);
-        setUFOTransform(UFOContainer);
-        activateUFOAnimation(UFOContainer);
+        ufoX = randomIntFromInterval(-170, 520);
+        ufoContainer.style.transform = `translate(${ufoX}px, ${ufoY}px)`;
+        ufoCreated = true;
+        activateUfo();
     }
 }
 
- function activateUFOAnimation(UFOContainer){
-    let id = setInterval(frame, 10);
-    async function frame() {
-        if (UFOX == UFOMaxX) {
-            UFODirection = -1;
-        } else if (UFOX == UFOMinX){
-            UFODirection = 1;
-        } else if (UFOHit){
-            UFOHit = 0;
-            UFOContainer.style.opacity = '0';
+/**
+ * Activates the Ufo animation.
+ */
+const activateUfo = () => {
+    console.log("activateUfo()");
+  
+    let ufoIntervalId = setInterval(frame, 10);
+    function frame() {
+        if (!gameInProgress) clearInterval(ufoIntervalId);
+        if (ufoHit) {
+            ufoHit = false;
             score++;
             setScore();
-            clearInterval(id);
-            await sleep(Math.floor(Math.random() * 6000));
-            UFOX = UFOResetX[Math.floor(Math.random() * 6)];
-            setUFOTransform(UFOContainer);
-            UFOContainer.style.opacity = '1';
-            activateUFOAnimation(UFOContainer);
+            removeAllChildElems(ufoContainer);
+            ufoContainer.remove();
+            ufoExists = false;
+            ufoCreated = false;
+            clearInterval(ufoIntervalId);
+            let time = Math.floor(Math.random() * 5000);
+            setTimeout(createUfo, time);
         }
-        UFOX += UFODirection;
-        setUFOTransform(UFOContainer);
+        if (ufoCreated) {
+            ufoX += ufoDirection;
+            if (ufoX == ufoMaxX) {
+                ufoDirection = -1;
+            } 
+            if (ufoX == ufoMinX) {
+                ufoDirection = 1;
+            }
+            ufoContainer.style.transform = `translate(${ufoX}px, ${ufoY}px)`;
+            if (!ufoExists) {
+                ufoOpac = window.getComputedStyle(ufoContainer).getPropertyValue("opacity");
+                if (ufoOpac == 1) {ufoExists = true;};
+            } 
+        }    
     }
 }
 
-let addLaser = (laserID) => { appendChildToGraphics('laser', '',laserID, 'graphics');}
- 
-function appendChildToGraphics(childClassName, childAddClassName, childId, parentElement){
-    let graphicsContainer = document.getElementById(parentElement);
-    let childElement = document.createElement("div");
-    childElement.className = childClassName;
-    if (childAddClassName != '') childElement.className += childAddClassName;
-    if (childId != 999) childElement.id = childId;
-    graphicsContainer.appendChild(childElement);
-}
-
-function checkKey(e) {
-    e = e || window.event;
-    keyPress = e.keyCode;
-    console.log(keyPress);
-    if ( keyPress == '38' || keyPress == '40' || keyPress == '37' || keyPress == '39' ){
-
-        if ((keyPress == '38') && (shipY > shipMinY)) {
-            shipY = shipY - 40;
+/**
+ * Activates the laser to fire.
+ */
+const fireLaser = async (shipX) => {
+    console.log("fireLaser()");
+    let laserX = shipX + 48;
+    let laserY = shipY - 12;
+    let laser = appendChildToParent(createElement('div', `laser${numLasersActive++}`, ['laser']), 'graphics');
+    laser.style.transform = `translate(${laserX}px, ${laserY}px)`;
+    
+    let laserIntervalId = setInterval(frame, 10);
+    function frame() {
+        if (!gameInProgress) clearInterval(laserIntervalId);
+        laserY--;
+        if (laserY == laserMinY) {
+            laser.remove();
+            clearInterval(laserIntervalId);
+            numLasersActive--;
+        } else {
+            laser.style.transform = `translate(${laserX}px, ${laserY}px)`;
+            if (ufoExists && laserY < (ufoY+20) && laserY > (ufoY-50) && laserX > (ufoX) && laserX < (ufoX+100)) {
+                    ufoHit = true;
+                    ufoExists = false;
+                }
         }
-        else if ((keyPress == '40') && (shipY < shipMaxY)) {
-            shipY = shipY + 40;
-        }
-        else if ((keyPress == '37') && (shipX > shipMinX)) {
-            shipX = shipX - 40;
-        }
-        else if ((keyPress == '39') && (shipX < shipMaxX)) {
-            shipX = shipX + 40;
-        }
-        shipMove();
-    } else if (keyPress = '32'){
-        console.log("pressed spacebar");
-        if (laserIDsActive.length < 5) fireLaser();
-        else console.log("Max lasers deployed");
     }
-}
-
-async function fireLaser(){
-    let laserIDNumber = laserIDsActive.length;
-    let laserID = `laser${laserIDNumber}`
-    let laser = document.getElementById(laserID);
-    activateFireLaserAnimation(laser);
-    checkLaserHit(laser);
-    laserIDsActive.push(laserIDNumber);
-    await sleep(2000);
-    laserIDsActive.shift();
  }
 
- function activateFireLaserAnimation(laser){
-    laserX = shipX + 48;
-    laserY = shipY;
-    laserIsMoving = 1;
-    laser.style.opacity = '1';
-    let id = setInterval(frame, 5);
-    function frame() {
-        if (laserY == laserMinY) {
-            laserIsMoving = 0;
-            laser.style.opacity = '0';
-            clearInterval(id);
-        } else {
-            laserY--;
-            laser.style.transform = `translate(${laserX}px, ${laserY}px)`;
-        }
+/**
+ * Creates an HTML element based on parameters.
+ * @param {} elemType tag type (i.e. div, span, ect.) to create
+ * @param {*} elemId id of element created
+ * @param {*} elemClassList list of classes to add to element
+ * @returns 
+ */
+const createElement = (elemType, elemId, elemClassList) => {
+    let elem = document.createElement(elemType);
+    elem.id = elemId;
+    if (elemClassList.length > 0) {
+        elemClassList.forEach(className => {
+            elem.classList.add(className);
+        });   
+    }
+    return elem;
+}
+
+/**
+ * Appends desired element to the graphics container.
+ * @param {*} childElem Element type to be create (i.e. "div" or "button")
+ * @param {*} childId Id of child element to create
+ * @param {*} childClassList List of strings of class names
+ * @param {*} parentId Id of element to append child to
+ */
+const appendChildToParent = (childElem, parentId) => {
+    let parentElem = document.getElementById(parentId);
+    parentElem.appendChild(childElem);
+    return childElem;
+}
+
+/**
+ * Removes all child Elements from given parent element
+ * @param {*} parentElem 
+ */
+ const removeAllChildElems = (parentElem) => {
+    while (parentElem.firstChild) {
+        parentElem.removeChild(parentElem.lastChild);
     }
 }
 
-async function checkLaserHit(laser){
-    while(laserIsMoving){
-        await sleep(10);
-        if(laserX > (UFOX) && laserX < (UFOX+100)){
-            console.log("x-HIT")
-            if(laserY < (UFOY+20) && laserY > (UFOY-50)){
-                //console.log("laserX: " + laserX);
-                //console.log("UFOX: " + UFOX);
-                //console.log("laserY: " + laserY);
-                //console.log("UFOY: " + UFOY);
-                console.log("y-HIT!");
-                laserIsMoving = 0;
-                UFOHit = 1;
+ /**
+  * Tool for logging an element's actual position. Used for development/troubleshooting.
+  * @param {*} elem 
+  */
+  const logElemPosition = (elem) =>{
+    const reX = /\d+(?=,\s\d+\))/;
+    const reY = /\d+(?=\))/;
+    elemTransformVal = window.getComputedStyle(elem).getPropertyValue("transform");
+    console.log(`Elem ${elem.id}'s position: " x=${elemTransformVal.match(reX)}, y=${elemTransformVal.match(reY)}`);
+}
+
+/**
+ * Checks the value of the key pressed.
+ * @param {*} e 
+ */
+const checkKey = (e) => {
+    e = e || window.event;
+    keyPress = e.keyCode;
+    switch(keyPress) {
+        case 37:
+            if (shipX > shipMinX) {shipX -= 40;}
+            break;
+        case 38:
+            if (shipY > shipMinY) {shipY -= 40;}
+            break;
+        case 39:
+            if (shipX < shipMaxX) {shipX += 40;}
+            break;
+        case 40:
+            if (shipY < shipMaxY) {shipY += 40;}
+            break;
+        default:
+            if (keyPress == 32){
+                fireLaser(shipX);
             }
-        }
     }
-};
-
-function setScore(){
-    document.getElementById('game-score-value').innerText = score;
+    if (keyPress >= 37 && keyPress <= 40) {shipMove();}
 }
 
-function setUFOTransform(UFOContainer){
-    UFOContainer.style.transform = `translate(${UFOX}px, ${UFOY}px)`;
-}
-function setShipCSSRootVariables(){
-    setCSSRootVariable('--ship-translateX', shipX, 'px');
-    setCSSRootVariable('--ship-translateY', shipY, 'px');
+/**
+ * Ends the game by removing 
+ */
+const quitGame = () => {
+    console.log("quitGame()");
+    time = 0;
+    document.getElementById('game-time-value').innerText = time;
+    document.onkeydown = null;
+    numStars = 0;
+    gameInProgress = false;
+    ufoExists = false;
+    ufoCreated = false;
+    
+    resetGraphics();
+    addStartButton();
 }
 
-let setCSSRootVariable = (varName, value, valueString)  => { document.documentElement.style.setProperty(`${varName}`, value + valueString);}  
+/**
+ * Removes all child elements of the graphics element and starts background animation
+ */
+const resetGraphics = () => {
+    let graphicsContainer = document.querySelector('.graphics');
+    while (graphicsContainer.lastElementChild) {
+        graphicsContainer.removeChild(graphicsContainer.lastElementChild);
+    }
+    startBackgroundAnimation();
+}
 
-let sleep = (ms) => { return new Promise(resolve => setTimeout(resolve, ms));}
+/**
+ * Adds Start button
+ */
+const addStartButton = () => {
+    let startButton = createElement("button", "startButton", ["start-button", "game-text"]);
+    startButton.setAttribute("type", "button");
+    startButton.setAttribute("onClick", "startGame()");
+    startButton.innerText="Start";
+    appendChildToParent(startButton, "start-button-container");
+}
+
+/**
+ * Removes start button and any possible duplicates
+ */
+const removeStartButton = () => {
+    while (document.getElementById('startButton')) {
+        document.getElementById('startButton').remove();
+    }
+}
+
+/**
+ * Sets the value of the score.
+ */
+
+const setScore = () => {document.getElementById('game-score-value').innerText = score;}
+
+/**
+ * Tool for seting a root CSS variable's value.
+ * @param {*} varName 
+ * @param {*} value 
+ * @param {*} valueString 
+ */
+const setCssRootValue = (varName, value, valueString)  => {document.documentElement.style.setProperty(`${varName}`, value + valueString);}  
+
+/**
+ * Sleeps for a given amount of milliseconds.
+ * @param {*} ms 
+ * @returns 
+ */
+const sleep = (ms) => { return new Promise(resolve => setTimeout(resolve, ms));}
+
+/**
+ * Determines the star speed.
+ * @returns number used to set star speed.
+ */
+const getStarTime = () => {return 10 * Math.random() + 3; }
+
+ /**
+  * Determines the star X-coordinate value.
+  * @returns number used to set star X position.
+  */
+const getStarXValue = () => { return Math.random() * (880 - (-80)) + -80;}
+
+const randomIntFromInterval = (min, max) => {return Math.floor(Math.random() * (max - min + 1) + min);}
+
+ /**
+  * TODO: Pauses game.
+  */
+const pauseGame = () => {
+ }
