@@ -96,3 +96,7 @@ body {
   align-self: center;
   max-width: fit-content;
 }
+
+.hashtags {
+  font-size: 1.3rem;
+}
