@@ -18,17 +18,11 @@
     #icon-1 {
         grid-column: 4 / span 2;
     }
-    #icon-2 {
+    #icon-2, #icon-4 {
         grid-column: 6 / span 2;
     }
     #icon-3 {
         grid-column: 8 / span 2;
-    }
-    #icon-4 {
-        grid-column: 5 / span 2;
-    }
-    #icon-5 {
-        grid-column: 7 / span 2;
     }
 }
 
@@ -52,17 +46,11 @@
     #icon-1 {
         grid-column: 3 / span 3;
     }
-    #icon-2 {
+    #icon-2, #icon-4 {
         grid-column: 6 / span 2;
     }
     #icon-3 {
         grid-column: 8 / span 3;
-    }
-    #icon-4 {
-        grid-column: 5 / span 2;
-    }
-    #icon-5 {
-        grid-column: 7 / span 2;
     }
 }
 
@@ -86,17 +74,11 @@
     #icon-1 {
         grid-column: 2 / span 4;
     }
-    #icon-2 {
+    #icon-2, #icon-4 {
         grid-column: 6 / span 2;
     }
     #icon-3 {
         grid-column: 8 / span 4;
-    }
-    #icon-4 {
-        grid-column: 4 / span 3;
-    }
-    #icon-5 {
-        grid-column: 7 / span 3;
     }
 }
 
@@ -121,7 +103,7 @@
         transition: initial;
     }
 
-    #icon-1, #icon-2, #icon-3, #icon-4, #icon-5 {
+    #icon-1, #icon-2, #icon-3, #icon-4 {
         grid-column: 3 / span 8;
     }
     #icon-1 {
@@ -135,9 +117,6 @@
     }
     #icon-4 {
         grid-row: 5 / span 1;
-    }
-    #icon-5 {
-        grid-row: 6 / span 1;
     }
 }
 
@@ -162,7 +141,7 @@
         transition: initial;
     }
 
-    #icon-1, #icon-2, #icon-3, #icon-4, #icon-5 {
+    #icon-1, #icon-2, #icon-3, #icon-4 {
         grid-column: 3 / span 8;
     }
     #icon-1 {
@@ -176,9 +155,6 @@
     }
     #icon-4 {
         grid-row: 5 / span 1;
-    }
-    #icon-5 {
-        grid-row: 6 / span 1;
     }
 }
 
@@ -203,7 +179,7 @@
         transition: initial;
     }
 
-    #icon-1, #icon-2, #icon-3, #icon-4, #icon-5 {
+    #icon-1, #icon-2, #icon-3, #icon-4 {
         grid-column: 3 / span 8;
     }
     #icon-1 {
@@ -218,10 +194,6 @@
     #icon-4 {
         grid-row: 5 / span 1;
     }
-    #icon-5 {
-        grid-row: 6 / span 1;
-    }
-
 }
 
 @media screen and (min-width: 290px) and (max-width:390px) {
@@ -253,7 +225,7 @@
         transition: initial;
     }
     
-    #icon-1, #icon-2, #icon-3, #icon-4, #icon-5 {
+    #icon-1, #icon-2, #icon-3, #icon-4 {
         grid-column: 3 / span 8;
     }
     #icon-1 {
@@ -267,9 +239,6 @@
     }
     #icon-4 {
         grid-row: 5 / span 1;
-    }
-    #icon-5 {
-        grid-row: 6 / span 1;
     }
 }
 
@@ -302,7 +271,7 @@
         transition: initial;
     }
     
-    #icon-1, #icon-2, #icon-3, #icon-4, #icon-5 {
+    #icon-1, #icon-2, #icon-3, #icon-4 {
         grid-column: 3 / span 8;
     }
     #icon-1 {
@@ -316,8 +285,5 @@
     }
     #icon-4 {
         grid-row: 5 / span 1;
-    }
-    #icon-5 {
-        grid-row: 6 / span 1;
     }
 }
