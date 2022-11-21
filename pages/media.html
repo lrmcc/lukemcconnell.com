@@ -15,20 +15,18 @@
 
 <body>
 
+    <header class="header" id="header">
+        <nav class="header-nav">
+            <a href="../index.html">Home</a>
+            <a href="dev.html">Dev</a>
+            <a href="blog.html">Blog</a>
+            <a href="media.html">Media</a>
+            <a href="about.html">About</a>
+            <hr class="header-line">
+        </nav>
+    </header>
+        
     <div class="container">
-
-        <header class="header" id="header">
-            <div class="header-banner"></div>
-            <div class="header-menu">
-                <a href="../index.html">Home</a>
-                <a href="dev.html">Dev</a>
-                <a href="blog.html">Blog</a>
-                <a href="media.html">Media</a>
-                <a href="about.html">About</a>
-                <hr class="header-line">
-            </div>
-        </header>
-
 
 		<div class="table-left">
 			<div class="page-info">
@@ -36,24 +34,59 @@
             </div>
         </div>
 
-        <div class="gallery">
-            <img src="../images/media/Bull_Elk.webp" class="row-6" alt="Bull Elk">
-            <img src="../images/media/Moose.webp" class="row-7" alt="Moose">
-            <img loading="lazy" src="../images/media/Coyote.webp" class="row-8" alt="Coyote">
-            <img loading="lazy" src="../images/media/Mushrooms.webp" class="row-9" alt="Mushrooms">
-            <img loading="lazy" src="../images/media/Elk_Cows.webp" class="row-10" alt="Cow Elk">
-            <img loading="lazy" src="../images/media/Pika.webp" class="row-11" alt="Pika">
-            <img loading="lazy" src="../images/media/Yellowstone_Buffalo.webp" class="row-12" alt="Buffalo at Yellowstone National Park">
-            <img loading="lazy" src="../images/media/Dunes_Tree.webp" class="row-13" alt="Great Sand Dunes National Park">
-            <img loading="lazy" src="../images/media/Royal_Gorge.webp" class="row-14" alt="Royal Gorge, Colorado">
-            <img loading="lazy" src="../images/media/Yellowstone_Canyon.webp" class="row-15" alt="Canyon at Yellowstone National Park">
+        <div class="card" id="first-card">
+            <div class="card-contents" id="Royal_Gorge">
+                <div class="card-text">
+                    <h2>Wild Lands</h2><hr class="card-line">
+                    <br>
+                    <span class="gallery">
+                        <img src="../images/media/Dunes_Tree.webp" class="img" alt="Colorado Aspen fall leaves">
+                        <img src="../images/media/Garden_Of_The_Gods.webp" class="img" alt="Person walking on snowy forest path">
+                        <img src="../images/media/Royal_Gorge.webp" class="img" alt="Royal Gorge, Colorado">
+                        <img src="../images/media/Yellowstone_Canyon.webp" class="img" alt="Canyon at Yellowstone National Park">
+                        <img loading="lazy" src="../images/media/aspen_fall.webp" class="img" alt="Colorado Aspen fall leaves">
+                        <img loading="lazy" src="../images/media/Winter_Walk.webp" class="img" alt="Person walking on snowy forest path">
+                    </span>
+                    
+                </div>
+            </div>
         </div>
-        
-        <footer class="footer">
-            <div> &copy; 2022 Luke McConnell</div>
-        </footer>
+
+        <div class="card" id="second-card">
+            <div class="card-contents" id="Bull_Elk">
+                <div class="card-text">
+                    <h2>Wild Mammals</h2><hr class="card-line">
+                    <br>
+                    <div class="gallery">
+                        <img loading="lazy" src="../images/media/Bull_Elk.webp" class="img" alt="Bull Elk">
+                        <img loading="lazy" src="../images/media/Moose.webp" class="img" alt="Moose">
+                        <img loading="lazy" src="../images/media/Buffalo_Side.webp" class="img" alt="Buffalo">
+                        <img loading="lazy" src="../images/media/Elk_Cows.webp" class="img" alt="Cow Elk">
+                        <img loading="lazy" src="../images/media/Coyote.webp" class="img" alt="Coyote">
+                        <img loading="lazy" src="../images/media/Pika.webp" class="img" alt="Pika">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="third-card">
+            <div class="card-contents" id="Bull_Elk">
+                <div class="card-text">
+                    <h2>Wild Avians</h2><hr class="card-line">
+                    <br>
+                    <div class="gallery">
+                        <img loading="lazy" src="../images/media/Bird_Crew.webp" class="img" alt="Beach birds">
+                        <img loading="lazy" src="../images/media/Bird_Fluffy.webp" class="img" alt="Beach sand piper">
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
+
+    <footer class="footer">
+        <div> &copy; 2022 Luke McConnell</div>
+    </footer>
     
 </body>
 

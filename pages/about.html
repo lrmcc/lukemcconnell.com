@@ -15,20 +15,19 @@
 
 <body>
 
+    <header class="header" id="header">
+        <nav class="header-nav">
+            <a href="../index.html">Home</a>
+            <a href="dev.html">Dev</a>
+            <a href="blog.html">Blog</a>
+            <a href="media.html">Media</a>
+            <a href="about.html">About</a>
+            <hr class="header-line">
+        </nav>
+    </header>
+
     <div class="container">
 
-		<header class="header" id="header">
-			<div class="header-banner"></div>
-			<div class="header-menu">
-                <a href="../index.html">Home</a>
-                <a href="dev.html">Dev</a>
-                <a href="blog.html">Blog</a>
-                <a href="media.html">Media</a>
-                <a href="about.html">About</a>
-                <hr class="header-line">
-            </div>
-        </header>
-        
         <div class="table-left">
 			<div class="page-info">
 				<div><a class="page-title">/About</a></div>
@@ -38,6 +37,7 @@
                     <li><a href="#University" class="link">University</a></li>
                     <li><a href="#Military" class="link">Military</a></li>
                     <li><a href="#Resume" class="link">Resume</a></li>
+                    <li><a href="#Contact" class="link">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -51,17 +51,15 @@
                     Hi! I'm Luke McConnell.
                     I am a Software Engineer living near Tokyo, Japan. 
                     <br><br>
-                    I have recently begun my job search since relocating to Japan in July of 2022.
-                    I will be honing my software skills and building out public <a href="https://github.com/lrmcc" target="_blank" class="link">projects</a> 
-                    while looking for the right position.
+                    I  relocated to Atami, Japan from Colorado, USA in 2022.
+                    <br><br>
+                    I enjoy honing my software skills and will be continuing to build public facing <a href="https://github.com/lrmcc" target="_blank" class="link">projects</a>.
                 </div>
             </div>
-
         </div>
 
         <div class="card" id="second-card">
             <div class="card-contents" id="Work">
-
                 <div class="card-img" id="usaf">
                     <img src="../images/logos/usaf-logo.png" alt="U.S. Air Force logo" />
                 </div>
@@ -76,11 +74,9 @@
 
         <div class="card" id="third-card">
             <div class="card-contents" id="University">
-
                 <div class="card-img" id="ucb">
                     <img src="../images/logos/ucb.png" alt="University of Colorado logo" />
                 </div>
-
                 <div class="card-w-img-text">
                     I graduated from the <a href="https://www.colorado.edu/cs/" target="_blank" class="link">University of Colorado Boulder</a> 
                     with a Bachelor of Science in Computer Science in August of 2020.
@@ -107,16 +103,14 @@
             </div>
         </div>
 
-
-        <div class="card img iframe-about" id="fifth-card">
+        <div class="card" id="fifth-card">
             <div class="card-contents" id="Resume">
-                <div class="card-iframe" id="resume">
-                    <iframe loading="lazy" src="../assets/Resume.pdf#toolbar=0&scrollbars=0&statusbar=0&navpanes=0"
-                    class="iframe-about no-select"></iframe>
+                <div class="card-iframe" id="Resume">
+                    <iframe title="Resume" loading="lazy" src="../assets/Resume.pdf#toolbar=0&scrollbars=0&statusbar=0&navpanes=0"
+                    class="no-select"></iframe>
                 </div>
             </div>
         </div>
-        <br>
 
         <div class="card" id="sixth-card">
             <div class="card-contents" id="Contact">
@@ -125,13 +119,13 @@
                 </div>
             </div>
         </div>
-        
-        <footer class="footer">
-            <div> &copy; 2022 Luke McConnell</div>
-        </footer>
-        
-    </div>
+    
+    </div>    
 
+    <footer class="footer">
+        <div> &copy; 2022 Luke McConnell</div>
+    </footer>
+        
 </body>
 
 </html>

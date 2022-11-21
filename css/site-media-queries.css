@@ -46,6 +46,11 @@
         grid-row: 8 / span 1;
     }
 
+    #sixth-card {
+        grid-column: 2 / span 10;
+        grid-row: 9 / span 1;
+    }
+
 }
 
 @media screen and (min-width: 730px) and (max-width:865px) {
@@ -90,6 +95,11 @@
     #fifth-card {
         grid-column: 2 / span 10;
         grid-row: 8 / span 1;
+    }
+
+    #sixth-card {
+        grid-column: 2 / span 10;
+        grid-row: 9 / span 1;
     }
 
 }
@@ -142,6 +152,11 @@
         grid-row: 8 / span 1;
     }
 
+    #sixth-card {
+        grid-column: 2 / span 10;
+        grid-row: 9 / span 1;
+    }
+
 }
 
 @media screen and (min-width: 150px) and (max-width:640px) {
@@ -185,6 +200,11 @@
     #fifth-card {
         grid-column: 2 / span 10;
         grid-row: 8 / span 1;
+    }
+
+    #sixth-card {
+        grid-column: 2 / span 10;
+        grid-row: 9 / span 1;
     }
 
     .card-img {

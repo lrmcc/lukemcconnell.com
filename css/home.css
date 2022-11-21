@@ -24,6 +24,7 @@
 .home-img {
   opacity: 1;
   transition: opacity 1s;
+  z-index: 2
 }
 .home-item:hover .home-img {
   opacity: 0.85;
@@ -79,5 +80,5 @@
   left: 30%
 }
 #icon-4 .item-name {
-  right: -12%;
+  right: -20%;
 }

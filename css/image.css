@@ -1,0 +1,20 @@
+.card img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    pointer-events: none;
+    justify-self: center;
+    margin-bottom: 10px;
+    margin: 50px 20px 0px 0px;
+}
+
+.gallery img{
+    width: 40%;
+}
+
+iframe {
+    height: 38rem;
+    width: 100%;
+    justify-self: end;
+}
