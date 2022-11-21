@@ -18,25 +18,22 @@
   display: none;
 }
 
-.header-banner {
+.banner {
   font-size: 1rem;
   text-align: center;
   color: whitesmoke;
-  grid-row: 1 / span 1;
   background-color: #112932;
 }
 
-.header-menu {
+.header-nav {
   display: block;
   margin: 0;
   font-size: 1.2rem;
   text-align: center;
   opacity: 1;
-  grid-column:  1 / span 12;
-  grid-row: 2 / span 1;
   background-color: var(--header);
 }
-.header-menu a {
+.header-nav a {
   padding: 0 1.6em 0 1.6em;
 }
 

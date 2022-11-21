@@ -11,10 +11,6 @@
 .container a {
   text-decoration: none;
 }
-.container header {
-  grid-column: 1 / span 12;
-  grid-row: 1 / 3;
-}
 
 .table-left{
   grid-column: 1 / span 2;

@@ -1,12 +1,11 @@
 @import url(card.css);
-@import url(gallery.css);
+@import url(image.css);
 @import url(grid.css);
 @import url(header.css);
 @import url(home.css);
 @import url(utils.css);
 @import url(home-media-queries.css);
 @import url(site-media-queries.css);
-@import url(gallery-media-queries.css);
 
 :root {
   --text:#31334a;
@@ -60,8 +59,6 @@ body {
 }
 
 .footer {
-  grid-column: 11 / span 2;
-  grid-row: 12 / span 1;
   color: var(--text);
   opacity: .25;
   position: sticky;
