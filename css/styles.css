@@ -57,6 +57,33 @@ body {
   padding: 20px;
 }
 
+#landing {
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+#landing {
+  background-color: #FFDEE9;
+  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+}
+#landing {
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+}
+#landing {
+  background-color: #FA709A;
+background-image: linear-gradient(0deg, #FA709A 20%, #FEE140 83%);
+}
+#landing {
+  background-color: #FBDA61;
+  background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+}
+#landing {
+  background-color: #FF3CAC;
+  background-image: linear-gradient(0deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+/* https://cssgradient.io/gradient-backgrounds/ */
+
+
 html::-webkit-scrollbar {
   width: 1vw;
 }
