@@ -28,7 +28,7 @@ window.addEventListener('click',
         if (isMobile) {checkOverIcon(event.x, event.y);}
         
         if (mouse.isOverIcon == true) {
-            window.location.href = `/../pages/${mouse.icon}.html`;
+            window.location.href = `/../${mouse.icon}.html`;
         }
     }
 )
@@ -153,7 +153,7 @@ function mobileInitSizing() {
 function drawText() {
     page.objects.push(new Text("Software/DevOps Engineer", page.xPos[0] - (page.iconWidth * 0.3), grid.yAxis * 0.55, 1.6))
     page.objects.push(new Text("living in Japan.", page.xPos[2]  + (page.iconWidth * 0.2), grid.yAxis * 0.8, 0.7));
-    page.objects.push(new Text("© 2022 Luke McConnell", innerWidth - (page.fontSize * 3.8), innerHeight - (page.fontSize * 0.1), 0.3));
+    page.objects.push(new Text("© 2023 Luke McConnell", innerWidth - (page.fontSize * 3.8), innerHeight - (page.fontSize * 0.1), 0.3));
 }
 
 function drawMobileText() {
