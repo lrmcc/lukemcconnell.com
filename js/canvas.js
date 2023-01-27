@@ -1,3 +1,4 @@
+console.log("1.27.2023");
 const canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -23,10 +24,34 @@ window.addEventListener('mousemove',
     }
 )
 
+// ['click','ontouchstart'].forEach( evt => 
+//     element.addEventListener(evt, dosomething, false)
+// );
+
 window.addEventListener('click',
     function(event) {
-        if (isMobile) {checkOverIcon(event.x, event.y);}
+        if (isMobile) {
+            console.log("Click event in mobile");
+            checkOverIcon(event.x, event.y);
+        }
+        console.log(`event.x ${event.x}, event.y: ${event.y}`);
+        console.log(`event.clientX ${event.clientX}, event.clientY: ${event.clientY}`);
         
+        if (mouse.isOverIcon == true) {
+            window.location.href = `/../${mouse.icon}.html`;
+        }
+    }
+)
+
+window.addEventListener('touchstart',
+    function(event) {
+        clientX = event.touches[0].clientX;
+        clientY = event.touches[0].clientY;
+        console.log("Touch event in mobile");
+        console.log(`touchstart: clientX ${clientX}, clientY: ${clientY}`);
+        mouse.x = clientX;
+        mouse.y = clientY; 
+        checkOverIcon(clientX, clientY);
         if (mouse.isOverIcon == true) {
             window.location.href = `/../${mouse.icon}.html`;
         }
