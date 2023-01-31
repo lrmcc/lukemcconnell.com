@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
+        </script>
+    <script src="js/form.js" defer></script>
     <link rel="icon" href="images/icons/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,8 +32,8 @@
     <div class="container">
 
         <div class="table-left">
-			<div class="page-info">
-				<div><a class="page-title">/About</a></div>
+            <div class="page-info">
+                <div><a class="page-title">/About</a></div>
                 <ul class="page-links">
                     <li><a href="#Intro" class="link">Intro</a></li>
                     <li><a href="#Work" class="link">Work</a></li>
@@ -44,15 +48,16 @@
         <div class="card" id="first-card">
             <div class="card-contents" id="Intro">
                 <div class="card-img">
-                    <img src="images/about/luke.jpg" alt="Luke" /> 
+                    <img src="images/about/luke.jpg" alt="Luke" />
                 </div>
                 <div class="card-w-img-text">
                     Hi! I'm Luke McConnell.
-                    I am a Software Engineer living near Tokyo, Japan. 
+                    I am a Software Engineer living near Tokyo, Japan.
                     <br><br>
-                    I  relocated to Atami, Japan from Colorado, USA in 2022.
+                    I relocated to Atami, Japan from Colorado, USA in 2022.
                     <br><br>
-                    I enjoy honing my software skills and will be continuing to build public facing <a href="https://github.com/lrmcc" target="_blank" class="link">projects</a>.
+                    I enjoy honing my software skills and will be continuing to build public facing <a
+                        href="https://github.com/lrmcc" target="_blank" class="link">projects</a>.
                 </div>
             </div>
         </div>
@@ -63,10 +68,15 @@
                     <img src="images/logos/usaf-logo.png" alt="U.S. Air Force logo" />
                 </div>
                 <div class="card-w-img-text">
-                    I worked as a <a href="https://www.opm.gov/policy-data-oversight/classification-qualifications/general-schedule-qualification-standards/1500/computer-science-series-1550/" target="_blank" class="link">Computer Scientist</a> for the
-                    <a href="https://afciviliancareers.com/" target="_blank" class="link">Air Force Civilian Service</a> for 2 years. 
+                    I worked as a <a
+                        href="https://www.opm.gov/policy-data-oversight/classification-qualifications/general-schedule-qualification-standards/1500/computer-science-series-1550/"
+                        target="_blank" class="link">Computer Scientist</a> for the
+                    <a href="https://afciviliancareers.com/" target="_blank" class="link">Air Force Civilian Service</a>
+                    for 2 years.
                     <br><br>
-                    I served as a Software Engineer, CI/CD pipeline manager, and <a href="https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster" target="_blank" class="link">Scrum Master</a>, among other roles.
+                    I served as a Software Engineer, CI/CD pipeline manager, and <a
+                        href="https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster"
+                        target="_blank" class="link">Scrum Master</a>, among other roles.
                 </div>
             </div>
         </div>
@@ -77,7 +87,8 @@
                     <img src="images/logos/ucb.png" alt="University of Colorado logo" />
                 </div>
                 <div class="card-w-img-text">
-                    I graduated from the <a href="https://www.colorado.edu/cs/" target="_blank" class="link">University of Colorado Boulder</a> 
+                    I graduated from the <a href="https://www.colorado.edu/cs/" target="_blank" class="link">University
+                        of Colorado Boulder</a>
                     with a Bachelor of Science in Computer Science in August of 2020.
                 </div>
             </div>
@@ -86,7 +97,7 @@
         <div class="card" id="fourth-card">
             <div class="card-contents" id="Military">
                 <div class="card-img" id="usn">
-                    <img src="images/logos/usn.png" alt="navy logo"/>
+                    <img src="images/logos/usn.png" alt="navy logo" />
                 </div>
 
                 <div class="card-w-img-text">
@@ -105,8 +116,9 @@
         <div class="card" id="fifth-card">
             <div class="card-contents" id="Resume">
                 <div class="card-iframe" id="Resume">
-                    <iframe title="Resume" loading="lazy" src="assets/Resume.pdf#toolbar=0&scrollbars=0&statusbar=0&navpanes=0"
-                    class="no-select"></iframe>
+                    <iframe title="Resume" loading="lazy"
+                        src="assets/Resume.pdf#toolbar=0&scrollbars=0&statusbar=0&navpanes=0"
+                        class="no-select"></iframe>
                 </div>
             </div>
         </div>
@@ -114,17 +126,36 @@
         <div class="card" id="sixth-card">
             <div class="card-contents" id="Contact">
                 <div class="card-text">
-                    <a href="mailto:lukermcconnell@gmail.com" class="link">lukermcconnell@gmail.com</a>
+                    <h3>Contact Me</h3><hr class="card-line"><br>
+                    <form id="contact-form" method="post" autocomplete="on">
+                        <h4>First name:</h4>
+                        <input type="text" style="height:35px;" id="first-name-input" name="firstName" autocomplete="given-name"
+                            class="form-control" style="width:100%;"/><br/>
+                        <h4>Last name:</h4>
+                        <input type="text" style="height:35px;" id="last-name-input" name="lastName" autocomplete="family-name"
+                            class="form-control" style="width:100%;"/><br/>
+                        <h4>Email:</h4>
+                        <input type="email" style="height:35px;" id="email-input"
+                            class="form-control" style="width:100%;"/><br/>
+                        <h4>Message:</h4>
+                        <textarea id="message-input" rows="3" class="form-control"
+                            style="width:100%;"></textarea><br/>
+                        <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys"
+                            class="form-control" style="width:100%;"></div>
+                        <button type="button" onClick="submitToAPI(event)" name="submit" class="btn btn-lg"
+                            style="margin-top:20px;">Submit</button>
+                    </form>
+
                 </div>
             </div>
         </div>
-    
-    </div>    
+
+    </div>
 
     <footer class="footer">
         <div> &copy; 2023 Luke McConnell</div>
     </footer>
-        
+
 </body>
 
 </html>
