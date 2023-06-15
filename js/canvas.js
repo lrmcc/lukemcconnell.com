@@ -104,7 +104,7 @@ function init() {
         drawText();
     }
     drawDevIcon();
-    drawBlogIcon();
+    drawForumIcon();
     drawMediaIcon();
     drawAboutIcon();
 }
@@ -176,16 +176,16 @@ function mobileInitSizing() {
 }
 
 function drawText() {
-    page.objects.push(new Text("Software/DevOps Engineer", page.xPos[0] - (page.iconWidth * 0.3), grid.yAxis * 0.55, 1.6))
+    page.objects.push(new Text("Software/IT Engineer", page.xPos[0] - (page.iconWidth * 0.0), grid.yAxis * 0.55, 1.6))
     page.objects.push(new Text("living in Japan.", page.xPos[2]  + (page.iconWidth * 0.2), grid.yAxis * 0.8, 0.7));
     page.objects.push(new Text("© 2023 Luke McConnell", innerWidth - (page.fontSize * 3.8), innerHeight - (page.fontSize * 0.1), 0.3));
 }
 
 function drawMobileText() {
-    page.objects.push(new Text("Software/DevOps", page.xPos[1] - (page.fontSize * 2.4), grid.yAxis * 0.14, 1.1));
+    page.objects.push(new Text("Software/IT", page.xPos[1] - (page.fontSize * 1.1), grid.yAxis * 0.14, 1.1));
     page.objects.push(new Text("Engineer", page.xPos[1] - (page.fontSize * 0.2), grid.yAxis * 0.26, 1.1));
     page.objects.push(new Text("Dev", page.xPos[0] + (page.iconWidth * 0.25), page.yPos[0] + (page.iconHeight[0] * 1.45), 1));
-    page.objects.push(new Text("Blog", page.xPos[1] + (page.iconWidth * 0.25), page.yPos[1] + (page.iconHeight[1] * 1.4), 1));
+    page.objects.push(new Text("Forum", page.xPos[1] + (page.iconWidth * 0.14), page.yPos[1] + (page.iconHeight[1] * 1.4), 1));
     page.objects.push(new Text("Media", page.xPos[2] + (page.iconWidth * 0.2), page.yPos[2] + (page.iconHeight[2] * 1.3), 1));
     page.objects.push(new Text("About", page.xPos[3] - (page.iconWidth * 0.27), page.yPos[3] + (page.iconHeight[3] * 2.6), 0.8));
 }
@@ -203,9 +203,9 @@ function drawDevIcon() {
     }
 }
 
-function drawBlogIcon() {
+function drawForumIcon() {
     page.objects.push(new SpeechBubble(page.xPos[1], page.yPos[1] + (page.iconWidth * 0.1), page.iconWidth, page.iconHeight[1]));
-    page.objects.push(new BlogLines());
+    page.objects.push(new ForumLines());
     page.objects.push(new Pencil());
 }
 
@@ -238,8 +238,8 @@ function checkOverIcon() {
                 text = 'Dev'; // animate </> or >: or 🖥️ or 💻 or 🌐 or 🧑‍💻 or ⚙️ or 💾 related
                 break;
             case 1:
-                text = 'Blog';
-                textX = page.xPos[i] + (page.iconWidth * 0.28); // animate ... or 🗏 or 📝 or 📃 or 🖊️related
+                text = 'Forum';
+                textX = page.xPos[i] + (page.iconWidth * 0.15); // animate ... or 🗏 or 📝 or 📃 or 🖊️related
                 break;
             case 2:
                 text = 'Media';
@@ -525,7 +525,7 @@ function Star(x, y, size) {
     }
 }
 
-function BlogLines() {
+function ForumLines() {
     this.lineWidth = page.lineWidth * 0.55;
     let moveXFactor = [0.2, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1];
     let moveYFactor = [0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85];
