@@ -2,22 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link rel="icon" href="images/icons/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
-        </script>
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="js/form.js" defer></script>
-    <link rel="icon" href="images/icons/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+
     <title>About - Luke McConnnell</title>
 </head>
 
 <body>
-
     <header class="header" id="header">
         <nav class="header-nav">
             <a href="index.html">Home</a>
@@ -25,138 +31,205 @@
             <a href="forum.html">Forum</a>
             <a href="media.html">Media</a>
             <a href="about.html">About</a>
-            <hr class="header-line">
+            <hr class="header-line" />
         </nav>
     </header>
 
     <div class="container">
 
-        <div class="table-left">
-            <div class="page-info">
-                <div><a class="page-title">/About</a></div>
-                <ul class="page-links">
-                    <li><a href="#Intro" class="link">Intro</a></li>
-                    <li><a href="#Work" class="link">Work</a></li>
-                    <li><a href="#University" class="link">University</a></li>
-                    <li><a href="#Military" class="link">Military</a></li>
-                    <li><a href="#Resume" class="link">Resume</a></li>
-                    <li><a href="#Contact" class="link">Contact</a></li>
+        <div class="row">
+
+            <div class="col-md-3" id="about-menu">
+                <ul class="nav flex-column sticky-menu bg-transparent pt-5">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#Top">Top</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#History">Work History</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#Education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Military">Military Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact">Contact</a>
+                    </li>
                 </ul>
             </div>
-        </div>
+            
+            <div class="col-md-9" id="about-content">
 
-        <div class="card" id="first-card">
-            <div class="card-contents" id="Intro">
-                <div class="card-img">
-                    <img src="images/about/luke.jpg" alt="Luke" />
+
+                <div class="card custom-card border-0 bg-transparent" id="Top">
+                    <div class="card-style shadow-lg">
+                        <div class="row g-0">
+                            <div class="col-md-4 align-self-start">
+                                <img src="images/about/luke.jpg" class="img-fluid m-3" alt="Card Image" />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body card-text p-0 pt-3 ms-5">
+                                    <p class="fs-2">
+                                        Software Engineering Consultant
+                                    </p><br />
+                                    <p class="fs-4">
+                                        Atami, Shizuoka, Japan
+                                    </p>
+                                    <!-- <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#detailsCollapse" aria-expanded="false" aria-controls="detailsCollapse"
+                                        id="toggleButton" text="More">More
+                                    </button>
+                                    <div class="collapse" id="detailsCollapse">
+                                        <div class="pt-3">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus nesciunt in ad
+                                            deleniti, sed cupiditate, tempora odit molestias perferendis totam, asperiores velit
+                                            voluptas est. Inventore rem voluptatum iste repellat quibusdam!
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-w-img-text">
-                    Hi! I'm Luke McConnell.
-                    <br><br>
-                    I am a freelance Software Engineer living near Tokyo, Japan since 2022.
-                    <br><br>
-                    I provide clients with project design, software engineering, and development pipeline management services.
-                    <br><br>
-                    In my freetime, I enjoy building public facing <a
-                        href="https://github.com/lrmcc" target="_blank" class="link">software and IT projects</a>.
+
+                <div class="card custom-card border-0 bg-transparent" id="History">
+                    <div class="card-style shadow-lg">
+                        <div class="row g-0">
+                            <div class="col-md-4 align-self-start">
+                                <img src="images/logos/usaf-logo.png" class="img-fluid m-3" alt="U.S. Air Force logo" />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body card-text p-0 mt-3 ms-5">
+                                    <p class="fs-2">
+                                        Former U.S. Air Force Civilian Computer Scientist
+                                    </p><br />
+                                    <p class="fs-4">
+                                        Colorado Springs, Colorado, USA
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="card custom-card border-0 bg-transparent" id="Education">
+                    <div class="card-style shadow-lg">
+                        <div class="row g-0">
+                            <div class="col-md-4 align-self-start">
+                                <img src="images/logos/ucb-seal.png" class="img-fluid m-3 ms-3"
+                                    alt="University of Colorado logo" />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body card-text p-0 mt-3 ms-5">
+                                    <p class="fs-2">
+                                        Bachelor of Science in Computer Science
+                                    </p><br />
+                                    <p class="fs-4">
+                                        University of Colorado Boulder
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card custom-card border-0 bg-transparent" id="Military">
+                    <div class="card-style shadow-lg">
+                        <div class="row g-0">
+                            <div class="col-md-4 align-self-start">
+                                <img src="images/logos/usn.png" class="img-fluid m-3" alt="navy logo" />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body card-text p-0 mt-3 ms-5">
+                                    <p class="fs-2">
+                                        Former U.S. Navy Nuclear Machinist's Mate</a>
+                                    </p><br />
+                                    <p class="fs-4"></p>
+                                    USS George Washington (CVN-73)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card custom-card border-0 bg-transparent" id="Contact">
+                    <div class="card-style shadow-lg">
+                        <div class="row g-0">
+                            <div class="col-md-4 align-self-start">
+                                <img src="images/logos/proj.png" class="img-fluid m-3" alt="project blocks logo" />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body card-text p-0 mt-3 ms-5">
+                                    <p class="fs-2">
+                                        Building Software/IT Projects for Clients and Colleagues
+                                    </p><br />
+                                    <p class="fs-4">
+                                        Reach Out Today!
+                                    </p>
+                                    <br />
+                                    <h5 class="card-title">Contact Form</h5>
+                                    <form id="contact-form" method="post" autocomplete="on">
+
+                                    <div class="mb-3 me-5">
+                                        <label for="first-name-input" class="form-label">First Name:</label>
+                                        <input type="text" class="form-control" id="first-name-input" name="firstName" autocomplete="given-name" required>
+                                    </div>
+
+                                    <div class="mb-3 me-5">
+                                        <label for="last-name-input" class="form-label">Last Name:</label>
+                                        <input type="text" class="form-control" id="last-name-input" name="lastName" autocomplete="family-name" required>
+                                    </div>
+
+                                    <div class="mb-3 me-5">
+                                        <label for="email-input" class="form-label">Email:</label>
+                                        <input type="email" class="form-control" id="email-input" name="email" required>
+                                    </div>
+
+                                    <div class="mb-3 me-5">
+                                        <label for="message-input" class="form-label">Message:</label>
+                                        <textarea class="form-control" id="message-input" name="message" rows="3" style="resize: none;"></textarea>
+                                    </div>
+                                    
+                                    <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys"
+                                    class="form-control" style="width: 100%"></div>
+                                    
+                                    <button type="submit" onClick="submitToAPI(event)" name="submit" class="btn btn-secondary mb-3">Submit</button>
+
+                                    </form>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
 
-        <div class="card" id="second-card">
-            <div class="card-contents" id="Work">
-                <div class="card-img" id="usaf">
-                    <img src="images/logos/usaf-logo.png" alt="U.S. Air Force logo" />
-                </div>
-                <div class="card-w-img-text">
-                    I worked as a <a
-                        href="https://www.opm.gov/policy-data-oversight/classification-qualifications/general-schedule-qualification-standards/1500/computer-science-series-1550/"
-                        target="_blank" class="link">Computer Scientist</a> for the
-                    <a href="https://afciviliancareers.com/" target="_blank" class="link">Air Force Civilian Service</a>
-                    for 2 years.
-                    <br><br>
-                    I served as a Software Engineer, CI/CD pipeline manager, and <a
-                        href="https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster"
-                        target="_blank" class="link">Scrum Master</a>, among other roles.
-                </div>
-            </div>
-        </div>
-
-        <div class="card" id="third-card">
-            <div class="card-contents" id="University">
-                <div class="card-img" id="ucb">
-                    <img src="images/logos/ucb.png" alt="University of Colorado logo" />
-                </div>
-                <div class="card-w-img-text">
-                    I graduated from the <a href="https://www.colorado.edu/cs/" target="_blank" class="link">University
-                        of Colorado Boulder</a>
-                    with a Bachelor of Science in Computer Science in August of 2020.
-                </div>
-            </div>
-        </div>
-
-        <div class="card" id="fourth-card">
-            <div class="card-contents" id="Military">
-                <div class="card-img" id="usn">
-                    <img src="images/logos/usn.png" alt="navy logo" />
-                </div>
-
-                <div class="card-w-img-text">
-                    I proudly served 6 years in the U.S. Navy as a
-                    <a href="https://en.wikipedia.org/wiki/Machinist%27s_mate#Nuclear_mechanics" target="_blank"
-                        class="link">Nuclear Machinist's Mate</a>.
-                    <br><br>
-                    My tranisition from Nuclear Power to Computer Science has been
-                    immensely rewarding.
-                    <br><br>
-                    My resume is below. Thanks for visiting my site!
-                </div>
-            </div>
-        </div>
-
-        <div class="card" id="fifth-card">
-            <div class="card-contents" id="Resume">
-                <div class="card-iframe" id="Resume">
-                    <iframe title="Resume" loading="lazy"
-                        src="assets/Resume.pdf#toolbar=0&scrollbars=0&statusbar=0&navpanes=0"
-                        class="no-select"></iframe>
-                </div>
-            </div>
-        </div>
-
-        <div class="card" id="sixth-card">
-            <div class="card-contents" id="Contact">
-                <div class="card-text">
-                    <h3>Contact Me</h3><hr class="card-line"><br>
-                    <form id="contact-form" method="post" autocomplete="on">
-                        <h4>First name:</h4>
-                        <input type="text" style="height:35px;" id="first-name-input" name="firstName" autocomplete="given-name"
-                            class="form-control" style="width:100%;"/><br/>
-                        <h4>Last name:</h4>
-                        <input type="text" style="height:35px;" id="last-name-input" name="lastName" autocomplete="family-name"
-                            class="form-control" style="width:100%;"/><br/>
-                        <h4>Email:</h4>
-                        <input type="email" style="height:35px;" id="email-input"
-                            class="form-control" style="width:100%;"/><br/>
-                        <h4>Message:</h4>
-                        <textarea id="message-input" rows="3" class="form-control"
-                            style="width:100%;"></textarea><br/>
-                        <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys"
-                            class="form-control" style="width:100%;"></div>
-                        <button type="button" onClick="submitToAPI(event)" name="submit" class="btn btn-lg"
-                            style="margin-top:20px;">Submit</button>
-                    </form>
-
-                </div>
-            </div>
         </div>
 
     </div>
 
     <footer class="footer">
-        <div> &copy; 2023 Luke McConnell</div>
+        <div>&copy; 2023 Luke McConnell</div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#detailsCollapse').on('show.bs.collapse', function () {
+                $('#toggleButton').text('Less');
+            });
+
+            $('#detailsCollapse').on('hide.bs.collapse', function () {
+                $('#toggleButton').text('More');
+            });
+        });
+    </script>
 </body>
 
 </html>
