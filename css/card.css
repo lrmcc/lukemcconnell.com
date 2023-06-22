@@ -13,11 +13,3 @@
     border-radius: 20px 10px 5px 8px;
     background-color: var(--card-background);
 }
-
-.card-line {
-    border: 0;
-    height: 1px;
-    background: var(--text);
-    background: linear-gradient(90deg, var(--text) 0%, rgba(0,0,0,0) 35%);
-    opacity: .2;
-}
