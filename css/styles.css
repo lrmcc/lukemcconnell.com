@@ -1,6 +1,4 @@
 @import url(card.css);
-@import url(image.css);
-@import url(grid.css);
 @import url(header.css);
 @import url(home.css);
 @import url(utils.css);
@@ -32,6 +30,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-y: scroll;
   overflow-x: hidden;
+  overscroll-behavior: none;
   color: var(--text);
   min-height: 100%;
   background-color: #0093E9;
@@ -43,8 +42,11 @@ body {
   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 
-.content {
-  padding: 20px;
+.sticky-menu {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 100;
 }
 
 html::-webkit-scrollbar {
@@ -74,37 +76,4 @@ html::-webkit-scrollbar-track:hover {
   justify-self: right;
   align-self: end;
   padding-top: 8rem;
-}
-
-.page-title {
-  color: var(--text);
-  font-family: var(--site-font);
-  text-align: left;
-}
-
-.page-info {
-  display: block;
-}
-
-.page-links {
-  list-style-type: none;
-}
-
-.link {
-  color: inherit;
-}
-
-.link:hover {
-  color: rgb(179, 10, 95);
-}
-
-.contact {
-  /* Revisit how neccessary this is */
-  justify-self: center;
-  align-self: center;
-  max-width: fit-content;
-}
-
-.hashtags {
-  font-size: 1.3rem;
 }
