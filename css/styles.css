@@ -1,79 +1,36 @@
-@import url(card.css);
-@import url(header.css);
-@import url(home.css);
-@import url(utils.css);
-@import url(home-media-queries.css);
-@import url(site-media-queries.css);
-
 :root {
-  --text: #31334a;
-  --background: #d0d0d0;
-  --card-text: #31334a;
-  --card-background: #816da975;
-  --header: #31334a7a;
-  --header-text: #f2f2f2;
-  --site-font: 'Cabin', sans-serif;
-  ;
+    --gray: rgb(155, 155, 155);
+    --light-gray: rgb(180, 180, 180);
+    --lighter-gray: rgb(200, 200, 200);
+    --off-white: rgb(220, 220, 220);
+    --bright-off-white: rgb(228, 228, 228);
+    --blue: rgb(59, 46, 197);
+    --light-blue: #bfd9ff;
+    --lighter-blue: rgb(200, 222, 255);
+    --bs-bg-dark: #22252a;
+    --bs-bg-dark-alt: #282b30;
+    --bs-bg-dark-alt-light: #34373c;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+.svgs path {
+    fill: var(--lighter-gray);
 }
 
-html {
-  height: 100%;
+.card a {
+    color: var(--bright-off-white);
+    text-decoration: none;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  overscroll-behavior: none;
-  color: var(--text);
-  min-height: 100%;
-  background-color: #0093E9;
-  background-size: auto 100%;
-  height: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-}
-
-.sticky-menu {
-  position: sticky;
-  top: 0;
-  background-color: #fff;
-  z-index: 100;
-}
-
-html::-webkit-scrollbar {
-  width: 1vw;
-}
-
-html::-webkit-scrollbar-thumb {
-  background-color: #7775;
-}
-
-html::-webkit-scrollbar-thumb:hover {
-  background-color: #777;
-}
-
-html::-webkit-scrollbar-track {
-  background-color: #5555;
-}
-
-html::-webkit-scrollbar-track:hover {
-  background-color: #555;
-}
-
-.footer {
-  color: var(--text);
-  opacity: .25;
-  position: sticky;
-  justify-self: right;
-  align-self: end;
-  padding-top: 8rem;
-}
+.card a:hover {
+    color: var(--light-gray);
+    text-decoration: underline;
+  }
