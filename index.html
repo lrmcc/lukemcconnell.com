@@ -4,16 +4,646 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/styles.css">
+
     <link rel="icon" href="./images/icons/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
-    <title>Luke McConnnell</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <title>Luke McConnell</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <canvas style="display:inline"></canvas>
-    <script src="js/canvas.js" defer></script>
+
+
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="images/svgs/logo.svg" class="me-2" width="40" height="32" role="img" aria-label="logo" />
+                    <span class="fs-4 text-white">Luke McConnell</span>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 ms-lg-3 justify-content-center mb-md-0">
+                    <li><a href="#mission" class="nav-link px-2" style="color: var(--lighter-gray);">Mission</a></li>
+                    <li><a href="#projects" class="nav-link px-2 text-white">Projects</a></li>
+                    <li><a href="#about" class="nav-link px-2 text-white">About</a></li>
+                    <li><a href="#contact" class="nav-link px-2 text-white">Contact</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+        <div class="container" style="max-width: 100%; min-height: 100vh;">
+            <img class="d-block mx-auto mb-4" src="images/svgs/cloud-light.svg" alt="DevSecOps Cloud Logo"
+                style="width: 40%; height: auto;">
+            <h1 class="display-5 fw-bold text-white" style="color: var(--off-white);">DevSecOps Engineer</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="fs-5 mb-4" style="color: var(--lighter-gray);">Crafting Secure Software and Building Reliable
+                    Delivery Pipelines</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-4 py-4">
+        <div class="container px-4 py-4">
+            <h2 class="pb-2 border-bottom text-left" id="mission">Mission</h2>
+
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+                <div class="col d-flex flex-column align-items-start gap-2">
+                    <h2 class="fw-bold text-body-emphasis">Practical. Fortifed. Agility.</h2>
+                    <p class="text-body-secondary"></p>
+                </div>
+
+                <div class="col">
+                    <div class="row row-cols-1 row-cols-sm-2 g-4">
+                        <div class="col d-flex flex-column gap-2">
+                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3"
+                                style="background-color: var(--light-gray);">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#table" />
+                                </svg>
+                            </div>
+                            <div class="d-inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                    class="bi bi-robot" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219V8.062Zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z" />
+                                    <path
+                                        d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2V1.866ZM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5Z" />
+                                </svg>
+                                <h4 class="fw-semibold mb-0 text-body-emphasis">Practical Automation</h4>
+                            </div>
+                            <p class="text-body-secondary">
+                                My efforts have focused on enhancing the efficiency of CI/CD pipelines through the use
+                                of open-source tools.<br><br>
+                                Specifically, I have used Jenkins to automate the build and test process, and Ansible to
+                                automate the deployment process.
+                                This improved the efficiency and reliability of the software delivery process.</p>
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3"
+                                style="background-color: var(--light-gray);">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#table" />
+                                </svg>
+                            </div>
+                            <div class="d-inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                    class="bi bi-file-lock" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224zM6.105 8.125A.637.637 0 0 1 6.5 8h3a.64.64 0 0 1 .395.125c.085.068.105.133.105.175v2.4c0 .042-.02.107-.105.175A.637.637 0 0 1 9.5 11h-3a.637.637 0 0 1-.395-.125C6.02 10.807 6 10.742 6 10.7V8.3c0-.042.02-.107.105-.175z" />
+                                    <path
+                                        d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                                </svg>
+                                <h4 class="fw-semibold mb-0 text-body-emphasis">Fortified with Security</h4>
+                            </div>
+                            <p class="text-body-secondary">
+                                Ensuring reliable software releases is critical. I have used vulnerability scans, secure
+                                code reviews, and static code analyzers to build the most secure software
+                                possible.<br><br>
+                                I have used the ISO 27001 framework to assess risks to information assets and made
+                                decisions to integrate security controls into the development process.
+                            </p>
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3"
+                                style="background-color: var(--light-gray);">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#table" />
+                                </svg>
+                            </div>
+                            <div class="d-inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                    class="bi bi-lightning" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5zM6.374 1 4.168 8.5H7.5a.5.5 0 0 1 .478.647L6.78 13.04 11.478 7H8a.5.5 0 0 1-.474-.658L9.306 1H6.374z" />
+                                </svg>
+                                <h4 class="fw-semibold mb-0 text-body-emphasis">Development Agility</h4>
+                            </div>
+                            <p class="text-body-secondary">
+                                As a developer, I used the Agile methodology to deliver software in a timely manner. As
+                                a Scrum Master, I facilitated proper scrum implementation.<br><br>
+                                In my experience, good DevSecOps practices within a scrum team relies on the types of
+                                transparent communication and quality metrics that feed into velocity and burndown
+                                charts allowing teams to collaborate and self-manage to the greatest extent
+                                possible.<br><br>
+                            </p>
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3"
+                                style="background-color: var(--light-gray);">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#table" />
+                                </svg>
+                            </div>
+                            <div class="d-inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                    class="bi bi-database-fill-gear" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 1c-1.573 0-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4s.875 1.755 1.904 2.223C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777C13.125 5.755 14 5.007 14 4s-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1Z" />
+                                    <path
+                                        d="M2 7v-.839c.457.432 1.004.751 1.49.972C4.722 7.693 6.318 8 8 8s3.278-.307 4.51-.867c.486-.22 1.033-.54 1.49-.972V7c0 .424-.155.802-.411 1.133a4.51 4.51 0 0 0-4.815 1.843A12.31 12.31 0 0 1 8 10c-1.573 0-3.022-.289-4.096-.777C2.875 8.755 2 8.007 2 7Zm6.257 3.998L8 11c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13h.027a4.552 4.552 0 0 1 .23-2.002Zm-.002 3L8 14c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.507 4.507 0 0 1-1.3-1.905Zm3.631-4.538c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+                                </svg>
+                                <h4 class="fw-semibold mb-0 text-body-emphasis">Reliable Operations</h4>
+                            </div>
+                            <p class="text-body-secondary">
+                                My experience in creating and maintaining CI/CD pipelines has given me the ability to
+                                collect data on the development process, which can be used as valuable inputs for
+                                burndown charts and to reflect pipeline status.<br><br>
+                                For example, my experience with monitoring and alert systems within Azure DevOps has
+                                helped me to identify and resolve issues like build failures before they become a larger
+                                problem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="bg-dark text-secondary px-4 py-4">
+        <div class="container px-4 py-4" style="min-height: 100vh;">
+            <h2 class="pb-2 border-bottom text-left" style="color: var(--off-white);" id="projects">Projects</h2>
+
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 py-4 g-4 ">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="pb-2 px-2 "
+                            style="background-color: var(--bs-bg-dark-alt); border-radius: 5px 5px 0px 0px; width: 100%;">
+                            <h2 class="card-text" style="color: rgb(228, 228, 228);">
+                                <a href="#projects" data-bs-toggle="tooltip"
+                                    data-bs-title="Github Repository Coming Soon">GatherUp</a>
+                            </h2>
+                            <h5 class="card-subtitle mb-2" style="color: var(--lighter-gray);">Store & Notify Form
+                                Submissions
+                            </h5>
+                            <div style="display: none;" id="GatherUp-details">
+                                <p class="card-text" style="color: var(--lighter-gray);">A serverless API to process
+                                    data from a form to a database with email
+                                    notification</p>
+                                <ul class="list-inline" style="color: var(--lighter-gray);">
+                                    <li class="list-inline-item">• AWS Lamda</li>
+                                    <li class="list-inline-item">• API Gateway</li>
+                                    <li class="list-inline-item">• Simple Email Service</li>
+                                </ul>
+                            </div>
+                            <div class="my-3">
+                                <img src="images/logos/AWS_Logo.svg" alt="" class="img-fluid" width="22%" height="auto">
+                            </div>
+                            <div id="GatherUp-icons">
+                                <span class="svgs" id="cloud-arrow-up">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                        class="bi bi-cloud-arrow-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2z" />
+                                        <path
+                                            d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z" />
+                                    </svg>
+                                </span>
+                                <span class="svgs" id="database">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                        class="bi bi-database" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313ZM13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 5.698ZM14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13V4Zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 8.698Zm0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525Z" />
+                                    </svg>
+                                </span>
+                                <span class="svgs" id="envelope-at">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                        class="bi bi-envelope-at" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z" />
+                                        <path
+                                            d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" id="GatherUp-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-expand" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="card-text"><span class="text-body-secondary bg-primary-subtle"
+                                        style="border-radius: 4px;">Status: Deployed</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col pt-md-5">
+                    <div class="card shadow-sm">
+                        <div class="pb-2 px-2"
+                            style="background-color: var(--bs-bg-dark-alt); border-radius: 5px 5px 0px 0px; width: 100%;">
+                            <h2 class="card-text">
+                                <a href="https://github.com/lrmcc/Domain_Reporter" data-bs-toggle="tooltip"
+                                    data-bs-title="Github Repository" target="_blank">Domain Reporter</a>
+                            </h2>
+                            <h5 class="card-subtitle mb-2" style="color: var(--lighter-gray);">Automate Domain
+                                Monitoring</h5>
+                            <div style="display: none;" id="Domain-Reporter-details">
+                                <p class="card-text" style="color: var(--lighter-gray);">A personal domain drop-catching
+                                    service based off of WHOIS response</p>
+                                <ul class="list-inline" style="color: var(--lighter-gray);">
+                                    <li class="list-inline-item">• Python</li>
+                                    <li class="list-inline-item">• TKinter</li>
+                                    <li class="list-inline-item">• WHOIS</li>
+                                    <li class="list-inline-item">• JSON</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <img src="images/logos/python_logo.svg" alt="" class="img-fluid" width="26%"
+                                    height="auto">
+                            </div>
+                            <div id="Domain-Reporter-icons">
+                                <span class="svgs" id="binoculars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                        class="bi bi-binoculars" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882V2.5zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5h-1zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V4zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5V3zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V14zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V14z" />
+                                    </svg>
+                                </span>
+                                <span class="svgs" id="activity">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                        class="bi bi-activity" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z" />
+                                    </svg>
+                                </span>
+                                <span class="svgs" id="flag">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                        class="bi bi-flag" viewBox="0 0 16 16">
+                                        <path
+                                            d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                        id="Domain-Reporter-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-expand" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="card-text"><span class="text-body-secondary bg-success-subtle"
+                                        style="border-radius: 4px;">Status: Released</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-4 ">
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="pb-2 px-2"
+                            style="background-color: var(--bs-bg-dark-alt); border-radius: 5px 5px 0px 0px; width: 100%;">
+                            <h2 class="card-text">
+                                <a href="https://github.com/lrmcc/Shoot_Messenger" data-bs-toggle="tooltip"
+                                    data-bs-title="Github Repository" target="_blank">Shoot Messenger</a>
+                            </h2>
+                            <h4 class="card-subtitle mb-2" style="color: var(--lighter-gray);">Connect on Your Terms
+                            </h4>
+                            <div style="display: none;" id="Shoot-Messenger-details">
+                                <p class="card-text" style="color: var(--lighter-gray);">A chat app without a
+                                    centralized
+                                    messaging database so users control
+                                    their own data</p>
+                                <ul class="list-inline" style="color: var(--lighter-gray);">
+                                    <li class="list-inline-item">• Java</li>
+                                    <li class="list-inline-item">• Spring Boot</li>
+                                    <li class="list-inline-item">• TCP/IP</li>
+                                    <li class="list-inline-item">• Network</li>
+                                </ul>
+                            </div>
+                            <div class="mx-2 my-3">
+                                <img src="images/logos/Java_Logo.svg" alt="" class="img-fluid" width="20%"
+                                    height="auto">
+                            </div>
+                            <div id="Shoot-Messenger-icons">
+                                <span class="svgs" id="people">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                        class="bi bi-people" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
+                                    </svg>
+                                </span>
+                                <span class="svgs" id="chat-dots">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                        class="bi bi-chat-dots" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                        <path
+                                            d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                                    </svg>
+                                </span>
+                                <span class="svgs" id="database-slash">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                        class="bi bi-database-slash" viewBox="0 0 16 16">
+                                        <path
+                                            d="M13.879 10.414a2.501 2.501 0 0 0-3.465 3.465l3.465-3.465Zm.707.707-3.465 3.465a2.501 2.501 0 0 0 3.465-3.465Zm-4.56-1.096a3.5 3.5 0 1 1 4.949 4.95 3.5 3.5 0 0 1-4.95-4.95Z" />
+                                        <path
+                                            d="M12.096 6.223A4.92 4.92 0 0 0 13 5.698V7c0 .289-.213.654-.753 1.007a4.493 4.493 0 0 1 1.753.25V4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.525 4.525 0 0 1-.813-.927C8.5 14.992 8.252 15 8 15c-1.464 0-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13h.027a4.552 4.552 0 0 1 0-1H8c-1.464 0-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10c.262 0 .52-.008.774-.024a4.525 4.525 0 0 1 1.102-1.132C9.298 8.944 8.666 9 8 9c-1.464 0-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777ZM3 4c0-.374.356-.875 1.318-1.313C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                        id="Shoot-Messenger-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-expand" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="card-text"><span class="text-body-secondary bg-success-subtle"
+                                        style="border-radius: 4px;">Status: Released</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col pt-md-5">
+                    <div class="card shadow-sm">
+                        <div class="pb-2 px-2"
+                            style="background-color: var(--bs-bg-dark-alt); border-radius: 5px 5px 0px 0px; width: 100%;">
+                            <h2 class="card-text">
+                                <a href="https://github.com/lrmcc/Space_Game" data-bs-toggle="tooltip"
+                                    data-bs-title="Github Repository" target="_blank">Space Shooter</a>
+                            </h2>
+                            <h4 class="card-subtitle mb-2" style="color: var(--lighter-gray);">Outer Space Survival</h4>
+                            <div style="display: none;" id="Space-Game-details">
+                                <p class="card-text" style="color: var(--lighter-gray);">An interactive creative visual
+                                    HTML/CSS exercise with vanilla JavaScript</p>
+                                <ul class="list-inline" style="color: var(--lighter-gray);">
+                                    <li class="list-inline-item">• JavaScript</li>
+                                    <li class="list-inline-item">• Browser</li>
+                                    <li class="list-inline-item">• CSS</li>
+                                    <li class="list-inline-item">• JQuery</li>
+                                </ul>
+                            </div>
+
+                            <div class="px-2 py-3">
+                                <img src="images/logos/html-css-js.svg" alt="" class="img-fluid" width="22%"
+                                    height="auto">
+                            </div>
+                            <div id="Space-Game-icons">
+                                <span class="svgs" id="person-workspace">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                        class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                                        <path
+                                            d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z" />
+                                    </svg>
+                                </span>
+                                <span class="svgs" id="joystick">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                        class="bi bi-joystick" viewBox="0 0 16 16">
+                                        <path
+                                            d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z" />
+                                        <path
+                                            d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z" />
+                                    </svg>
+                                </span>
+                                <span class="svgs" id="rocket">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                                        class="bi bi-rocket" viewBox="0 0 16 16">
+                                        <path d="M8 8c.828 0 1.5-.895 1.5-2S8.828 4 8 4s-1.5.895-1.5 2S7.172 8 8 8Z" />
+                                        <path
+                                            d="M11.953 8.81c-.195-3.388-.968-5.507-1.777-6.819C9.707 1.233 9.23.751 8.857.454a3.495 3.495 0 0 0-.463-.315A2.19 2.19 0 0 0 8.25.064.546.546 0 0 0 8 0a.549.549 0 0 0-.266.073 2.312 2.312 0 0 0-.142.08 3.67 3.67 0 0 0-.459.33c-.37.308-.844.803-1.31 1.57-.805 1.322-1.577 3.433-1.774 6.756l-1.497 1.826-.004.005A2.5 2.5 0 0 0 2 12.202V15.5a.5.5 0 0 0 .9.3l1.125-1.5c.166-.222.42-.4.752-.57.214-.108.414-.192.625-.281l.198-.084c.7.428 1.55.635 2.4.635.85 0 1.7-.207 2.4-.635.067.03.132.056.196.083.213.09.413.174.627.282.332.17.586.348.752.57l1.125 1.5a.5.5 0 0 0 .9-.3v-3.298a2.5 2.5 0 0 0-.548-1.562l-1.499-1.83ZM12 10.445v.055c0 .866-.284 1.585-.75 2.14.146.064.292.13.425.199.39.197.8.46 1.1.86L13 14v-1.798a1.5 1.5 0 0 0-.327-.935L12 10.445ZM4.75 12.64C4.284 12.085 4 11.366 4 10.5v-.054l-.673.82a1.5 1.5 0 0 0-.327.936V14l.225-.3c.3-.4.71-.664 1.1-.861.133-.068.279-.135.425-.199ZM8.009 1.073c.063.04.14.094.226.163.284.226.683.621 1.09 1.28C10.137 3.836 11 6.237 11 10.5c0 .858-.374 1.48-.943 1.893C9.517 12.786 8.781 13 8 13c-.781 0-1.517-.214-2.057-.607C5.373 11.979 5 11.358 5 10.5c0-4.182.86-6.586 1.677-7.928.409-.67.81-1.082 1.096-1.32.09-.076.17-.135.236-.18Z" />
+                                        <path
+                                            d="M9.479 14.361c-.48.093-.98.139-1.479.139-.5 0-.999-.046-1.479-.139L7.6 15.8a.5.5 0 0 0 .8 0l1.079-1.439Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                        id="Space-Game-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-expand" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="card-text"><span class="text-body-secondary bg-success-subtle"
+                                        style="border-radius: 4px;">Status: Released</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="bg-dark text-secondary px-4 py-4">
+        <div class="container justify-content-evenly px-4 py-4" style="min-height: 100vh;">
+            <h2 class="pb-2 border-bottom" style="color: var(--off-white);" id="about">About</h2>
+
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 pt-3 g-4">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="images/logos/AWS-SysOps.png" alt="AWS SysOps Logo" class="p-2 m-auto img-fluid"
+                            width="60%" height="auto">
+                        <div class="card-body bg-light">
+                            <p class="card-text">AWS Certified SysOps</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                </div>
+                                <small class="text-body-secondary bg-warning-subtle" style="border-radius: 4px;">In
+                                    Progress</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col pt-md-5">
+                    <div class="card shadow-sm">
+                        <img src="images/logos/SecurityPlus.png" alt="Security Plus Logo" class="p-2 m-auto img-fluid"
+                            width="60%" height="auto">
+                        <div class="card-body bg-light">
+                            <p class="card-text">CompTia Security+ CE</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                </div>
+                                <small class="text-body-secondary bg-success-subtle" style="border-radius: 4px;">Awarded
+                                    6/2023</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-md-5">
+                    <div class="col pt-md-5">
+                        <div class="card shadow-sm">
+                            <img src="images/logos/csm.png" alt="Certified Scrum Master Logo" class="m-auto img-fluid"
+                                width="60%" height="auto">
+                            <div class="card-body bg-light">
+                                <p class="card-text">ScrumAlliance Certified ScrumMaster</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    </div>
+                                    <small class="text-body-secondary bg-success-subtle"
+                                        style="border-radius: 4px;">Awarded 2/2022</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 pt-3 g-4">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="images/logos/usaf-logo-notext.png" alt="United States Air Force Logo"
+                            class="p-2 m-auto img-fluid" width="60%" height="auto">
+                        <div class="card-body bg-light">
+                            <p class="card-text">U.S. Air Force Computer Scientist</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">More</button>
+                                </div>
+                                <small class="text-body-secondary bg-info-subtle"
+                                    style="border-radius: 4px;">2020-2022</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col pt-md-5">
+                    <div class="card shadow-sm">
+                        <img src="images/logos/ucb-seal.png" alt="University of Colorado Seal"
+                            class="p-2 m-auto img-fluid" width="60%" height="auto">
+                        <div class="card-body bg-light">
+                            <p class="card-text">B.S. in Computer Science</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">More</button>
+                                </div>
+                                <small class="text-body-secondary bg-success-subtle" style="border-radius: 4px;">Awarded
+                                    8/2020</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-md-5">
+                    <div class="col pt-md-5">
+                        <div class="card shadow-sm">
+                            <img src="images/logos/usn.png" alt="United States Navy Logo" class="p-2 m-auto img-fluid"
+                                width="60%" height="auto">
+                            <div class="card-body bg-light">
+                                <p class="card-text">U.S. Navy Nuclear Power Operator</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">More</button>
+                                    </div>
+                                    <small class="text-body-secondary bg-info-subtle"
+                                        style="border-radius: 4px;">2010-2016</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="px-4 py-4">
+        <div class="container px-4 py-4">
+            <h2 class="pb-2 border-bottom text-left" id="contact">Contact</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+
+                    <form id="contact-form" method="post" autocomplete="on">
+
+                        <div class="form-group text-left">
+                            <label for="first-name-input" class="form-label">First Name:</label>
+                            <input type="text" class="form-control" id="first-name-input" name="firstName" autocomplete="given-name" required>
+                        </div>
+
+                        <div class="form-group text-left">
+                            <label for="last-name-input" class="form-label">Last Name:</label>
+                            <input type="text" class="form-control" id="last-name-input" name="lastName" autocomplete="family-name" required>
+                        </div>
+
+                        <div class="form-group text-left">
+                            <label for="email-input" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="email-input" name="email" required>
+                        </div>
+
+                        <div class="form-group text-left mb-2">
+                            <label for="message-input" class="form-label">Message:</label>
+                            <textarea class="form-control" id="message-input" name="message" rows="3" style="resize: none;"></textarea>
+                        </div>
+                        
+                        <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys" class="form-control" style="width: 100%"></div>
+                        
+                        <button type="submit" onClick="submitToAPI(event)" name="submit" class="btn btn-secondary mb-3">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/form.js" defer></script>
 </body>
 
 </html>
